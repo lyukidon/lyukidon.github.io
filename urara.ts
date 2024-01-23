@@ -122,6 +122,7 @@ const build = () => {
 }
 
 const clean = () => {
+  fs.writeFile('build/.nojekyll', '')
   cleanDir('urara')
   rmDir('static', { dest: ['static'] })
   rmDir('src/static', { dest: ['src/static'] })
