@@ -56,6 +56,10 @@ export const head: HeadConfig = {}
 export const header: HeaderConfig = {
   nav: [
     {
+      text: 'Introduction',
+      link: '/Introduction'
+    },
+    {
       text: 'Get Started',
       link: '/hello-world'
     },
@@ -80,7 +84,7 @@ export const footer: FooterConfig = {
 }
 
 export const date: DateConfig = {
-  locales: 'en-US',
+  locales: 'ko-KR',
   options: {
     year: '2-digit',
     weekday: 'long',
