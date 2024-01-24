@@ -6,10 +6,12 @@
   <icon>https://lyukidon.github.io/favicon.png</icon>
   <link href="https://lyukidon.github.io" />
   <link href="https://lyukidon.github.io/atom.xml" rel="self" type="application/atom+xml" />
-  <updated>2024-01-24T03:28:36.650Z</updated>
+  <updated>2024-01-24T09:24:45.853Z</updated>
   <author>
     <name><![CDATA[Ryu Kidon]]></name>
   </author>
+  <category term="docker" scheme="https://lyukidon.github.io/?tags=docker" />
+  <category term="mysql" scheme="https://lyukidon.github.io/?tags=mysql" />
   <category term="bug_fix" scheme="https://lyukidon.github.io/?tags=bug_fix" />
   <category term="Introduction" scheme="https://lyukidon.github.io/?tags=Introduction" />
   <category term="mongodb" scheme="https://lyukidon.github.io/?tags=mongodb" />
@@ -18,6 +20,18 @@
   <category term="Elements" scheme="https://lyukidon.github.io/?tags=Elements" />
   <category term="Front-Matter" scheme="https://lyukidon.github.io/?tags=Front-Matter" />
   <category term="Hello World" scheme="https://lyukidon.github.io/?tags=Hello%20World" />
+  <entry>
+    <title type="html"><![CDATA[Docker MySQL Container 설치와 사용방법]]></title>
+    <link href="https://lyukidon.github.io/Javascript/TIL/docker_start" />
+    <id>https://lyukidon.github.io/Javascript/TIL/docker_start</id>
+    <published>2024-01-24T00:00:00.000Z</published>
+    <updated>2024-01-24T00:00:00.000Z</updated>
+    <content type="html">
+      <![CDATA[<ol><li><p data-svelte-h="svelte-25mlwg">Docker 설치</p> <ul><li data-svelte-h="svelte-4g3t0l"><p>Docker Desktop</p> <p><a href="https://www.docker.com/" rel="nofollow noopener noreferrer external" target="_blank">https://www.docker.com/</a></p></li> <li><p data-svelte-h="svelte-1hf8ffo">Docker Engine (Ubuntu) 설치</p> <ol><li><p data-svelte-h="svelte-1msjo4z">Add docker repo</p> <!-- HTML_TAG_START --><pre class="shiki material-default" bash="true"><div class="language-id">bash</div><div class='code-container'><code><div class='line'># Add Docker's official GPG key:</div><div class='line'>sudo apt-get update</div><div class='line'>sudo apt-get install ca-certificates curl gnupg</div><div class='line'>sudo install -m 0755 -d /etc/apt/keyrings</div><div class='line'>curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg</div><div class='line'>sudo chmod a+r /etc/apt/keyrings/docker.gpg</div></code></div></pre><!-- HTML_TAG_END --></li></ol></li></ul></li></ol> <h1 id="add-the-repository-to-apt-sources" data-svelte-h="svelte-94mgpm"><a href="#add-the-repository-to-apt-sources">Add the repository to Apt sources:</a></h1> <p data-svelte-h="svelte-1ks2k67">echo \“deb [arch=$(dpkg –print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] <a href="https://download.docker.com/linux/ubuntu" rel="nofollow noopener noreferrer external" target="_blank">https://download.docker.com/linux/ubuntu</a> \$(. /etc/os-release &amp;&amp; echo “$VERSION_CODENAME”) stable” | \sudo tee /etc/apt/sources.list.d/docker.list &gt; /dev/nullsudo apt-get update</p> <!-- HTML_TAG_START --><pre class="shiki material-default"><div class='code-container'><code><div class='line'></div><div class='line'>2. Install Docker</div><div class='line'>&#96;&#96;&#96;bash</div><div class='line'>sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin</div><div class='line'>&#96;&#96;&#96;</div><div class='line'></div><div class='line'>2. mysql 이미지 다운로드</div><div class='line'></div><div class='line'>&#96;&#96;&#96;bash</div><div class='line'>docker pull mysql</div><div class='line'>&#96;&#96;&#96;</div><div class='line'></div><div class='line'>3. 다운로드 받은 이미지 확인</div><div class='line'></div><div class='line'>&#96;&#96;&#96;bash</div><div class='line'>docker images</div><div class='line'>&#96;&#96;&#96;</div><div class='line'></div><div class='line'>4. container 생성 및 구동</div><div class='line'></div><div class='line'>&#96;&#96;&#96;bash</div><div class='line'>docker run --name mysqlContainer -d -p 3306:3306 -e MYSQL_ROOT_PASSWORD=비밀번호 mysql:latest</div><div class='line'>&#96;&#96;&#96;</div><div class='line'></div><div class='line'>- run : 컨테이너를 생성하고 구동시키는 명령어</div><div class='line'>- --name : 컨테이너의 이름</div><div class='line'>- -d : 백그라운드에서 실행</div><div class='line'>- -p : &#96;내부포트:외부포트&#96; 연결 설정</div><div class='line'>- -e : 환경변수 설정</div><div class='line'></div><div class='line'>MYSQL은 &#96;MYSQL_ROOT_PASSWORD&#96;, &#96;MYSQL_DATABASE&#96;, &#96;MYSQL_USER&#96;, &#96;MYSQL_PASSWORD&#96; 가 있다.</div><div class='line'></div><div class='line'>- mysql:latest : 구동하고자 하는 컨테이너(mysql)을 적는다.</div><div class='line'></div><div class='line'>5. 구동 중(run)인 컨테이너 확인</div><div class='line'></div><div class='line'>&#96;&#96;&#96;bash</div><div class='line'>docker ps</div><div class='line'>&#96;&#96;&#96;</div><div class='line'></div><div class='line'>- -a : 전체 컨테이너를 확인하고자 하는 경우</div><div class='line'></div><div class='line'>6. 컨테이너 접속</div><div class='line'></div><div class='line'>&#96;&#96;&#96;bash</div><div class='line'>docker exec -it mysqlContainer /bin/bash</div><div class='line'>&#96;&#96;&#96;</div><div class='line'></div><div class='line'>- -i : 사용자가 접근하지 않아도, 계속 입력을 받을 수 있는 상태를 유지</div><div class='line'>- -t : 터미널을 사용할 수 있도록 할당해놓음</div><div class='line'></div><div class='line'>7. 컨테이너 종료</div><div class='line'></div><div class='line'>&#96;&#96;&#96;bash</div><div class='line'>docker stop mysqlContainer</div><div class='line'>&#96;&#96;&#96;</div><div class='line'></div><div class='line'>8. 기존 컨테이너 시작</div><div class='line'></div><div class='line'>&#96;&#96;&#96;bash</div><div class='line'>docker start mysqlContainer</div><div class='line'>&#96;&#96;&#96;</div><div class='line'></div><div class='line'>9. 기존 컨테이너 재시작</div><div class='line'></div><div class='line'>&#96;&#96;&#96;bash</div><div class='line'>docker restart mysqlContainer</div><div class='line'>&#96;&#96;&#96;</div><div class='line'></div></code></div></pre><!-- HTML_TAG_END -->]]>
+    </content>
+    <category term="docker" scheme="https://lyukidon.github.io/?tags=docker" />
+    <category term="mysql" scheme="https://lyukidon.github.io/?tags=mysql" />
+  </entry>
   <entry>
     <title type="html"><![CDATA[How to fix urara build bug while using gh-pages]]></title>
     <link href="https://lyukidon.github.io/Javascript/etc/urara_bug_fix" />
