@@ -3,7 +3,7 @@
   "short_name": "Home",
   "lang": "en-US",
   "description": "Powered by SvelteKit/Urara",
-  "id": "https://https://lyukidon.github.io/",
+  "id": "https://lyukidon.github.io/",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
@@ -12,25 +12,25 @@
   "theme_color": "#3D4451",
   "icons": [
     {
-      "src": "https://https://lyukidon.github.io/assets/any@192.png",
+      "src": "https://lyukidon.github.io/assets/any@192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "https://https://lyukidon.github.io/assets/any@512.png",
+      "src": "https://lyukidon.github.io/assets/any@512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "https://https://lyukidon.github.io/assets/maskable@192.png",
+      "src": "https://lyukidon.github.io/assets/maskable@192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "maskable"
     },
     {
-      "src": "https://https://lyukidon.github.io/assets/maskable@512.png",
+      "src": "https://lyukidon.github.io/assets/maskable@512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"
