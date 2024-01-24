@@ -121,8 +121,11 @@ const build = () => {
   cpDir('urara')
 }
 
-const clean = () => {
+const nojekyll = () => {
   fs.writeFile('build/.nojekyll', '')
+}
+
+const clean = () => {
   cleanDir('urara')
   rmDir('static', { dest: ['static'] })
   rmDir('src/static', { dest: ['src/static'] })
@@ -159,6 +162,9 @@ switch (process.argv[2]) {
     break
   case 'build':
     build()
+    break
+  case 'nojekyll':
+    nojekyll()
     break
   case 'clean':
     clean()
