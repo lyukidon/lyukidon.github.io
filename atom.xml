@@ -6,10 +6,12 @@
   <icon>https://lyukidon.github.io/favicon.png</icon>
   <link href="https://lyukidon.github.io" />
   <link href="https://lyukidon.github.io/atom.xml" rel="self" type="application/atom+xml" />
-  <updated>2024-01-30T07:43:57.706Z</updated>
+  <updated>2024-01-31T09:47:52.934Z</updated>
   <author>
     <name><![CDATA[Ryu Kidon]]></name>
   </author>
+  <category term="jwt" scheme="https://lyukidon.github.io/?tags=jwt" />
+  <category term="token" scheme="https://lyukidon.github.io/?tags=token" />
   <category term="http_status_code" scheme="https://lyukidon.github.io/?tags=http_status_code" />
   <category term="encryption" scheme="https://lyukidon.github.io/?tags=encryption" />
   <category term="null" scheme="https://lyukidon.github.io/?tags=null" />
@@ -25,6 +27,18 @@
   <category term="Elements" scheme="https://lyukidon.github.io/?tags=Elements" />
   <category term="Front-Matter" scheme="https://lyukidon.github.io/?tags=Front-Matter" />
   <category term="Hello World" scheme="https://lyukidon.github.io/?tags=Hello%20World" />
+  <entry>
+    <title type="html"><![CDATA[JWT 사용방법]]></title>
+    <link href="https://lyukidon.github.io/Javascript/TIL/jwt" />
+    <id>https://lyukidon.github.io/Javascript/TIL/jwt</id>
+    <published>2024-01-31T00:00:00.000Z</published>
+    <updated>2024-01-31T00:00:00.000Z</updated>
+    <content type="html">
+      <![CDATA[<p data-svelte-h="svelte-ksgtza">JWT 사용방법</p> <p data-svelte-h="svelte-vaaiwa">npm: <a href="https://www.npmjs.com/package/jsonwebtoken" rel="nofollow noopener noreferrer external" target="_blank">https://www.npmjs.com/package/jsonwebtoken</a></p> <ol><li>설치하기<!-- HTML_TAG_START --><pre class="shiki material-default" bash="true"><div class="language-id">bash</div><div class='code-container'><code><div class='line'>npm i jsonwebtoken</div></code></div></pre><!-- HTML_TAG_END --></li> <li>모듈 불러오기<!-- HTML_TAG_START --><pre class="shiki material-default" js="true"><div class="language-id">js</div><div class='code-container'><code><div class='line'>import jwt from "jsonwebtoken";</div><div class='line'>// or</div><div class='line'>const jwt = require("jsonwebtoken");</div></code></div></pre><!-- HTML_TAG_END --></li> <li>Access Token 생성하기<!-- HTML_TAG_START --><pre class="shiki material-default" js="true"><div class="language-id">js</div><div class='code-container'><code><div class='line'>const accessToken = jwt.sign(payload, secretkey, options);</div><div class='line'>// example</div><div class='line'>const accessToken = jwt.sign(&#123; id: "lyu" &#125;, "randomSecretKey", &#123;</div><div class='line'>    algorithm: "HS256", // 암호화 방식</div><div class='line'>    expiresIn: "12h", // 만료 기간</div><div class='line'>    notBefore, // 설정한 시간 이전까지는 작동하지 않도록 하는 옵션</div><div class='line'>    audience,</div><div class='line'>    issuer,</div><div class='line'>    jwtid,</div><div class='line'>    subject,</div><div class='line'>    noTimestamp,</div><div class='line'>    header,</div><div class='line'>    keyid,</div><div class='line'>    mutatePayload: boolean, // 키가 생성되기 전에, payload 값을 변경</div><div class='line'>    allowInsecureKeySizes: boolean, // 2048 미만의 모듈러스 개인 키를 RSA에 사용할 수 있음</div><div class='line'>    allowInvalidAsymmetricKeyTypes: boolean // (이전 버전 호환용) 지정된 알고리즘과 다른 비대칭 키를 허용</div><div class='line'>&#125;);</div></code></div></pre><!-- HTML_TAG_END --></li> <li>Access Token 해석하기<!-- HTML_TAG_START --><pre class="shiki material-default" js="true"><div class="language-id">js</div><div class='code-container'><code><div class='line'>const decoded = jwt.verify(token, secretkey, options, callback);</div><div class='line'>// example</div><div class='line'>const decoded = jwt.verify(</div><div class='line'>    token,</div><div class='line'>    "secretkey",</div><div class='line'>    &#123;</div><div class='line'>        algorithm: "HS256", // 암호화 방식</div><div class='line'>        audience,</div><div class='line'>        complete, // 해석된 &#123; payload, header, signature &#125;를 반환 (기존은 payload만 반환)</div><div class='line'>        issuer,</div><div class='line'>        jwtid, // JWT ID를 확인할 때 사용</div><div class='line'>        ignoreExpiration, // 만료 기간을 확인하지 않고 인증</div><div class='line'>        subject,</div><div class='line'>        clockTolerance,</div><div class='line'>        maxAge, // 만료기간을 최대 기간으로 설정</div><div class='line'>        clockTimestamp,</div><div class='line'>        nonce,</div><div class='line'>        allowInvalidAsymmetricKeyTypes</div><div class='line'>    &#125;,</div><div class='line'>    (err, decoded) =&gt; &#123;&#125;</div><div class='line'>);</div></code></div></pre><!-- HTML_TAG_END --></li></ol> <ul><li>에러 확인하기<ul><li>토큰 만료 에러<!-- HTML_TAG_START --><pre class="shiki material-default" js="true"><div class="language-id">js</div><div class='code-container'><code><div class='line'>&#123;</div><div class='line'>    name: 'TokenExpiredError',</div><div class='line'>    message:'jwt expired',</div><div class='line'>    expiredAt</div><div class='line'>&#125;</div></code></div></pre><!-- HTML_TAG_END --></li> <li>토큰 에러<!-- HTML_TAG_START --><pre class="shiki material-default" js="true"><div class="language-id">js</div><div class='code-container'><code><div class='line'>&#123;</div><div class='line'>    name: "JsonWebTokenError", message;</div><div class='line'>&#125;</div></code></div></pre><!-- HTML_TAG_END --></li> <li>NotBefore 에러<!-- HTML_TAG_START --><pre class="shiki material-default" js="true"><div class="language-id">js</div><div class='code-container'><code><div class='line'>&#123;</div><div class='line'>    name: 'NotBeforeError',</div><div class='line'>    message: 'jwt not active',</div><div class='line'>    date</div><div class='line'>&#125;</div></code></div></pre><!-- HTML_TAG_END --></li></ul></li></ul>]]>
+    </content>
+    <category term="jwt" scheme="https://lyukidon.github.io/?tags=jwt" />
+    <category term="token" scheme="https://lyukidon.github.io/?tags=token" />
+  </entry>
   <entry>
     <title type="html"><![CDATA[http 에러 코드 종류]]></title>
     <link href="https://lyukidon.github.io/Javascript/TIL/http_status_code" />
