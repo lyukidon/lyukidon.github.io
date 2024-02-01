@@ -11,6 +11,11 @@
     </url>
     
         <url>
+            <loc>https://lyukidon.github.io/Javascript/TIL/jest/jest_es6</loc>
+            <lastmod>2024-02-01T00:00:00.000Z</lastmod>
+            <priority>0.5</priority>
+        </url>
+        <url>
             <loc>https://lyukidon.github.io/Javascript/TIL/jwt</loc>
             <lastmod>2024-01-31T00:00:00.000Z</lastmod>
             <priority>0.5</priority>

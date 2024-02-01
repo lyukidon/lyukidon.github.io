@@ -6,13 +6,13 @@
   <icon>https://lyukidon.github.io/favicon.png</icon>
   <link href="https://lyukidon.github.io" />
   <link href="https://lyukidon.github.io/atom.xml" rel="self" type="application/atom+xml" />
-  <updated>2024-01-31T09:48:14.748Z</updated>
+  <updated>2024-02-01T08:19:21.361Z</updated>
   <author>
     <name><![CDATA[Ryu Kidon]]></name>
   </author>
+  <category term="http_status_code" scheme="https://lyukidon.github.io/?tags=http_status_code" />
   <category term="jwt" scheme="https://lyukidon.github.io/?tags=jwt" />
   <category term="token" scheme="https://lyukidon.github.io/?tags=token" />
-  <category term="http_status_code" scheme="https://lyukidon.github.io/?tags=http_status_code" />
   <category term="encryption" scheme="https://lyukidon.github.io/?tags=encryption" />
   <category term="null" scheme="https://lyukidon.github.io/?tags=null" />
   <category term="mysql" scheme="https://lyukidon.github.io/?tags=mysql" />
@@ -27,6 +27,17 @@
   <category term="Elements" scheme="https://lyukidon.github.io/?tags=Elements" />
   <category term="Front-Matter" scheme="https://lyukidon.github.io/?tags=Front-Matter" />
   <category term="Hello World" scheme="https://lyukidon.github.io/?tags=Hello%20World" />
+  <entry>
+    <title type="html"><![CDATA[Jest Error - SyntaxError: Cannot use import statement outside a module]]></title>
+    <link href="https://lyukidon.github.io/Javascript/TIL/jest/jest_es6" />
+    <id>https://lyukidon.github.io/Javascript/TIL/jest/jest_es6</id>
+    <published>2024-02-01T00:00:00.000Z</published>
+    <updated>2024-02-01T00:00:00.000Z</updated>
+    <content type="html">
+      <![CDATA[<p data-svelte-h="svelte-1by5mpn">Jest 에서 ES6 Module Syntax 사용 시 에러가 발생한다.</p> <p data-svelte-h="svelte-1j3wt01">이 때는 package.json의 “script” 부분을 변경해주면 된다.</p> <!-- HTML_TAG_START --><pre class="shiki material-default" json="true"><div class="language-id">json</div><div class='code-container'><code><div class='line'>"script": &#123;</div><div class='line'>    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"</div><div class='line'>&#125;</div><div class='line'>//npm run test</div></code></div></pre><!-- HTML_TAG_END --> <p data-svelte-h="svelte-370g1h">또는 아래 코드로 jest를 실행해주면 된다.</p> <!-- HTML_TAG_START --><pre class="shiki material-default" bash="true"><div class="language-id">bash</div><div class='code-container'><code><div class='line'>NODE_OPTIONS="$NODE_OPTIONS --experimental-vm-modules" npx jest</div></code></div></pre><!-- HTML_TAG_END -->]]>
+    </content>
+    <category term="http_status_code" scheme="https://lyukidon.github.io/?tags=http_status_code" />
+  </entry>
   <entry>
     <title type="html"><![CDATA[JWT 사용방법]]></title>
     <link href="https://lyukidon.github.io/Javascript/TIL/jwt" />
