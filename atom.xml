@@ -6,13 +6,14 @@
   <icon>https://lyukidon.github.io/favicon.png</icon>
   <link href="https://lyukidon.github.io" />
   <link href="https://lyukidon.github.io/atom.xml" rel="self" type="application/atom+xml" />
-  <updated>2024-02-01T08:19:21.361Z</updated>
+  <updated>2024-02-01T23:49:54.702Z</updated>
   <author>
     <name><![CDATA[Ryu Kidon]]></name>
   </author>
-  <category term="http_status_code" scheme="https://lyukidon.github.io/?tags=http_status_code" />
   <category term="jwt" scheme="https://lyukidon.github.io/?tags=jwt" />
   <category term="token" scheme="https://lyukidon.github.io/?tags=token" />
+  <category term="refresh token" scheme="https://lyukidon.github.io/?tags=refresh%20token" />
+  <category term="http_status_code" scheme="https://lyukidon.github.io/?tags=http_status_code" />
   <category term="encryption" scheme="https://lyukidon.github.io/?tags=encryption" />
   <category term="null" scheme="https://lyukidon.github.io/?tags=null" />
   <category term="mysql" scheme="https://lyukidon.github.io/?tags=mysql" />
@@ -28,6 +29,19 @@
   <category term="Front-Matter" scheme="https://lyukidon.github.io/?tags=Front-Matter" />
   <category term="Hello World" scheme="https://lyukidon.github.io/?tags=Hello%20World" />
   <entry>
+    <title type="html"><![CDATA[Refresh Token 사용 방법]]></title>
+    <link href="https://lyukidon.github.io/Javascript/TIL/jwt/refresh_token" />
+    <id>https://lyukidon.github.io/Javascript/TIL/jwt/refresh_token</id>
+    <published>2024-02-02T00:00:00.000Z</published>
+    <updated>2024-02-02T00:00:00.000Z</updated>
+    <content type="html">
+      <![CDATA[<p data-svelte-h="svelte-kxmjao">Access Token은 발급 받은 후, 인증을 위해 지속적으로 서버와 교환을 하게 된다. 통신을 자주 반복하게 된다는 것은, 그만큼 탈취될 가능성도 높다는 뜻이다.</p> <p data-svelte-h="svelte-160z862">Refresh Token은 이러한 Access Token의 단점을 보완해주는 역할을 한다.</p> <p data-svelte-h="svelte-1iifmc2">토큰을 발급받고 저장하는 순서는 다음과 같다.</p> <!-- HTML_TAG_START --><pre class="shiki material-default"><div class='code-container'><code><div class='line'>|        |        |          |</div><div class='line'>| Client | Server | Database |</div><div class='line'>|        |        |          |</div></code></div></pre><!-- HTML_TAG_END --> <ol data-svelte-h="svelte-m068na"><li>사용자가 로그인을 한다.</li> <li>서버에서 Access Token과 Refresh Token을 발급한다.<ul><li>클라이언트에 Access Token과 Refresh Token을 전달한다.</li> <li>Refresh Token은 데이터 베이스에 저장한다.</li></ul></li> <li>Access Token의 만료 기간이 지나면, Refresh Token을 이용한다.<ul><li>클라이언트의 Refresh Token과 데이터베이스의 Refresh Token을 비교한다.</li> <li>같다면 2번을 반복한다.</li></ul></li></ol>]]>
+    </content>
+    <category term="jwt" scheme="https://lyukidon.github.io/?tags=jwt" />
+    <category term="token" scheme="https://lyukidon.github.io/?tags=token" />
+    <category term="refresh token" scheme="https://lyukidon.github.io/?tags=refresh%20token" />
+  </entry>
+  <entry>
     <title type="html"><![CDATA[Jest Error - SyntaxError: Cannot use import statement outside a module]]></title>
     <link href="https://lyukidon.github.io/Javascript/TIL/jest/jest_es6" />
     <id>https://lyukidon.github.io/Javascript/TIL/jest/jest_es6</id>
@@ -40,8 +54,8 @@
   </entry>
   <entry>
     <title type="html"><![CDATA[JWT 사용방법]]></title>
-    <link href="https://lyukidon.github.io/Javascript/TIL/jwt" />
-    <id>https://lyukidon.github.io/Javascript/TIL/jwt</id>
+    <link href="https://lyukidon.github.io/Javascript/TIL/jwt/usage" />
+    <id>https://lyukidon.github.io/Javascript/TIL/jwt/usage</id>
     <published>2024-01-31T00:00:00.000Z</published>
     <updated>2024-01-31T00:00:00.000Z</updated>
     <content type="html">
