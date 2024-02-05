@@ -6,10 +6,13 @@
   <icon>https://lyukidon.github.io/favicon.png</icon>
   <link href="https://lyukidon.github.io" />
   <link href="https://lyukidon.github.io/atom.xml" rel="self" type="application/atom+xml" />
-  <updated>2024-02-01T23:49:54.702Z</updated>
+  <updated>2024-02-05T02:28:22.832Z</updated>
   <author>
     <name><![CDATA[Ryu Kidon]]></name>
   </author>
+  <category term="docker" scheme="https://lyukidon.github.io/?tags=docker" />
+  <category term="redis" scheme="https://lyukidon.github.io/?tags=redis" />
+  <category term="express" scheme="https://lyukidon.github.io/?tags=express" />
   <category term="jwt" scheme="https://lyukidon.github.io/?tags=jwt" />
   <category term="token" scheme="https://lyukidon.github.io/?tags=token" />
   <category term="refresh token" scheme="https://lyukidon.github.io/?tags=refresh%20token" />
@@ -19,7 +22,6 @@
   <category term="mysql" scheme="https://lyukidon.github.io/?tags=mysql" />
   <category term="prisma" scheme="https://lyukidon.github.io/?tags=prisma" />
   <category term="DDL" scheme="https://lyukidon.github.io/?tags=DDL" />
-  <category term="docker" scheme="https://lyukidon.github.io/?tags=docker" />
   <category term="bug_fix" scheme="https://lyukidon.github.io/?tags=bug_fix" />
   <category term="Introduction" scheme="https://lyukidon.github.io/?tags=Introduction" />
   <category term="mongodb" scheme="https://lyukidon.github.io/?tags=mongodb" />
@@ -28,6 +30,19 @@
   <category term="Elements" scheme="https://lyukidon.github.io/?tags=Elements" />
   <category term="Front-Matter" scheme="https://lyukidon.github.io/?tags=Front-Matter" />
   <category term="Hello World" scheme="https://lyukidon.github.io/?tags=Hello%20World" />
+  <entry>
+    <title type="html"><![CDATA[redis 설치 및 연결]]></title>
+    <link href="https://lyukidon.github.io/Javascript/TIL/redis/start" />
+    <id>https://lyukidon.github.io/Javascript/TIL/redis/start</id>
+    <published>2024-02-05T00:00:00.000Z</published>
+    <updated>2024-02-05T00:00:00.000Z</updated>
+    <content type="html">
+      <![CDATA[<p data-svelte-h="svelte-tjnbp1">docker에 redis를 설치하는 방법</p> <ol><li><p data-svelte-h="svelte-etlrfi">redis 이미지 받아오기</p> <!-- HTML_TAG_START --><pre class="shiki material-default" bash="true"><div class="language-id">bash</div><div class='code-container'><code><div class='line'>docker pull redis</div></code></div></pre><!-- HTML_TAG_END --></li> <li><p data-svelte-h="svelte-cz7wcs">docker에 설치</p> <!-- HTML_TAG_START --><pre class="shiki material-default" bash="true"><div class="language-id">bash</div><div class='code-container'><code><div class='line'>docker run --name redisContainer -d -p 6379:6379 redis</div></code></div></pre><!-- HTML_TAG_END --></li> <li><p data-svelte-h="svelte-17ka62f">redis와 express 연결하기</p> <!-- HTML_TAG_START --><pre class="shiki material-default" bash="true"><div class="language-id">bash</div><div class='code-container'><code><div class='line'>npm i redis</div></code></div></pre><!-- HTML_TAG_END --> <!-- HTML_TAG_START --><pre class="shiki material-default" js="true"><div class="language-id">js</div><div class='code-container'><code><div class='line'>// redisClient.js</div><div class='line'>import Redis from "redis";</div><div class='line'></div><div class='line'>const redisClient = await Redis.createClient(process.env.PORT_REDIS)</div><div class='line'>    .on("error", err =&gt; console.log("Redis Client Error", err))</div><div class='line'>    .connect();</div><div class='line'></div><div class='line'>export default redisClient;</div></code></div></pre><!-- HTML_TAG_END --></li> <li><p data-svelte-h="svelte-1vxbpig">redis 데이터 읽기, 쓰기</p> <ol><li><p data-svelte-h="svelte-1obkz8b">읽기</p> <!-- HTML_TAG_START --><pre class="shiki material-default" js="true"><div class="language-id">js</div><div class='code-container'><code><div class='line'>import redisClient from "redisClient.js";</div><div class='line'></div><div class='line'>await redisClient.get(key);</div></code></div></pre><!-- HTML_TAG_END --></li> <li><p data-svelte-h="svelte-1yzjzni">쓰기 및 업데이트</p> <!-- HTML_TAG_START --><pre class="shiki material-default" js="true"><div class="language-id">js</div><div class='code-container'><code><div class='line'>import redisClient from "redisClient.js";</div><div class='line'></div><div class='line'>await redisClient.set(key, value);</div></code></div></pre><!-- HTML_TAG_END --></li></ol></li></ol>]]>
+    </content>
+    <category term="docker" scheme="https://lyukidon.github.io/?tags=docker" />
+    <category term="redis" scheme="https://lyukidon.github.io/?tags=redis" />
+    <category term="express" scheme="https://lyukidon.github.io/?tags=express" />
+  </entry>
   <entry>
     <title type="html"><![CDATA[Refresh Token 사용 방법]]></title>
     <link href="https://lyukidon.github.io/Javascript/TIL/jwt/refresh_token" />
