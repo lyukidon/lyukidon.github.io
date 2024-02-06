@@ -6,10 +6,12 @@
   <icon>https://lyukidon.github.io/favicon.png</icon>
   <link href="https://lyukidon.github.io" />
   <link href="https://lyukidon.github.io/atom.xml" rel="self" type="application/atom+xml" />
-  <updated>2024-02-05T02:28:22.832Z</updated>
+  <updated>2024-02-06T00:05:01.737Z</updated>
   <author>
     <name><![CDATA[Ryu Kidon]]></name>
   </author>
+  <category term="Google Console" scheme="https://lyukidon.github.io/?tags=Google%20Console" />
+  <category term="Firewall" scheme="https://lyukidon.github.io/?tags=Firewall" />
   <category term="docker" scheme="https://lyukidon.github.io/?tags=docker" />
   <category term="redis" scheme="https://lyukidon.github.io/?tags=redis" />
   <category term="express" scheme="https://lyukidon.github.io/?tags=express" />
@@ -30,6 +32,18 @@
   <category term="Elements" scheme="https://lyukidon.github.io/?tags=Elements" />
   <category term="Front-Matter" scheme="https://lyukidon.github.io/?tags=Front-Matter" />
   <category term="Hello World" scheme="https://lyukidon.github.io/?tags=Hello%20World" />
+  <entry>
+    <title type="html"><![CDATA[Google Console VM instance 포트 열기]]></title>
+    <link href="https://lyukidon.github.io/Javascript/TIL/google_console/port" />
+    <id>https://lyukidon.github.io/Javascript/TIL/google_console/port</id>
+    <published>2024-02-06T00:00:00.000Z</published>
+    <updated>2024-02-06T00:00:00.000Z</updated>
+    <content type="html">
+      <![CDATA[<p data-svelte-h="svelte-15f9ix0">Google Console은 AWS와 다르게 포트 여는 부분이 다른 곳에 있다.</p> <ol data-svelte-h="svelte-1k73q0h"><li>VPC 네트워크 들어가기</li> <li>방화벽</li> <li>방화벽 규칙 만들기</li> <li>TCP에서 포트 열기</li></ol> <p data-svelte-h="svelte-1nvgwq8">또는</p> <ol data-svelte-h="svelte-170mjx6"><li>인스턴스 메뉴</li> <li>하단 방화벽 규칙 설정</li></ol> <p data-svelte-h="svelte-1uv61kv">을 누르면 방화벽 설정에 들어갈 수 있다.</p>]]>
+    </content>
+    <category term="Google Console" scheme="https://lyukidon.github.io/?tags=Google%20Console" />
+    <category term="Firewall" scheme="https://lyukidon.github.io/?tags=Firewall" />
+  </entry>
   <entry>
     <title type="html"><![CDATA[redis 설치 및 연결]]></title>
     <link href="https://lyukidon.github.io/Javascript/TIL/redis/start" />
