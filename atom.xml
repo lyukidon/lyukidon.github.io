@@ -6,10 +6,11 @@
   <icon>https://lyukidon.github.io/favicon.png</icon>
   <link href="https://lyukidon.github.io" />
   <link href="https://lyukidon.github.io/atom.xml" rel="self" type="application/atom+xml" />
-  <updated>2024-02-06T00:05:01.737Z</updated>
+  <updated>2024-02-06T17:02:17.882Z</updated>
   <author>
     <name><![CDATA[Ryu Kidon]]></name>
   </author>
+  <category term="Error" scheme="https://lyukidon.github.io/?tags=Error" />
   <category term="Google Console" scheme="https://lyukidon.github.io/?tags=Google%20Console" />
   <category term="Firewall" scheme="https://lyukidon.github.io/?tags=Firewall" />
   <category term="docker" scheme="https://lyukidon.github.io/?tags=docker" />
@@ -32,6 +33,17 @@
   <category term="Elements" scheme="https://lyukidon.github.io/?tags=Elements" />
   <category term="Front-Matter" scheme="https://lyukidon.github.io/?tags=Front-Matter" />
   <category term="Hello World" scheme="https://lyukidon.github.io/?tags=Hello%20World" />
+  <entry>
+    <title type="html"><![CDATA[Error 메세지 작성방법]]></title>
+    <link href="https://lyukidon.github.io/Javascript/TIL/error_handling" />
+    <id>https://lyukidon.github.io/Javascript/TIL/error_handling</id>
+    <published>2024-02-06T00:00:00.000Z</published>
+    <updated>2024-02-06T00:00:00.000Z</updated>
+    <content type="html">
+      <![CDATA[<ul><li data-svelte-h="svelte-16t0uzc"><p>throw</p> <p><a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Statements/throw" rel="nofollow noopener noreferrer external" target="_blank">https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Statements/throw</a></p> <p>throw 문을 사용하면 예외 처리를 할 수 있는데, throw 가 실행되면, 코드의 실행이 중지되고 catch 블록으로 전달되게 된다.</p></li> <li data-svelte-h="svelte-1ay1poj"><p>error</p> <p>Error 객체는 에러를 나타낼 때 사용하는 객체로 아래와 같은 속성을 가지고 있다.</p> <ul><li>name : 에러명</li> <li>message : 에러 설명</li> <li>stack : <code>${error.name}: ${error.message}</code></li> <li>cause : Error 객체를 생성할 때, 발생한 이유를 추가. 데이터 타입은 상관 없음</li></ul></li> <li><p data-svelte-h="svelte-1j0d301">에러 객체 생성하는 방법</p> <!-- HTML_TAG_START --><pre class="shiki material-default" js="true"><div class="language-id">js</div><div class='code-container'><code><div class='line'>throw new Error(MESSAGE, &#123; name: NAME, cause: &#123; CAUSE &#125; &#125;);</div><div class='line'>// error.stack -&gt; NAME: MESSAGE</div></code></div></pre><!-- HTML_TAG_END --></li> <li><p data-svelte-h="svelte-1l1mnkl">특정 데이터를 전달하고자 하는 경우, 에러 객체를 사용하지 않고 throw를 할 수도 있다.</p> <!-- HTML_TAG_START --><pre class="shiki material-default" js="true"><div class="language-id">js</div><div class='code-container'><code><div class='line'>throw &#123;</div><div class='line'>    name: NAME,</div><div class='line'>    message: MESSAGE</div><div class='line'>&#125;;</div></code></div></pre><!-- HTML_TAG_END --></li></ul>]]>
+    </content>
+    <category term="Error" scheme="https://lyukidon.github.io/?tags=Error" />
+  </entry>
   <entry>
     <title type="html"><![CDATA[Google Console VM instance 포트 열기]]></title>
     <link href="https://lyukidon.github.io/Javascript/TIL/google_console/port" />
