@@ -6,11 +6,13 @@
   <icon>https://lyukidon.github.io/favicon.png</icon>
   <link href="https://lyukidon.github.io" />
   <link href="https://lyukidon.github.io/atom.xml" rel="self" type="application/atom+xml" />
-  <updated>2024-02-08T02:01:10.824Z</updated>
+  <updated>2024-02-14T06:23:01.415Z</updated>
   <author>
     <name><![CDATA[Ryu Kidon]]></name>
   </author>
+  <category term="ejs" scheme="https://lyukidon.github.io/?tags=ejs" />
   <category term="passport" scheme="https://lyukidon.github.io/?tags=passport" />
+  <category term="passport-local" scheme="https://lyukidon.github.io/?tags=passport-local" />
   <category term="Error" scheme="https://lyukidon.github.io/?tags=Error" />
   <category term="Google Console" scheme="https://lyukidon.github.io/?tags=Google%20Console" />
   <category term="Firewall" scheme="https://lyukidon.github.io/?tags=Firewall" />
@@ -32,6 +34,29 @@
   <category term="Elements" scheme="https://lyukidon.github.io/?tags=Elements" />
   <category term="Front-Matter" scheme="https://lyukidon.github.io/?tags=Front-Matter" />
   <category term="Hello World" scheme="https://lyukidon.github.io/?tags=Hello%20World" />
+  <entry>
+    <title type="html"><![CDATA[ejs 구문과 태그 오류 해결 방법]]></title>
+    <link href="https://lyukidon.github.io/Javascript/TIL/ejs" />
+    <id>https://lyukidon.github.io/Javascript/TIL/ejs</id>
+    <published>2024-02-14T00:00:00.000Z</published>
+    <updated>2024-02-14T00:00:00.000Z</updated>
+    <content type="html">
+      <![CDATA[<p data-svelte-h="svelte-14iy0j3">ejs를 렌더링할 때, html에 자바스크립트를 삽입하는 방법이 있다.</p> <ul data-svelte-h="svelte-8v0q2i"><li>Scriptlet tag : 흐름 제어 용으로 출력되지 않는다.<ul><li><code>&lt;% %&gt;</code></li></ul></li> <li>Output tag : 자바스크립트를 반환하는 태그<ul><li><code>&lt;%- %&gt;</code> (unescape) : 구문을 적용하여 반환</li> <li><code>&lt;%= %&gt;</code> (escape) : 단순 문자열로 반환</li></ul></li></ul> <hr> <p data-svelte-h="svelte-1rj2ci5">VS CODE에서 위의 구문이 오류가 나는 경우가 있다.</p> <p data-svelte-h="svelte-75s3mi">Extension 중, <code>EJS Language Support</code>를 설치해주면 오류가 사라진다.</p>]]>
+    </content>
+    <category term="ejs" scheme="https://lyukidon.github.io/?tags=ejs" />
+  </entry>
+  <entry>
+    <title type="html"><![CDATA[Passport-local 구축하기]]></title>
+    <link href="https://lyukidon.github.io/Javascript/TIL/passport/passport-local" />
+    <id>https://lyukidon.github.io/Javascript/TIL/passport/passport-local</id>
+    <published>2024-02-14T00:00:00.000Z</published>
+    <updated>2024-02-14T00:00:00.000Z</updated>
+    <content type="html">
+      <![CDATA[<ul><li><p data-svelte-h="svelte-8jztr3">Library</p> <!-- HTML_TAG_START --><pre class="shiki material-default"><div class='code-container'><code><div class='line'>express</div><div class='line'>express-session</div><div class='line'></div></code></div></pre><!-- HTML_TAG_END --></li> <li><p data-svelte-h="svelte-mbisda">Directory Structure</p> <!-- HTML_TAG_START --><pre class="shiki material-default"><div class='code-container'><code><div class='line'>app.js</div><div class='line'></div><div class='line'>passport</div><div class='line'>___index.js</div><div class='line'>___localStrategy.js</div></code></div></pre><!-- HTML_TAG_END --></li></ul>]]>
+    </content>
+    <category term="passport" scheme="https://lyukidon.github.io/?tags=passport" />
+    <category term="passport-local" scheme="https://lyukidon.github.io/?tags=passport-local" />
+  </entry>
   <entry>
     <title type="html"><![CDATA[Passport-naver 예제 보기]]></title>
     <link href="https://lyukidon.github.io/Javascript/TIL/passport/passport-naver-example" />
