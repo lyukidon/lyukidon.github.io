@@ -6,10 +6,15 @@
   <icon>https://lyukidon.github.io/favicon.png</icon>
   <link href="https://lyukidon.github.io" />
   <link href="https://lyukidon.github.io/atom.xml" rel="self" type="application/atom+xml" />
-  <updated>2024-02-15T10:40:23.623Z</updated>
+  <updated>2024-02-18T23:56:11.067Z</updated>
   <author>
     <name><![CDATA[Ryu Kidon]]></name>
   </author>
+  <category term="this" scheme="https://lyukidon.github.io/?tags=this" />
+  <category term="webpack" scheme="https://lyukidon.github.io/?tags=webpack" />
+  <category term="babel" scheme="https://lyukidon.github.io/?tags=babel" />
+  <category term="module bundler" scheme="https://lyukidon.github.io/?tags=module%20bundler" />
+  <category term="javascript compiler" scheme="https://lyukidon.github.io/?tags=javascript%20compiler" />
   <category term="ejs" scheme="https://lyukidon.github.io/?tags=ejs" />
   <category term="passport" scheme="https://lyukidon.github.io/?tags=passport" />
   <category term="passport-local" scheme="https://lyukidon.github.io/?tags=passport-local" />
@@ -34,6 +39,31 @@
   <category term="Elements" scheme="https://lyukidon.github.io/?tags=Elements" />
   <category term="Front-Matter" scheme="https://lyukidon.github.io/?tags=Front-Matter" />
   <category term="Hello World" scheme="https://lyukidon.github.io/?tags=Hello%20World" />
+  <entry>
+    <title type="html"><![CDATA[this 바인딩]]></title>
+    <link href="https://lyukidon.github.io/Javascript/TIL/this" />
+    <id>https://lyukidon.github.io/Javascript/TIL/this</id>
+    <published>2024-02-18T00:00:00.000Z</published>
+    <updated>2024-02-18T00:00:00.000Z</updated>
+    <content type="html">
+      <![CDATA[<p data-svelte-h="svelte-6n7k3w">this는 자기 참조 변수이다. this 바인딩은 호출 방식에 따라서 동적으로 결정된다.</p> <div class="overflow-x-auto mb-4"><table class="table w-full"><thead data-svelte-h="svelte-16s0d5h"><tr><th>함수 호출 방식</th> <th>this가 가리키는 값</th></tr></thead> <tbody data-svelte-h="svelte-1du37mo"><tr><td>일반 함수</td> <td>전역 객체</td></tr> <tr><td>메서드</td> <td>메서드를 호출한 객체</td></tr> <tr><td>생성자 함수</td> <td>생성자가 생성할 인스턴스</td></tr></tbody></table></div> <!-- HTML_TAG_START --><pre class="shiki material-default" js="true"><div class="language-id">js</div><div class='code-container'><code><div class='line'>function test &#123;&#125;</div><div class='line'>const obj = &#123; test &#125;</div><div class='line'></div><div class='line'>// 일반 함수 호출</div><div class='line'>test()</div><div class='line'>//메서드 호출</div><div class='line'>obj.test()</div><div class='line'>//생성자 함수 호출</div><div class='line'>const hello = new test();</div></code></div></pre><!-- HTML_TAG_END --> <p data-svelte-h="svelte-dhvuk9">new 연산자를 이용해 호출 시, 생성자 함수로서 동작</p>]]>
+    </content>
+    <category term="this" scheme="https://lyukidon.github.io/?tags=this" />
+  </entry>
+  <entry>
+    <title type="html"><![CDATA[Webpack과 Babel]]></title>
+    <link href="https://lyukidon.github.io/Javascript/TIL/webpack_babel" />
+    <id>https://lyukidon.github.io/Javascript/TIL/webpack_babel</id>
+    <published>2024-02-16T00:00:00.000Z</published>
+    <updated>2024-02-16T00:00:00.000Z</updated>
+    <content type="html">
+      <![CDATA[<h2 id="webpack-이란" data-svelte-h="svelte-1c667il"><a href="#webpack-이란">Webpack 이란</a></h2> <p data-svelte-h="svelte-1xoqt9b">Webpack은</p> <h2 id="babel-이란" data-svelte-h="svelte-g9zm9g"><a href="#babel-이란">Babel 이란</a></h2>]]>
+    </content>
+    <category term="webpack" scheme="https://lyukidon.github.io/?tags=webpack" />
+    <category term="babel" scheme="https://lyukidon.github.io/?tags=babel" />
+    <category term="module bundler" scheme="https://lyukidon.github.io/?tags=module%20bundler" />
+    <category term="javascript compiler" scheme="https://lyukidon.github.io/?tags=javascript%20compiler" />
+  </entry>
   <entry>
     <title type="html"><![CDATA[ejs 구문과 태그 오류 해결 방법]]></title>
     <link href="https://lyukidon.github.io/Javascript/TIL/ejs" />
