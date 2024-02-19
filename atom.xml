@@ -6,11 +6,14 @@
   <icon>https://lyukidon.github.io/favicon.png</icon>
   <link href="https://lyukidon.github.io" />
   <link href="https://lyukidon.github.io/atom.xml" rel="self" type="application/atom+xml" />
-  <updated>2024-02-18T23:56:11.067Z</updated>
+  <updated>2024-02-19T23:47:45.135Z</updated>
   <author>
     <name><![CDATA[Ryu Kidon]]></name>
   </author>
   <category term="this" scheme="https://lyukidon.github.io/?tags=this" />
+  <category term="3계층 아키텍처" scheme="https://lyukidon.github.io/?tags=3%EA%B3%84%EC%B8%B5%20%EC%95%84%ED%82%A4%ED%85%8D%EC%B2%98" />
+  <category term="TypeORM" scheme="https://lyukidon.github.io/?tags=TypeORM" />
+  <category term="Getting Started" scheme="https://lyukidon.github.io/?tags=Getting%20Started" />
   <category term="webpack" scheme="https://lyukidon.github.io/?tags=webpack" />
   <category term="babel" scheme="https://lyukidon.github.io/?tags=babel" />
   <category term="module bundler" scheme="https://lyukidon.github.io/?tags=module%20bundler" />
@@ -49,6 +52,29 @@
       <![CDATA[<p data-svelte-h="svelte-6n7k3w">this는 자기 참조 변수이다. this 바인딩은 호출 방식에 따라서 동적으로 결정된다.</p> <div class="overflow-x-auto mb-4"><table class="table w-full"><thead data-svelte-h="svelte-16s0d5h"><tr><th>함수 호출 방식</th> <th>this가 가리키는 값</th></tr></thead> <tbody data-svelte-h="svelte-1du37mo"><tr><td>일반 함수</td> <td>전역 객체</td></tr> <tr><td>메서드</td> <td>메서드를 호출한 객체</td></tr> <tr><td>생성자 함수</td> <td>생성자가 생성할 인스턴스</td></tr></tbody></table></div> <!-- HTML_TAG_START --><pre class="shiki material-default" js="true"><div class="language-id">js</div><div class='code-container'><code><div class='line'>function test &#123;&#125;</div><div class='line'>const obj = &#123; test &#125;</div><div class='line'></div><div class='line'>// 일반 함수 호출</div><div class='line'>test()</div><div class='line'>//메서드 호출</div><div class='line'>obj.test()</div><div class='line'>//생성자 함수 호출</div><div class='line'>const hello = new test();</div></code></div></pre><!-- HTML_TAG_END --> <p data-svelte-h="svelte-dhvuk9">new 연산자를 이용해 호출 시, 생성자 함수로서 동작</p>]]>
     </content>
     <category term="this" scheme="https://lyukidon.github.io/?tags=this" />
+  </entry>
+  <entry>
+    <title type="html"><![CDATA[3계층 아키텍처]]></title>
+    <link href="https://lyukidon.github.io/Javascript/TIL/3_layer_architecture" />
+    <id>https://lyukidon.github.io/Javascript/TIL/3_layer_architecture</id>
+    <published>2024-02-17T00:00:00.000Z</published>
+    <updated>2024-02-17T00:00:00.000Z</updated>
+    <content type="html">
+      <![CDATA[<ul data-svelte-h="svelte-8ali71"><li><p>구성</p> <ul><li>프레젠테이션 계층 (controller)</li> <li>비즈니스 로직 계층 (service)</li> <li>데이터 엑세스 계층 (database)</li></ul></li> <li><p>역할</p> <ul><li>Controller<ul><li>어플리케이션의 가장 바깥에 위치</li> <li>Client와의 요청과 응답</li></ul></li> <li>Service<ul><li>어플리케이션의 중간</li> <li>API의 실제 역할을 하는 부분</li></ul></li> <li>Database<ul><li>어플리케이션의 안쪽</li> <li>실제 데이터베이스와 통신하는 부분</li></ul></li></ul></li></ul>]]>
+    </content>
+    <category term="3계층 아키텍처" scheme="https://lyukidon.github.io/?tags=3%EA%B3%84%EC%B8%B5%20%EC%95%84%ED%82%A4%ED%85%8D%EC%B2%98" />
+  </entry>
+  <entry>
+    <title type="html"><![CDATA[TypeORM 설정하기]]></title>
+    <link href="https://lyukidon.github.io/Javascript/TIL/typeorm/getting_started" />
+    <id>https://lyukidon.github.io/Javascript/TIL/typeorm/getting_started</id>
+    <published>2024-02-16T00:00:00.000Z</published>
+    <updated>2024-02-16T00:00:00.000Z</updated>
+    <content type="html">
+      <![CDATA[<ul><li><p data-svelte-h="svelte-6i5nze">새로운 프로젝트 생성하는 경우</p> <ol><li><p data-svelte-h="svelte-1r2k6be"><code>npx typeorm init --name Project --database mysql</code></p> <!-- HTML_TAG_START --><pre class="shiki material-default"><div class='code-container'><code><div class='line'>MyProject</div><div class='line'>├── src                   // 소스 코드 작성</div><div class='line'>│   ├── entity            // 데이터베이스 모델(스키마)작성</div><div class='line'>│   │   └── User.ts       // sample entity</div><div class='line'>│   ├── migration         // 마이그레이션이 저장되는 곳</div><div class='line'>│   ├── data-source.ts    // 연결 설정</div><div class='line'>│   └── index.ts          // start point of your application</div><div class='line'>├── .gitignore            // standard gitignore file</div><div class='line'>├── package.json          // node module dependencies</div><div class='line'>├── README.md             // simple readme file</div><div class='line'>├── tsconfig.json         // TypeScript compiler options</div><div class='line'>└── ormconfig.json        // TypeORM의 설정 파일</div></code></div></pre><!-- HTML_TAG_END --></li></ol></li> <li data-svelte-h="svelte-1v7ryac"><p>entity : 테이블 스키마를 작성</p></li> <li data-svelte-h="svelte-1pxgha9"><p>data-source.ts : 파일의 연결 설정을 작성</p></li> <li data-svelte-h="svelte-1kgx0x0"><p>index.ts : 프로그램 작동 파일 (app.js와 같음)</p></li> <li data-svelte-h="svelte-nv1kj2"><p>ormconfig.json : TypeORM 설정 파일. 데이터 베이스 연결 정보, 엔티티 위치, 동기화 설정 등을 작성</p></li></ul>]]>
+    </content>
+    <category term="TypeORM" scheme="https://lyukidon.github.io/?tags=TypeORM" />
+    <category term="Getting Started" scheme="https://lyukidon.github.io/?tags=Getting%20Started" />
   </entry>
   <entry>
     <title type="html"><![CDATA[Webpack과 Babel]]></title>
