@@ -6,10 +6,11 @@
   <icon>https://lyukidon.github.io/favicon.png</icon>
   <link href="https://lyukidon.github.io" />
   <link href="https://lyukidon.github.io/atom.xml" rel="self" type="application/atom+xml" />
-  <updated>2024-02-19T23:47:45.135Z</updated>
+  <updated>2024-02-20T23:54:49.106Z</updated>
   <author>
     <name><![CDATA[Ryu Kidon]]></name>
   </author>
+  <category term="express-session" scheme="https://lyukidon.github.io/?tags=express-session" />
   <category term="this" scheme="https://lyukidon.github.io/?tags=this" />
   <category term="3계층 아키텍처" scheme="https://lyukidon.github.io/?tags=3%EA%B3%84%EC%B8%B5%20%EC%95%84%ED%82%A4%ED%85%8D%EC%B2%98" />
   <category term="TypeORM" scheme="https://lyukidon.github.io/?tags=TypeORM" />
@@ -42,6 +43,17 @@
   <category term="Elements" scheme="https://lyukidon.github.io/?tags=Elements" />
   <category term="Front-Matter" scheme="https://lyukidon.github.io/?tags=Front-Matter" />
   <category term="Hello World" scheme="https://lyukidon.github.io/?tags=Hello%20World" />
+  <entry>
+    <title type="html"><![CDATA[Express Session 설정하기]]></title>
+    <link href="https://lyukidon.github.io/Javascript/TIL/express/session" />
+    <id>https://lyukidon.github.io/Javascript/TIL/express/session</id>
+    <published>2024-02-20T00:00:00.000Z</published>
+    <updated>2024-02-20T00:00:00.000Z</updated>
+    <content type="html">
+      <![CDATA[<ul><li><p data-svelte-h="svelte-x21egh"><strong>app.js</strong></p> <!-- HTML_TAG_START --><pre class="shiki material-default" js="true"><div class="language-id">js</div><div class='code-container'><code><div class='line'>app.use(</div><div class='line'>  session(&#123;</div><div class='line'>    secret: "SECRET_KEY", //session 비밀키 설정</div><div class='line'>    resave: false,</div><div class='line'>    saveUninitialized: false,</div><div class='line'>    cookie: &#123;</div><div class='line'>      maxAge: 1000 * 60 * 60 * 24 * 7</div><div class='line'>    &#125;</div><div class='line'>  &#125;)</div><div class='line'>);</div></code></div></pre><!-- HTML_TAG_END --> <ul data-svelte-h="svelte-xd84v7"><li>secret : 세션 암호화 키</li> <li>resave : 세션 변경이 없어도 저장할지 여부. (default: true)<ul><li>세션 데이터 변경이 잦은 경우 =&gt; true</li> <li>세션 데이터 변경이 드문 경우 =&gt; false</li></ul></li> <li>saveUninitialized : 세션 초기화 여부. (default: true)</li> <li>cookie : 쿠키 설정</li></ul></li> <li><p data-svelte-h="svelte-kh8jt9">사용 시</p> <!-- HTML_TAG_START --><pre class="shiki material-default"><div class='code-container'><code><div class='line'>// 보낼 때</div><div class='line'>request.session.obj = obj</div><div class='line'>// 받을 때</div><div class='line'>const obj = request.session</div></code></div></pre><!-- HTML_TAG_END --></li></ul>]]>
+    </content>
+    <category term="express-session" scheme="https://lyukidon.github.io/?tags=express-session" />
+  </entry>
   <entry>
     <title type="html"><![CDATA[this 바인딩]]></title>
     <link href="https://lyukidon.github.io/Javascript/TIL/this" />
