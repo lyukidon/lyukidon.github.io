@@ -6,10 +6,11 @@
   <icon>https://lyukidon.github.io/favicon.png</icon>
   <link href="https://lyukidon.github.io" />
   <link href="https://lyukidon.github.io/atom.xml" rel="self" type="application/atom+xml" />
-  <updated>2024-02-23T00:01:28.264Z</updated>
+  <updated>2024-02-26T00:27:28.252Z</updated>
   <author>
     <name><![CDATA[Ryu Kidon]]></name>
   </author>
+  <category term="의존성 주입" scheme="https://lyukidon.github.io/?tags=%EC%9D%98%EC%A1%B4%EC%84%B1%20%EC%A3%BC%EC%9E%85" />
   <category term="TypeORM" scheme="https://lyukidon.github.io/?tags=TypeORM" />
   <category term="error" scheme="https://lyukidon.github.io/?tags=error" />
   <category term="jest" scheme="https://lyukidon.github.io/?tags=jest" />
@@ -45,6 +46,17 @@
   <category term="Elements" scheme="https://lyukidon.github.io/?tags=Elements" />
   <category term="Front-Matter" scheme="https://lyukidon.github.io/?tags=Front-Matter" />
   <category term="Hello World" scheme="https://lyukidon.github.io/?tags=Hello%20World" />
+  <entry>
+    <title type="html"><![CDATA[의존성 주입]]></title>
+    <link href="https://lyukidon.github.io/Javascript/TIL/dependency_injection" />
+    <id>https://lyukidon.github.io/Javascript/TIL/dependency_injection</id>
+    <published>2024-02-25T00:00:00.000Z</published>
+    <updated>2024-02-25T00:00:00.000Z</updated>
+    <content type="html">
+      <![CDATA[<p data-svelte-h="svelte-gin53o">필요한 객체를 생성하는 것이 아니라, 외부에서 매개변수로 받아오는 것</p> <p data-svelte-h="svelte-xrf083">장점</p> <ul data-svelte-h="svelte-1qqqdae"><li>결합도 감소</li> <li>테스트 용이성 향상</li> <li>재사용성 증대</li> <li>변경 관리 용이</li></ul> <p data-svelte-h="svelte-1ty26ni">방법</p> <ul data-svelte-h="svelte-shokp0"><li>생성자 주입</li> <li>세터 주입</li> <li>필드 주입</li></ul> <p data-svelte-h="svelte-1bgkxyr">import와의 차이점</p> <div class="overflow-x-auto mb-4"><table class="table w-full"><thead data-svelte-h="svelte-1j1f5vl"><tr><th>분류</th> <th>의존성 주입</th> <th>import</th></tr></thead> <tbody data-svelte-h="svelte-1p3kh0q"><tr><td>의존 관계 설정 방식</td> <td>매개변수로 직접 전달</td> <td>코드에 직접 명시</td></tr> <tr><td>의존 관계의 유연성</td> <td>외부에서 설정하기 때문에 의존 관계를 쉽게 변경</td> <td>의존 관계를 변경하기 위해서는 코드를 수정</td></tr> <tr><td>테스트 용이성</td> <td>객체를 쉽게 분리하여 단위 테스트를 수행</td> <td>코드에 직접 삽입되어 있기 때문에 단위 테스트를 수행하기 어려움</td></tr> <tr><td>코드의 가독성</td> <td>생성자에 명시되어 있어 코드를 읽기 어려움</td> <td>의존 관계 설정 코드가 코드 전체에 분산되어 있어 코드를 읽기 어려움</td></tr> <tr><td>사용 시점</td> <td>객체 생성 시점에 의존 관계를 설정</td> <td>컴파일 시점에 의존 관계를 설정</td></tr></tbody></table></div> <p data-svelte-h="svelte-6lb8w3">생성자를 이용한 의존성 주입은 의존 관계 변형과 테스트가 쉽지만 가독성이 떨어진다는 단점이 존재.</p> <p data-svelte-h="svelte-h92k66">import는 가독성은 높지만, 의존 관계 변형과 테스트가 어려움</p>]]>
+    </content>
+    <category term="의존성 주입" scheme="https://lyukidon.github.io/?tags=%EC%9D%98%EC%A1%B4%EC%84%B1%20%EC%A3%BC%EC%9E%85" />
+  </entry>
   <entry>
     <title type="html"><![CDATA[TypeORM 적용 시, 연결 에러]]></title>
     <link href="https://lyukidon.github.io/Javascript/TIL/typeorm/connection_error" />
