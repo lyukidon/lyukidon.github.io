@@ -6,16 +6,16 @@
   <icon>https://lyukidon.github.io/favicon.png</icon>
   <link href="https://lyukidon.github.io" />
   <link href="https://lyukidon.github.io/atom.xml" rel="self" type="application/atom+xml" />
-  <updated>2024-02-26T00:27:28.252Z</updated>
+  <updated>2024-02-27T02:48:46.080Z</updated>
   <author>
     <name><![CDATA[Ryu Kidon]]></name>
   </author>
+  <category term="this" scheme="https://lyukidon.github.io/?tags=this" />
   <category term="의존성 주입" scheme="https://lyukidon.github.io/?tags=%EC%9D%98%EC%A1%B4%EC%84%B1%20%EC%A3%BC%EC%9E%85" />
   <category term="TypeORM" scheme="https://lyukidon.github.io/?tags=TypeORM" />
   <category term="error" scheme="https://lyukidon.github.io/?tags=error" />
   <category term="jest" scheme="https://lyukidon.github.io/?tags=jest" />
   <category term="express-session" scheme="https://lyukidon.github.io/?tags=express-session" />
-  <category term="this" scheme="https://lyukidon.github.io/?tags=this" />
   <category term="3계층 아키텍처" scheme="https://lyukidon.github.io/?tags=3%EA%B3%84%EC%B8%B5%20%EC%95%84%ED%82%A4%ED%85%8D%EC%B2%98" />
   <category term="Getting Started" scheme="https://lyukidon.github.io/?tags=Getting%20Started" />
   <category term="webpack" scheme="https://lyukidon.github.io/?tags=webpack" />
@@ -46,6 +46,17 @@
   <category term="Elements" scheme="https://lyukidon.github.io/?tags=Elements" />
   <category term="Front-Matter" scheme="https://lyukidon.github.io/?tags=Front-Matter" />
   <category term="Hello World" scheme="https://lyukidon.github.io/?tags=Hello%20World" />
+  <entry>
+    <title type="html"><![CDATA[this를 선택 호출하는 방법]]></title>
+    <link href="https://lyukidon.github.io/Javascript/TIL/this/간접_호출" />
+    <id>https://lyukidon.github.io/Javascript/TIL/this/간접_호출</id>
+    <published>2024-02-27T00:00:00.000Z</published>
+    <updated>2024-02-27T00:00:00.000Z</updated>
+    <content type="html">
+      <![CDATA[<ul data-svelte-h="svelte-1ls4uoe"><li>Function.prototype.apply/call/bind메서드에 의한 간접 호출<ul><li>apply<ul><li><code>Function.prototype.apply(thisArg[, argsArray])</code></li> <li>사용법 : <code>foo.apply(thisArg)</code></li> <li>예시 : <code>foo.apply(thisArg, [1, 2, 3, 4])</code></li></ul></li> <li>call<ul><li><code>Function.prototype.apply(thisArg[, arg1[, arg2[, ...]]])</code></li> <li>사용법: <code>foo.apply(thisArg)</code></li> <li>예시 : <code>foo.apply(thisArg, 1, 2, 3, 4)</code></li></ul></li> <li>bind<ul><li>callback 함수의 바인딩을 지정</li></ul></li></ul></li></ul>]]>
+    </content>
+    <category term="this" scheme="https://lyukidon.github.io/?tags=this" />
+  </entry>
   <entry>
     <title type="html"><![CDATA[의존성 주입]]></title>
     <link href="https://lyukidon.github.io/Javascript/TIL/dependency_injection" />
