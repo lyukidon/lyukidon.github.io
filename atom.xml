@@ -6,10 +6,11 @@
   <icon>https://lyukidon.github.io/favicon.png</icon>
   <link href="https://lyukidon.github.io" />
   <link href="https://lyukidon.github.io/atom.xml" rel="self" type="application/atom+xml" />
-  <updated>2024-02-27T02:48:46.080Z</updated>
+  <updated>2024-03-03T17:51:34.276Z</updated>
   <author>
     <name><![CDATA[Ryu Kidon]]></name>
   </author>
+  <category term="typescript" scheme="https://lyukidon.github.io/?tags=typescript" />
   <category term="this" scheme="https://lyukidon.github.io/?tags=this" />
   <category term="의존성 주입" scheme="https://lyukidon.github.io/?tags=%EC%9D%98%EC%A1%B4%EC%84%B1%20%EC%A3%BC%EC%9E%85" />
   <category term="TypeORM" scheme="https://lyukidon.github.io/?tags=TypeORM" />
@@ -46,6 +47,17 @@
   <category term="Elements" scheme="https://lyukidon.github.io/?tags=Elements" />
   <category term="Front-Matter" scheme="https://lyukidon.github.io/?tags=Front-Matter" />
   <category term="Hello World" scheme="https://lyukidon.github.io/?tags=Hello%20World" />
+  <entry>
+    <title type="html"><![CDATA[TypeScript Generics]]></title>
+    <link href="https://lyukidon.github.io/Javascript/TIL/typescript/generic" />
+    <id>https://lyukidon.github.io/Javascript/TIL/typescript/generic</id>
+    <published>2024-03-04T00:00:00.000Z</published>
+    <updated>2024-03-04T00:00:00.000Z</updated>
+    <content type="html">
+      <![CDATA[<h2 id="제네릭" data-svelte-h="svelte-1rp21qz"><a href="#제네릭">제네릭</a></h2> <ul data-svelte-h="svelte-4sl92y"><li>사용성이 높은 컴포넌트를 만들 때 사용됨</li> <li>여러 타입을 넣어서 사용하는 컴포넌트에 적합</li></ul> <h2 id="예시" data-svelte-h="svelte-5vkn6w"><a href="#예시">예시</a></h2> <p data-svelte-h="svelte-n0jrd2"><strong>일반 TS로 작성한 함수</strong></p> <!-- HTML_TAG_START --><pre class="shiki material-default" ts="true"><div class="language-id">ts</div><div class='code-container'><code><div class='line'>function hello(data: string): string &#123;</div><div class='line'>  return data;</div><div class='line'>&#125;</div></code></div></pre><!-- HTML_TAG_END --> <p data-svelte-h="svelte-k6o9ev"><strong>제네릭을 사용해 작성된 함수</strong></p> <!-- HTML_TAG_START --><pre class="shiki material-default" ts="true"><div class="language-id">ts</div><div class='code-container'><code><div class='line'>function hello&lt;Type&gt;(data: Type): Type &#123;</div><div class='line'>  return data;</div><div class='line'>&#125;</div><div class='line'>const newFunc = hello&lt;string&gt;("hello world");</div><div class='line'>newFunc(); // "hello world"</div></code></div></pre><!-- HTML_TAG_END --> <p data-svelte-h="svelte-bejh8z"><strong>여러 타입을 작성하는 경우</strong></p> <!-- HTML_TAG_START --><pre class="shiki material-default" ts="true"><div class="language-id">ts</div><div class='code-container'><code><div class='line'>function hello&lt;T, P&gt;(key: T, value: P): Map&lt;T, P&gt; &#123;</div><div class='line'>  const data = new Map&lt;T, P&gt;([[key, value]]);</div><div class='line'>  return data;</div><div class='line'>&#125;</div></code></div></pre><!-- HTML_TAG_END --> <p data-svelte-h="svelte-1g3jyvz"><strong>제네릭 제약 조건</strong></p> <!-- HTML_TAG_START --><pre class="shiki material-default" ts="true"><div class="language-id">ts</div><div class='code-container'><code><div class='line'>function hello&lt;Type&gt;(data: Type) &#123;</div><div class='line'>  return data.name; //에러 발생</div><div class='line'>&#125;</div></code></div></pre><!-- HTML_TAG_END --> <p data-svelte-h="svelte-v88wnk">data의 Type이 지정되지 않은 경우이기 때문에 오류가 발생한다. 이 경우에는</p> <!-- HTML_TAG_START --><pre class="shiki material-default" ts="true"><div class="language-id">ts</div><div class='code-container'><code><div class='line'>interface Person &#123;</div><div class='line'>  name: string;</div><div class='line'>&#125;</div><div class='line'></div><div class='line'>function hello&lt;Type extends Person&gt;(data: Type) &#123;</div><div class='line'>  return data.name; //에러 발생</div><div class='line'>&#125;</div></code></div></pre><!-- HTML_TAG_END --> <p data-svelte-h="svelte-g08pzi"><strong><code>keyof</code> 키워드</strong>특정 객체의 key를 받아와, 그 객체의 key 값이 아닌 경우 에러를 발생시킵니다.</p> <!-- HTML_TAG_START --><pre class="shiki material-default" ts="true"><div class="language-id">ts</div><div class='code-container'><code><div class='line'>type Obj = &#123; a: 1; b: 2; c: 3 &#125;;</div><div class='line'>type T = keyof Obj; // "a" | "b" | "c"</div></code></div></pre><!-- HTML_TAG_END --> <p data-svelte-h="svelte-ns44tc"><strong>클래스에서 사용 시</strong></p> <!-- HTML_TAG_START --><pre class="shiki material-default" ts="true"><div class="language-id">ts</div><div class='code-container'><code><div class='line'></div></code></div></pre><!-- HTML_TAG_END -->]]>
+    </content>
+    <category term="typescript" scheme="https://lyukidon.github.io/?tags=typescript" />
+  </entry>
   <entry>
     <title type="html"><![CDATA[this를 선택 호출하는 방법]]></title>
     <link href="https://lyukidon.github.io/Javascript/TIL/this/간접_호출" />
