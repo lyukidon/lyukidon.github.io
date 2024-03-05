@@ -6,7 +6,7 @@
   <icon>https://lyukidon.github.io/favicon.png</icon>
   <link href="https://lyukidon.github.io" />
   <link href="https://lyukidon.github.io/atom.xml" rel="self" type="application/atom+xml" />
-  <updated>2024-03-04T08:13:28.174Z</updated>
+  <updated>2024-03-05T17:06:12.387Z</updated>
   <author>
     <name><![CDATA[Ryu Kidon]]></name>
   </author>
@@ -130,9 +130,9 @@
     <link href="https://lyukidon.github.io/Javascript/TIL/this" />
     <id>https://lyukidon.github.io/Javascript/TIL/this</id>
     <published>2024-02-18T00:00:00.000Z</published>
-    <updated>2024-02-18T00:00:00.000Z</updated>
+    <updated>2024-03-06T00:00:00.000Z</updated>
     <content type="html">
-      <![CDATA[<p data-svelte-h="svelte-6n7k3w">this는 자기 참조 변수이다. this 바인딩은 호출 방식에 따라서 동적으로 결정된다.</p> <div class="overflow-x-auto mb-4"><table class="table w-full"><thead data-svelte-h="svelte-16s0d5h"><tr><th>함수 호출 방식</th> <th>this가 가리키는 값</th></tr></thead> <tbody data-svelte-h="svelte-1du37mo"><tr><td>일반 함수</td> <td>전역 객체</td></tr> <tr><td>메서드</td> <td>메서드를 호출한 객체</td></tr> <tr><td>생성자 함수</td> <td>생성자가 생성할 인스턴스</td></tr></tbody></table></div> <!-- HTML_TAG_START --><pre class="shiki material-default" js="true"><div class="language-id">js</div><div class='code-container'><code><div class='line'>function test &#123;&#125;</div><div class='line'>const obj = &#123; test &#125;</div><div class='line'></div><div class='line'>// 일반 함수 호출</div><div class='line'>test()</div><div class='line'>//메서드 호출</div><div class='line'>obj.test()</div><div class='line'>//생성자 함수 호출</div><div class='line'>const hello = new test();</div></code></div></pre><!-- HTML_TAG_END --> <p data-svelte-h="svelte-dhvuk9">new 연산자를 이용해 호출 시, 생성자 함수로서 동작</p>]]>
+      <![CDATA[<p data-svelte-h="svelte-6n7k3w">this는 자기 참조 변수이다. this 바인딩은 호출 방식에 따라서 동적으로 결정된다.</p> <div class="overflow-x-auto mb-4"><table class="table w-full"><thead data-svelte-h="svelte-16s0d5h"><tr><th>함수 호출 방식</th> <th>this가 가리키는 값</th></tr></thead> <tbody data-svelte-h="svelte-1du37mo"><tr><td>일반 함수</td> <td>전역 객체</td></tr> <tr><td>메서드</td> <td>메서드를 호출한 객체</td></tr> <tr><td>생성자 함수</td> <td>생성자가 생성할 인스턴스</td></tr></tbody></table></div> <!-- HTML_TAG_START --><pre class="shiki material-default" js="true"><div class="language-id">js</div><div class='code-container'><code><div class='line'>function test &#123;&#125;</div><div class='line'>const obj = &#123; test &#125;</div><div class='line'></div><div class='line'>// 일반 함수 호출</div><div class='line'>test()</div><div class='line'>//메서드 호출</div><div class='line'>obj.test()</div><div class='line'>//생성자 함수 호출</div><div class='line'>const hello = new test();</div></code></div></pre><!-- HTML_TAG_END --> <p data-svelte-h="svelte-dhvuk9">new 연산자를 이용해 호출 시, 생성자 함수로서 동작</p> <ul data-svelte-h="svelte-rs5dfk"><li>this : 자기 참조 변수(자신이 속한 객체 or 자신이 생성할 인스턴스를 가리킴)</li> <li>this 바인딩은 함수 호출 방식에 따라 동적으로 결정</li> <li>strict mode가 영향을 주기도 함</li> <li>호출 방식에 따른 this<ul><li>일반 함수 호출</li> <li>메서드 호출</li> <li>생성자 함수 호출</li> <li>Function.prototype.apply/call/bind메서드에 의한 간접 호출</li></ul></li> <li>일반 함수 호출<ul><li>전역 객체 바인딩</li></ul></li> <li>메서드 호출<ul><li>연산자 앞의 객체가 바인딩 (.prototype도 같다.)</li> <li>일반 함수로 호출 시, 전역 객체</li></ul></li> <li>생성자 함수 호출<ul><li>생성할 인스턴스에 바인딩</li> <li>일반 함수로 호출시는 언제나 전역 객체이다.</li></ul></li> <li>Function.prototype.apply/call/bind메서드에 의한 간접 호출<ul><li>apply<ul><li><code>Function.prototype.apply(thisArg[, argsArray])</code></li> <li>사용법 : <code>foo.apply(thisArg)</code></li> <li>예시 : <code>foo.apply(thisArg, [1, 2, 3, 4])</code></li></ul></li> <li>call<ul><li><code>Function.prototype.apply(thisArg[, arg1[, arg2[, ...]]])</code></li> <li>사용법: <code>foo.apply(thisArg)</code></li> <li>예시 : <code>foo.apply(thisArg, 1, 2, 3, 4)</code></li></ul></li> <li>bind<ul><li>callback 함수의 바인딩을 지정</li></ul></li></ul></li></ul>]]>
     </content>
     <category term="this" scheme="https://lyukidon.github.io/?tags=this" />
   </entry>
