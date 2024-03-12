@@ -6,17 +6,18 @@
   <icon>https://lyukidon.github.io/favicon.png</icon>
   <link href="https://lyukidon.github.io" />
   <link href="https://lyukidon.github.io/atom.xml" rel="self" type="application/atom+xml" />
-  <updated>2024-03-12T00:55:43.183Z</updated>
+  <updated>2024-03-12T14:57:32.168Z</updated>
   <author>
     <name><![CDATA[Ryu Kidon]]></name>
   </author>
   <category term="closure" scheme="https://lyukidon.github.io/?tags=closure" />
+  <category term="TypeORM" scheme="https://lyukidon.github.io/?tags=TypeORM" />
+  <category term="Relation" scheme="https://lyukidon.github.io/?tags=Relation" />
   <category term="nestjs" scheme="https://lyukidon.github.io/?tags=nestjs" />
   <category term="GraphQL" scheme="https://lyukidon.github.io/?tags=GraphQL" />
   <category term="typescript" scheme="https://lyukidon.github.io/?tags=typescript" />
   <category term="this" scheme="https://lyukidon.github.io/?tags=this" />
   <category term="Dependency Injection" scheme="https://lyukidon.github.io/?tags=Dependency%20Injection" />
-  <category term="TypeORM" scheme="https://lyukidon.github.io/?tags=TypeORM" />
   <category term="error" scheme="https://lyukidon.github.io/?tags=error" />
   <category term="jest" scheme="https://lyukidon.github.io/?tags=jest" />
   <category term="express-session" scheme="https://lyukidon.github.io/?tags=express-session" />
@@ -60,6 +61,18 @@
       <![CDATA[<ul data-svelte-h="svelte-1v6o0ih"><li><p>클로저</p> <ul><li>함수와 그 함수가 선언된 렉시컬 환경과의 조합</li> <li>함수 내부에서 함수 외부의 값을 참조할 수 있음.</li> <li>중첩되지 않은 함수인 경우는 값을 참조할 수 없음.</li></ul></li> <li><p>정적 스코프(렉시컬 스코프)</p> <ul><li>자바스크립트는 함수를 어디에 정의했는지에 따라 상위 스코프를 결정한다.</li></ul></li> <li><p>함수 객체의 내부 슬롯</p> <ul><li>렉시컬 스코프 가능하려면, 함수의 상위 스코프(함수가 정의된 환경)을 기억해야 한다.</li> <li>함수는 자신의 내부 슬롯에 상위 스코프의 참조를 저장한다.</li></ul></li> <li><p>클로저와 렉시컬 환경</p> <ul><li>외부 함수보다 중첩 함수가 더 오래 유지되는 경우, 중첩 함수는 이미 생명 주가기 종료한 외부 함수의 변수를 참조할 수 있다. 이런 중첩 함수는 클로저라고 한다.</li> <li>누군가가 참조하고 있는 메모리 공간을 함부로 해제하지 않는다.</li></ul></li> <li><p>클로저 활용</p> <ul><li>상태를 안전하게 변경하고 유지하기 위해 사용</li> <li>상태를 안전하게 은닉하고, 특정 함수에게만 상태 변경을 허용</li></ul></li></ul>]]>
     </content>
     <category term="closure" scheme="https://lyukidon.github.io/?tags=closure" />
+  </entry>
+  <entry>
+    <title type="html"><![CDATA[TypeORM 설정하기]]></title>
+    <link href="https://lyukidon.github.io/Javascript/TIL/typeorm/relation" />
+    <id>https://lyukidon.github.io/Javascript/TIL/typeorm/relation</id>
+    <published>2024-03-12T00:00:00.000Z</published>
+    <updated>2024-03-12T00:00:00.000Z</updated>
+    <content type="html">
+      <![CDATA[<h1 id="typeorm-관계-작성하기" data-svelte-h="svelte-1sujgiu"><a href="#typeorm-관계-작성하기">TypeORM 관계 작성하기</a></h1> <h2 id="11-관계" data-svelte-h="svelte-12unp5o"><a href="#11-관계">1:1 관계</a></h2> <ul><li><p data-svelte-h="svelte-f9l2ed">user</p> <!-- HTML_TAG_START --><pre class="shiki material-default" ts="true"><div class="language-id">ts</div><div class='code-container'><code><div class='line'>@Entity()</div><div class='line'>class User &#123;</div><div class='line'>  @PrimaryGeneratedColumn()</div><div class='line'>  userId: number;</div><div class='line'></div><div class='line'>  @Column()</div><div class='line'>  name: string;</div><div class='line'>&#125;</div></code></div></pre><!-- HTML_TAG_END --></li> <li><p data-svelte-h="svelte-62ixfe">point</p> <!-- HTML_TAG_START --><pre class="shiki material-default" ts="true"><div class="language-id">ts</div><div class='code-container'><code><div class='line'>@Entity()</div><div class='line'>class Point &#123;</div><div class='line'>  @PrimaryGeneratedColumn()</div><div class='line'>  pointId: number;</div><div class='line'></div><div class='line'>  @Column()</div><div class='line'>  point: number;</div><div class='line'></div><div class='line'>  @OneToOne(() =&gt; User, user =&gt; user.userId)</div><div class='line'>  @JoinColumn(&#123; name: "userId", referenceName: "userId" &#125;)</div><div class='line'>  user: User;</div><div class='line'>&#125;</div></code></div></pre><!-- HTML_TAG_END --></li></ul> <h2 id="1n-관계" data-svelte-h="svelte-1w355v5"><a href="#1n-관계">1:N 관계</a></h2> <ul><li><p data-svelte-h="svelte-f9l2ed">user</p> <!-- HTML_TAG_START --><pre class="shiki material-default" ts="true"><div class="language-id">ts</div><div class='code-container'><code><div class='line'>@Entity()</div><div class='line'>class User &#123;</div><div class='line'>  @PrimaryGeneratedColumn()</div><div class='line'>  userId: number;</div><div class='line'></div><div class='line'>  @Column()</div><div class='line'>  name: string;</div><div class='line'></div><div class='line'>  @OneToMany(() =&gt; Book, book =&gt; book.user)</div><div class='line'>  books: book[];</div><div class='line'>&#125;</div></code></div></pre><!-- HTML_TAG_END --></li> <li><p data-svelte-h="svelte-ueh36j">book</p> <!-- HTML_TAG_START --><pre class="shiki material-default" ts="true"><div class="language-id">ts</div><div class='code-container'><code><div class='line'>@Entity()</div><div class='line'>class Book &#123;</div><div class='line'>  @PrimaryGeneratedColumn()</div><div class='line'>  bookId: number;</div><div class='line'></div><div class='line'>  @ManyToOne(() =&gt; User, user =&gt; user.books)</div><div class='line'>  @JoinColumn(&#123; name: "userId", ReferenceName: "userId" &#125;)</div><div class='line'>  user: User;</div><div class='line'>&#125;</div></code></div></pre><!-- HTML_TAG_END --></li></ul>]]>
+    </content>
+    <category term="TypeORM" scheme="https://lyukidon.github.io/?tags=TypeORM" />
+    <category term="Relation" scheme="https://lyukidon.github.io/?tags=Relation" />
   </entry>
   <entry>
     <title type="html"><![CDATA[Nest JS Decorator]]></title>
