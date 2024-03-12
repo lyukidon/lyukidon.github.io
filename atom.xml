@@ -6,7 +6,7 @@
   <icon>https://lyukidon.github.io/favicon.png</icon>
   <link href="https://lyukidon.github.io" />
   <link href="https://lyukidon.github.io/atom.xml" rel="self" type="application/atom+xml" />
-  <updated>2024-03-12T14:57:32.168Z</updated>
+  <updated>2024-03-12T15:02:12.253Z</updated>
   <author>
     <name><![CDATA[Ryu Kidon]]></name>
   </author>
@@ -63,7 +63,7 @@
     <category term="closure" scheme="https://lyukidon.github.io/?tags=closure" />
   </entry>
   <entry>
-    <title type="html"><![CDATA[TypeORM 설정하기]]></title>
+    <title type="html"><![CDATA[TypeORM 관계 작성]]></title>
     <link href="https://lyukidon.github.io/Javascript/TIL/typeorm/relation" />
     <id>https://lyukidon.github.io/Javascript/TIL/typeorm/relation</id>
     <published>2024-03-12T00:00:00.000Z</published>
