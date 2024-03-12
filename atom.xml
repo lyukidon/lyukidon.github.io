@@ -6,15 +6,16 @@
   <icon>https://lyukidon.github.io/favicon.png</icon>
   <link href="https://lyukidon.github.io" />
   <link href="https://lyukidon.github.io/atom.xml" rel="self" type="application/atom+xml" />
-  <updated>2024-03-11T05:43:25.257Z</updated>
+  <updated>2024-03-12T00:55:43.183Z</updated>
   <author>
     <name><![CDATA[Ryu Kidon]]></name>
   </author>
+  <category term="closure" scheme="https://lyukidon.github.io/?tags=closure" />
   <category term="nestjs" scheme="https://lyukidon.github.io/?tags=nestjs" />
   <category term="GraphQL" scheme="https://lyukidon.github.io/?tags=GraphQL" />
   <category term="typescript" scheme="https://lyukidon.github.io/?tags=typescript" />
   <category term="this" scheme="https://lyukidon.github.io/?tags=this" />
-  <category term="의존성 주입" scheme="https://lyukidon.github.io/?tags=%EC%9D%98%EC%A1%B4%EC%84%B1%20%EC%A3%BC%EC%9E%85" />
+  <category term="Dependency Injection" scheme="https://lyukidon.github.io/?tags=Dependency%20Injection" />
   <category term="TypeORM" scheme="https://lyukidon.github.io/?tags=TypeORM" />
   <category term="error" scheme="https://lyukidon.github.io/?tags=error" />
   <category term="jest" scheme="https://lyukidon.github.io/?tags=jest" />
@@ -49,6 +50,17 @@
   <category term="Elements" scheme="https://lyukidon.github.io/?tags=Elements" />
   <category term="Front-Matter" scheme="https://lyukidon.github.io/?tags=Front-Matter" />
   <category term="Hello World" scheme="https://lyukidon.github.io/?tags=Hello%20World" />
+  <entry>
+    <title type="html"><![CDATA[클로저(Closure)]]></title>
+    <link href="https://lyukidon.github.io/Javascript/TIL/closure" />
+    <id>https://lyukidon.github.io/Javascript/TIL/closure</id>
+    <published>2024-03-12T00:00:00.000Z</published>
+    <updated>2024-03-12T00:00:00.000Z</updated>
+    <content type="html">
+      <![CDATA[<ul data-svelte-h="svelte-1v6o0ih"><li><p>클로저</p> <ul><li>함수와 그 함수가 선언된 렉시컬 환경과의 조합</li> <li>함수 내부에서 함수 외부의 값을 참조할 수 있음.</li> <li>중첩되지 않은 함수인 경우는 값을 참조할 수 없음.</li></ul></li> <li><p>정적 스코프(렉시컬 스코프)</p> <ul><li>자바스크립트는 함수를 어디에 정의했는지에 따라 상위 스코프를 결정한다.</li></ul></li> <li><p>함수 객체의 내부 슬롯</p> <ul><li>렉시컬 스코프 가능하려면, 함수의 상위 스코프(함수가 정의된 환경)을 기억해야 한다.</li> <li>함수는 자신의 내부 슬롯에 상위 스코프의 참조를 저장한다.</li></ul></li> <li><p>클로저와 렉시컬 환경</p> <ul><li>외부 함수보다 중첩 함수가 더 오래 유지되는 경우, 중첩 함수는 이미 생명 주가기 종료한 외부 함수의 변수를 참조할 수 있다. 이런 중첩 함수는 클로저라고 한다.</li> <li>누군가가 참조하고 있는 메모리 공간을 함부로 해제하지 않는다.</li></ul></li> <li><p>클로저 활용</p> <ul><li>상태를 안전하게 변경하고 유지하기 위해 사용</li> <li>상태를 안전하게 은닉하고, 특정 함수에게만 상태 변경을 허용</li></ul></li></ul>]]>
+    </content>
+    <category term="closure" scheme="https://lyukidon.github.io/?tags=closure" />
+  </entry>
   <entry>
     <title type="html"><![CDATA[Nest JS Decorator]]></title>
     <link href="https://lyukidon.github.io/Javascript/TIL/nestjs/decorator" />
@@ -113,7 +125,7 @@
     <content type="html">
       <![CDATA[<p data-svelte-h="svelte-gin53o">필요한 객체를 생성하는 것이 아니라, 외부에서 매개변수로 받아오는 것</p> <p data-svelte-h="svelte-xrf083">장점</p> <ul data-svelte-h="svelte-1qqqdae"><li>결합도 감소</li> <li>테스트 용이성 향상</li> <li>재사용성 증대</li> <li>변경 관리 용이</li></ul> <p data-svelte-h="svelte-1ty26ni">방법</p> <ul data-svelte-h="svelte-shokp0"><li>생성자 주입</li> <li>세터 주입</li> <li>필드 주입</li></ul> <p data-svelte-h="svelte-1bgkxyr">import와의 차이점</p> <div class="overflow-x-auto mb-4"><table class="table w-full"><thead data-svelte-h="svelte-1j1f5vl"><tr><th>분류</th> <th>의존성 주입</th> <th>import</th></tr></thead> <tbody data-svelte-h="svelte-1p3kh0q"><tr><td>의존 관계 설정 방식</td> <td>매개변수로 직접 전달</td> <td>코드에 직접 명시</td></tr> <tr><td>의존 관계의 유연성</td> <td>외부에서 설정하기 때문에 의존 관계를 쉽게 변경</td> <td>의존 관계를 변경하기 위해서는 코드를 수정</td></tr> <tr><td>테스트 용이성</td> <td>객체를 쉽게 분리하여 단위 테스트를 수행</td> <td>코드에 직접 삽입되어 있기 때문에 단위 테스트를 수행하기 어려움</td></tr> <tr><td>코드의 가독성</td> <td>생성자에 명시되어 있어 코드를 읽기 어려움</td> <td>의존 관계 설정 코드가 코드 전체에 분산되어 있어 코드를 읽기 어려움</td></tr> <tr><td>사용 시점</td> <td>객체 생성 시점에 의존 관계를 설정</td> <td>컴파일 시점에 의존 관계를 설정</td></tr></tbody></table></div> <p data-svelte-h="svelte-6lb8w3">생성자를 이용한 의존성 주입은 의존 관계 변형과 테스트가 쉽지만 가독성이 떨어진다는 단점이 존재.</p> <p data-svelte-h="svelte-h92k66">import는 가독성은 높지만, 의존 관계 변형과 테스트가 어려움</p>]]>
     </content>
-    <category term="의존성 주입" scheme="https://lyukidon.github.io/?tags=%EC%9D%98%EC%A1%B4%EC%84%B1%20%EC%A3%BC%EC%9E%85" />
+    <category term="Dependency Injection" scheme="https://lyukidon.github.io/?tags=Dependency%20Injection" />
   </entry>
   <entry>
     <title type="html"><![CDATA[TypeORM 적용 시, 연결 에러]]></title>
