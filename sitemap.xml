@@ -11,6 +11,11 @@
     </url>
     
         <url>
+            <loc>https://lyukidon.github.io/Javascript/TIL/regexp/kanji</loc>
+            <lastmod>2024-03-19T00:00:00.000Z</lastmod>
+            <priority>0.5</priority>
+        </url>
+        <url>
             <loc>https://lyukidon.github.io/Javascript/TIL/execution_context</loc>
             <lastmod>2024-03-18T00:00:00.000Z</lastmod>
             <priority>0.5</priority>
@@ -43,11 +48,6 @@
         <url>
             <loc>https://lyukidon.github.io/Javascript/TIL/typescript/types</loc>
             <lastmod>2024-03-04T00:00:00.000Z</lastmod>
-            <priority>0.5</priority>
-        </url>
-        <url>
-            <loc>https://lyukidon.github.io/Javascript/TIL/regexp/kanji</loc>
-            <lastmod>2024-02-27T00:00:00.000Z</lastmod>
             <priority>0.5</priority>
         </url>
         <url>
