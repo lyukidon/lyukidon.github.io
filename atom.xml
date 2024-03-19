@@ -6,7 +6,7 @@
   <icon>https://lyukidon.github.io/favicon.png</icon>
   <link href="https://lyukidon.github.io" />
   <link href="https://lyukidon.github.io/atom.xml" rel="self" type="application/atom+xml" />
-  <updated>2024-03-19T03:02:12.476Z</updated>
+  <updated>2024-03-19T03:06:48.741Z</updated>
   <author>
     <name><![CDATA[Ryu Kidon]]></name>
   </author>
@@ -54,13 +54,13 @@
   <category term="Front-Matter" scheme="https://lyukidon.github.io/?tags=Front-Matter" />
   <category term="Hello World" scheme="https://lyukidon.github.io/?tags=Hello%20World" />
   <entry>
-    <title type="html"><![CDATA[정규표현식으로 한자 찾기]]></title>
+    <title type="html"><![CDATA[정규표현식으로 한자 찾기 + 메서드]]></title>
     <link href="https://lyukidon.github.io/Javascript/TIL/regexp/kanji" />
     <id>https://lyukidon.github.io/Javascript/TIL/regexp/kanji</id>
     <published>2024-03-19T00:00:00.000Z</published>
     <updated>2024-03-19T00:00:00.000Z</updated>
     <content type="html">
-      <![CDATA[<h2 id="한자-정규-표현식" data-svelte-h="svelte-1kv5wgm"><a href="#한자-정규-표현식">한자 정규 표현식</a></h2> <!-- HTML_TAG_START --><pre class="shiki material-default" js="true"><div class="language-id">js</div><div class='code-container'><code><div class='line'>&#96;[一-鿿]&#96;;</div></code></div></pre><!-- HTML_TAG_END --> <h2 id="관련-메서드" data-svelte-h="svelte-f7a5ig"><a href="#관련-메서드">관련 메서드</a></h2> <ul data-svelte-h="svelte-18b5a98"><li><p>string.match(regexp) : string</p></li> <li><p>string.search(regexp) : string</p></li> <li><p>regexp.test(string) : boolean</p></li> <li><p>string.exec</p></li></ul>]]>
+      <![CDATA[<h2 id="한자-정규-표현식" data-svelte-h="svelte-1kv5wgm"><a href="#한자-정규-표현식">한자 정규 표현식</a></h2> <!-- HTML_TAG_START --><pre class="shiki material-default" js="true"><div class="language-id">js</div><div class='code-container'><code><div class='line'>&#96;[一-鿿]&#96;;</div></code></div></pre><!-- HTML_TAG_END --> <h2 id="관련-메서드" data-svelte-h="svelte-f7a5ig"><a href="#관련-메서드">관련 메서드</a></h2> <ul data-svelte-h="svelte-1y2n10n"><li><p>string.match(regexp) : String</p> <ul><li>일치하는 문자만 출력</li></ul></li> <li><p>string.search(regexp) : String</p> <ul><li>일치하는 첫번째 문자의 위치</li></ul></li> <li><p>string.replace(regexp, “원하는 문자열”) : String</p> <ul><li>일치하는 문자열을 원하는 문자열로 변경</li></ul></li> <li><p>string.split(regexp) : Array</p> <ul><li>일치하는 문자열을 분할하는데 사용</li></ul></li> <li><p>regexp.test(string) : Boolean</p> <ul><li>문자열이 조건과 일치하는지 여부</li></ul></li> <li><p>regexp.exec(string) : Array</p> <ul><li>일치하는 문자의 모든 정보를 배열로 반환</li></ul></li></ul>]]>
     </content>
     <category term="regexp" scheme="https://lyukidon.github.io/?tags=regexp" />
   </entry>
