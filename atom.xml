@@ -6,16 +6,16 @@
   <icon>https://lyukidon.github.io/favicon.png</icon>
   <link href="https://lyukidon.github.io" />
   <link href="https://lyukidon.github.io/atom.xml" rel="self" type="application/atom+xml" />
-  <updated>2024-03-20T02:47:00.991Z</updated>
+  <updated>2024-03-20T02:47:42.993Z</updated>
   <author>
     <name><![CDATA[Ryu Kidon]]></name>
   </author>
+  <category term="typeorm" scheme="https://lyukidon.github.io/?tags=typeorm" />
   <category term="regexp" scheme="https://lyukidon.github.io/?tags=regexp" />
   <category term="실행 컨텍스트" scheme="https://lyukidon.github.io/?tags=%EC%8B%A4%ED%96%89%20%EC%BB%A8%ED%85%8D%EC%8A%A4%ED%8A%B8" />
   <category term="closure" scheme="https://lyukidon.github.io/?tags=closure" />
   <category term="TypeORM" scheme="https://lyukidon.github.io/?tags=TypeORM" />
   <category term="Relation" scheme="https://lyukidon.github.io/?tags=Relation" />
-  <category term="typeorm" scheme="https://lyukidon.github.io/?tags=typeorm" />
   <category term="nestjs" scheme="https://lyukidon.github.io/?tags=nestjs" />
   <category term="GraphQL" scheme="https://lyukidon.github.io/?tags=GraphQL" />
   <category term="typescript" scheme="https://lyukidon.github.io/?tags=typescript" />
@@ -54,6 +54,17 @@
   <category term="Elements" scheme="https://lyukidon.github.io/?tags=Elements" />
   <category term="Front-Matter" scheme="https://lyukidon.github.io/?tags=Front-Matter" />
   <category term="Hello World" scheme="https://lyukidon.github.io/?tags=Hello%20World" />
+  <entry>
+    <title type="html"><![CDATA[TypeORM + NestJS Transaction]]></title>
+    <link href="https://lyukidon.github.io/Javascript/TIL/typeorm/transaction" />
+    <id>https://lyukidon.github.io/Javascript/TIL/typeorm/transaction</id>
+    <published>2024-03-20T00:00:00.000Z</published>
+    <updated>2024-03-20T00:00:00.000Z</updated>
+    <content type="html">
+      <![CDATA[<p data-svelte-h="svelte-tqj1eu">service.ts 파일</p> <ol><li><p data-svelte-h="svelte-5yeek7">typeorm의 <code>DataSource</code> module을 import</p> <!-- HTML_TAG_START --><pre class="shiki material-default" ts="true"><div class="language-id">ts</div><div class='code-container'><code><div class='line'>import &#123; DataSource &#125; from "typeorm";</div></code></div></pre><!-- HTML_TAG_END --></li> <li><p data-svelte-h="svelte-c13iog">constructor에 추가</p> <!-- HTML_TAG_START --><pre class="shiki material-default" ts="true"><div class="language-id">ts</div><div class='code-container'><code><div class='line'>constructor(</div><div class='line'>  private readonly dataSource: DataSource</div><div class='line'>)&#123;&#125;</div></code></div></pre><!-- HTML_TAG_END --></li> <li><p data-svelte-h="svelte-1okapth">transaction 작성법</p> <!-- HTML_TAG_START --><pre class="shiki material-default" ts="true"><div class="language-id">ts</div><div class='code-container'><code><div class='line'>async createMany(users: User[]) &#123;</div><div class='line'>  const queryRunner = this.dataSource.createQueryRunner();</div><div class='line'></div><div class='line'>  await queryRunner.connect(); // 연결하기</div><div class='line'>  await queryRunner.startTransaction();</div><div class='line'>  try &#123;</div><div class='line'>    await queryRunner.manager.save(users[0]);</div><div class='line'>    await queryRunner.manager.save(users[1]);</div><div class='line'></div><div class='line'>    await queryRunner.commitTransaction();</div><div class='line'>  &#125; catch (err) &#123;</div><div class='line'>    // 에러 생성 시 복구</div><div class='line'>    await queryRunner.rollbackTransaction();</div><div class='line'>  &#125; finally &#123;</div><div class='line'>    // queryRunner가 완료되면 연결 끊기</div><div class='line'>    await queryRunner.release();</div><div class='line'>  &#125;</div><div class='line'>&#125;</div></code></div></pre><!-- HTML_TAG_END --></li></ol> <ul data-svelte-h="svelte-qhim64"><li><code>connect()</code> : 새로운 queryRunner를 사용해 데이터베이스에 직접 연결</li> <li><code>startTransaction()</code> : 트랜젝션 시작</li> <li><code>commitTransaction()</code> : 트랜젝션이 완료되면 커밋</li> <li><code>rollbackTransaction()</code> : 트랜젝션 중 오류 발생 시, 복구</li> <li><code>release()</code> : queryRunner가 완료되면, 연결 끊기</li></ul>]]>
+    </content>
+    <category term="typeorm" scheme="https://lyukidon.github.io/?tags=typeorm" />
+  </entry>
   <entry>
     <title type="html"><![CDATA[정규표현식으로 한자 찾기 + 메서드]]></title>
     <link href="https://lyukidon.github.io/Javascript/TIL/regexp/kanji" />
@@ -98,17 +109,6 @@
     </content>
     <category term="TypeORM" scheme="https://lyukidon.github.io/?tags=TypeORM" />
     <category term="Relation" scheme="https://lyukidon.github.io/?tags=Relation" />
-  </entry>
-  <entry>
-    <title type="html"><![CDATA[TypeORM + NestJS Transaction]]></title>
-    <link href="https://lyukidon.github.io/Javascript/TIL/typeorm/transaction" />
-    <id>https://lyukidon.github.io/Javascript/TIL/typeorm/transaction</id>
-    <published>2024-03-12T00:00:00.000Z</published>
-    <updated>2024-03-12T00:00:00.000Z</updated>
-    <content type="html">
-      <![CDATA[<p data-svelte-h="svelte-tqj1eu">service.ts 파일</p> <ol><li><p data-svelte-h="svelte-5yeek7">typeorm의 <code>DataSource</code> module을 import</p> <!-- HTML_TAG_START --><pre class="shiki material-default" ts="true"><div class="language-id">ts</div><div class='code-container'><code><div class='line'>import &#123; DataSource &#125; from "typeorm";</div></code></div></pre><!-- HTML_TAG_END --></li> <li><p data-svelte-h="svelte-c13iog">constructor에 추가</p> <!-- HTML_TAG_START --><pre class="shiki material-default" ts="true"><div class="language-id">ts</div><div class='code-container'><code><div class='line'>constructor(</div><div class='line'>  private readonly dataSource: DataSource</div><div class='line'>)&#123;&#125;</div></code></div></pre><!-- HTML_TAG_END --></li> <li><p data-svelte-h="svelte-1okapth">transaction 작성법</p> <!-- HTML_TAG_START --><pre class="shiki material-default" ts="true"><div class="language-id">ts</div><div class='code-container'><code><div class='line'>async createMany(users: User[]) &#123;</div><div class='line'>  const queryRunner = this.dataSource.createQueryRunner();</div><div class='line'></div><div class='line'>  await queryRunner.connect(); // 연결하기</div><div class='line'>  await queryRunner.startTransaction();</div><div class='line'>  try &#123;</div><div class='line'>    await queryRunner.manager.save(users[0]);</div><div class='line'>    await queryRunner.manager.save(users[1]);</div><div class='line'></div><div class='line'>    await queryRunner.commitTransaction();</div><div class='line'>  &#125; catch (err) &#123;</div><div class='line'>    // 에러 생성 시 복구</div><div class='line'>    await queryRunner.rollbackTransaction();</div><div class='line'>  &#125; finally &#123;</div><div class='line'>    // queryRunner가 완료되면 연결 끊기</div><div class='line'>    await queryRunner.release();</div><div class='line'>  &#125;</div><div class='line'>&#125;</div></code></div></pre><!-- HTML_TAG_END --></li></ol> <ul data-svelte-h="svelte-qhim64"><li><code>connect()</code> : 새로운 queryRunner를 사용해 데이터베이스에 직접 연결</li> <li><code>startTransaction()</code> : 트랜젝션 시작</li> <li><code>commitTransaction()</code> : 트랜젝션이 완료되면 커밋</li> <li><code>rollbackTransaction()</code> : 트랜젝션 중 오류 발생 시, 복구</li> <li><code>release()</code> : queryRunner가 완료되면, 연결 끊기</li></ul>]]>
-    </content>
-    <category term="typeorm" scheme="https://lyukidon.github.io/?tags=typeorm" />
   </entry>
   <entry>
     <title type="html"><![CDATA[Nest JS Decorator]]></title>
