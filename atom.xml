@@ -6,7 +6,7 @@
   <icon>https://lyukidon.github.io/favicon.png</icon>
   <link href="https://lyukidon.github.io" />
   <link href="https://lyukidon.github.io/atom.xml" rel="self" type="application/atom+xml" />
-  <updated>2024-03-27T16:14:56.859Z</updated>
+  <updated>2024-03-29T00:34:56.580Z</updated>
   <author>
     <name><![CDATA[Ryu Kidon]]></name>
   </author>
@@ -27,6 +27,7 @@
   <category term="jest" scheme="https://lyukidon.github.io/?tags=jest" />
   <category term="express-session" scheme="https://lyukidon.github.io/?tags=express-session" />
   <category term="3계층 아키텍처" scheme="https://lyukidon.github.io/?tags=3%EA%B3%84%EC%B8%B5%20%EC%95%84%ED%82%A4%ED%85%8D%EC%B2%98" />
+  <category term="backend" scheme="https://lyukidon.github.io/?tags=backend" />
   <category term="Getting Started" scheme="https://lyukidon.github.io/?tags=Getting%20Started" />
   <category term="webpack" scheme="https://lyukidon.github.io/?tags=webpack" />
   <category term="babel" scheme="https://lyukidon.github.io/?tags=babel" />
@@ -277,6 +278,17 @@
       <![CDATA[<ul data-svelte-h="svelte-8ali71"><li><p>구성</p> <ul><li>프레젠테이션 계층 (controller)</li> <li>비즈니스 로직 계층 (service)</li> <li>데이터 엑세스 계층 (database)</li></ul></li> <li><p>역할</p> <ul><li>Controller<ul><li>어플리케이션의 가장 바깥에 위치</li> <li>Client와의 요청과 응답</li></ul></li> <li>Service<ul><li>어플리케이션의 중간</li> <li>API의 실제 역할을 하는 부분</li></ul></li> <li>Database<ul><li>어플리케이션의 안쪽</li> <li>실제 데이터베이스와 통신하는 부분</li></ul></li></ul></li></ul>]]>
     </content>
     <category term="3계층 아키텍처" scheme="https://lyukidon.github.io/?tags=3%EA%B3%84%EC%B8%B5%20%EC%95%84%ED%82%A4%ED%85%8D%EC%B2%98" />
+  </entry>
+  <entry>
+    <title type="html"><![CDATA[백엔드 기초]]></title>
+    <link href="https://lyukidon.github.io/Javascript/TIL/백엔드기초" />
+    <id>https://lyukidon.github.io/Javascript/TIL/백엔드기초</id>
+    <published>2024-02-17T00:00:00.000Z</published>
+    <updated>2024-02-17T00:00:00.000Z</updated>
+    <content type="html">
+      <![CDATA[<ol data-svelte-h="svelte-19hgn5v"><li>HTTP 메서드에 대해 설명해주세요 PROTOCOL  찾아보기<ul><li>종류: GET, POST, PUT, PATCH, DELETE, HEAD, CONNECT, OPTIONS, TRACE<ul><li>HEAD: get 메서드와 동일하지만, body값을 제외하고 조회</li> <li>CONNECT: 목적 리소스로 식별되는 서버로의 터널을 맺습니다.</li> <li>options: 목적 리소스의 통신을 설정하는 데 쓰입니다.</li> <li>Trace: 목적 리소스의 경로를 따라 메시지 loop-back 테스트를 합니다.</li></ul></li> <li>의미: 클라이언트가 웹 서버에 어떤 동작을 원하는지 나타내는 방법 or 서버가 수행해야할 동작을 지정하는 방법</li></ul></li> <li>GET, POST의 개념과 함께 데이터 흐름에 대해서 설명해주세요<ul><li>GET<ul><li>서버에 정보를 조회할 때</li> <li>데이터 흐름<ol><li>경로 or 쿼리스트링을 이용해 데이터 요청</li> <li>요청을 받으면 데이터베이스에서 정보 조회 후 클라이언트 전달</li> </ol><ul><li>2014년부터 GET메서드도 body를 보낼 수 있게 되었으나, 특정 클라이언트에서는 지원하지 않을 수도 있음.</li></ul></li></ul></li> <li>POST<ul><li>서버에 리소스를 추가할 때</li> <li>데이터 흐름<ol><li>클라이언트는 body에 데이터를 JSON형태로 전달</li> <li>database에 body 데이터를 추가</li> <li>생성된 리소스를 클라이언트로 전달</li></ol></li></ul></li></ul></li></ol>]]>
+    </content>
+    <category term="backend" scheme="https://lyukidon.github.io/?tags=backend" />
   </entry>
   <entry>
     <title type="html"><![CDATA[TypeORM 설정하기]]></title>
