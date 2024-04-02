@@ -6,7 +6,7 @@
   <icon>https://lyukidon.github.io/favicon.png</icon>
   <link href="https://lyukidon.github.io" />
   <link href="https://lyukidon.github.io/atom.xml" rel="self" type="application/atom+xml" />
-  <updated>2024-04-02T02:57:03.591Z</updated>
+  <updated>2024-04-02T03:00:56.269Z</updated>
   <author>
     <name><![CDATA[Ryu Kidon]]></name>
   </author>
@@ -66,7 +66,7 @@
     <published>2024-04-02T00:00:00.000Z</published>
     <updated>2024-04-02T00:00:00.000Z</updated>
     <content type="html">
-      <![CDATA[<h2 id="머터리얼-테일윈드의-컴포넌트-사용-시-에러-발생" data-svelte-h="svelte-oge4t4"><a href="#머터리얼-테일윈드의-컴포넌트-사용-시-에러-발생">머터리얼 테일윈드의 컴포넌트 사용 시 에러 발생</a></h2> <!-- HTML_TAG_START --><pre class="shiki material-default" ts="true"><div class="language-id">ts</div><div class='code-container'><code><div class='line'>import &#123;Button&#125; from '@material-tailwind/react'</div></code></div></pre><!-- HTML_TAG_END -->]]>
+      <![CDATA[<h2 id="머터리얼-테일윈드의-컴포넌트-사용-시-에러-발생" data-svelte-h="svelte-oge4t4"><a href="#머터리얼-테일윈드의-컴포넌트-사용-시-에러-발생">머터리얼 테일윈드의 컴포넌트 사용 시 에러 발생</a></h2> <!-- HTML_TAG_START --><pre class="shiki material-default" ts="true"><div class="language-id">ts</div><div class='code-container'><code><div class='line'>import &#123;Button&#125; from '@material-tailwind/react'</div><div class='line'></div><div class='line'>export default () =&gt; &#123;</div><div class='line'>  return &lt;Button&gt;버튼&lt;/Button&gt;</div><div class='line'>&#125;</div></code></div></pre><!-- HTML_TAG_END --> <p data-svelte-h="svelte-16ulj9a">사용 시 필수 props를 작성하지 않았다는 오류가 발생한다.</p> <p data-svelte-h="svelte-1armueo">vs code의 QUICK FIX 기능을 사용하여 해결해보면</p> <!-- HTML_TAG_START --><pre class="shiki material-default" ts="true"><div class="language-id">ts</div><div class='code-container'><code><div class='line'>import &#123;Button&#125; from '@material-tailwind/react'</div><div class='line'></div><div class='line'>export default () =&gt; &#123;</div><div class='line'>  return &lt;Button </div><div class='line'>            placeholder=&#123;undefined&#125;</div><div class='line'>            onPointerEnterCapture=&#123;undefined&#125;</div><div class='line'>            onPointerLeaveCapture=&#123;undefined&#125;</div><div class='line'>          &gt;</div><div class='line'>            버튼</div><div class='line'>          &lt;/Button&gt;</div><div class='line'>&#125;</div></code></div></pre><!-- HTML_TAG_END --> <p data-svelte-h="svelte-l9tp8p">위와 같이 변경이 되면서 TypeError가 발생하지는 않는데, 왜 이렇게 만들어놓았는지는 잘 모르겠다.</p>]]>
     </content>
     <category term="react" scheme="https://lyukidon.github.io/?tags=react" />
     <category term="typescript" scheme="https://lyukidon.github.io/?tags=typescript" />
