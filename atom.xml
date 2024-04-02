@@ -6,10 +6,14 @@
   <icon>https://lyukidon.github.io/favicon.png</icon>
   <link href="https://lyukidon.github.io" />
   <link href="https://lyukidon.github.io/atom.xml" rel="self" type="application/atom+xml" />
-  <updated>2024-04-01T00:35:54.928Z</updated>
+  <updated>2024-04-02T02:57:03.591Z</updated>
   <author>
     <name><![CDATA[Ryu Kidon]]></name>
   </author>
+  <category term="react" scheme="https://lyukidon.github.io/?tags=react" />
+  <category term="typescript" scheme="https://lyukidon.github.io/?tags=typescript" />
+  <category term="tailwind" scheme="https://lyukidon.github.io/?tags=tailwind" />
+  <category term="error" scheme="https://lyukidon.github.io/?tags=error" />
   <category term="webrtc" scheme="https://lyukidon.github.io/?tags=webrtc" />
   <category term="backend" scheme="https://lyukidon.github.io/?tags=backend" />
   <category term="KPT" scheme="https://lyukidon.github.io/?tags=KPT" />
@@ -21,10 +25,8 @@
   <category term="Relation" scheme="https://lyukidon.github.io/?tags=Relation" />
   <category term="nestjs" scheme="https://lyukidon.github.io/?tags=nestjs" />
   <category term="GraphQL" scheme="https://lyukidon.github.io/?tags=GraphQL" />
-  <category term="typescript" scheme="https://lyukidon.github.io/?tags=typescript" />
   <category term="this" scheme="https://lyukidon.github.io/?tags=this" />
   <category term="Dependency Injection" scheme="https://lyukidon.github.io/?tags=Dependency%20Injection" />
-  <category term="error" scheme="https://lyukidon.github.io/?tags=error" />
   <category term="jest" scheme="https://lyukidon.github.io/?tags=jest" />
   <category term="express-session" scheme="https://lyukidon.github.io/?tags=express-session" />
   <category term="3계층 아키텍처" scheme="https://lyukidon.github.io/?tags=3%EA%B3%84%EC%B8%B5%20%EC%95%84%ED%82%A4%ED%85%8D%EC%B2%98" />
@@ -57,6 +59,20 @@
   <category term="Elements" scheme="https://lyukidon.github.io/?tags=Elements" />
   <category term="Front-Matter" scheme="https://lyukidon.github.io/?tags=Front-Matter" />
   <category term="Hello World" scheme="https://lyukidon.github.io/?tags=Hello%20World" />
+  <entry>
+    <title type="html"><![CDATA[Material Tailwind Error]]></title>
+    <link href="https://lyukidon.github.io/Javascript/TIL/React/tailwind/typescript_error" />
+    <id>https://lyukidon.github.io/Javascript/TIL/React/tailwind/typescript_error</id>
+    <published>2024-04-02T00:00:00.000Z</published>
+    <updated>2024-04-02T00:00:00.000Z</updated>
+    <content type="html">
+      <![CDATA[<h2 id="머터리얼-테일윈드의-컴포넌트-사용-시-에러-발생" data-svelte-h="svelte-oge4t4"><a href="#머터리얼-테일윈드의-컴포넌트-사용-시-에러-발생">머터리얼 테일윈드의 컴포넌트 사용 시 에러 발생</a></h2> <!-- HTML_TAG_START --><pre class="shiki material-default" ts="true"><div class="language-id">ts</div><div class='code-container'><code><div class='line'>import &#123;Button&#125; from '@material-tailwind/react'</div></code></div></pre><!-- HTML_TAG_END -->]]>
+    </content>
+    <category term="react" scheme="https://lyukidon.github.io/?tags=react" />
+    <category term="typescript" scheme="https://lyukidon.github.io/?tags=typescript" />
+    <category term="tailwind" scheme="https://lyukidon.github.io/?tags=tailwind" />
+    <category term="error" scheme="https://lyukidon.github.io/?tags=error" />
+  </entry>
   <entry>
     <title type="html"><![CDATA[Signaling Server]]></title>
     <link href="https://lyukidon.github.io/Javascript/TIL/webrtc/signaling_server" />
