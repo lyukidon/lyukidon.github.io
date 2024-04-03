@@ -6,7 +6,7 @@
   <icon>https://lyukidon.github.io/favicon.png</icon>
   <link href="https://lyukidon.github.io" />
   <link href="https://lyukidon.github.io/atom.xml" rel="self" type="application/atom+xml" />
-  <updated>2024-04-03T02:33:20.905Z</updated>
+  <updated>2024-04-03T02:51:47.197Z</updated>
   <author>
     <name><![CDATA[Ryu Kidon]]></name>
   </author>
@@ -66,7 +66,18 @@
     <published>2024-04-03T00:00:00.000Z</published>
     <updated>2024-04-03T00:00:00.000Z</updated>
     <content type="html">
-      <![CDATA[]]>
+      <![CDATA[<ul data-svelte-h="svelte-tvq8pb"><li><code>.dockerignore</code></li> <li><code>Dockerfile</code><ul><li>컨테이너 이미지 생성 코드</li></ul></li> <li><code>docker-compose.yml</code><ul><li>도커 컨테이너를 dockerfile 이용해 생성</li> <li>서비스 실행에 관여</li></ul></li> <li><code>dockerfile</code> 과 <code>docker-compose</code> 의 차이점<ul><li>dockerfile : 도커 컨테이너 img 생성</li> <li>docker-compose.yml : 앱 구동 시 컨테이너 관리</li></ul></li></ul>]]>
+    </content>
+    <category term="docker" scheme="https://lyukidon.github.io/?tags=docker" />
+  </entry>
+  <entry>
+    <title type="html"><![CDATA[Dockerfile]]></title>
+    <link href="https://lyukidon.github.io/Javascript/TIL/docker/files/dockerfile" />
+    <id>https://lyukidon.github.io/Javascript/TIL/docker/files/dockerfile</id>
+    <published>2024-04-03T00:00:00.000Z</published>
+    <updated>2024-04-03T00:00:00.000Z</updated>
+    <content type="html">
+      <![CDATA[<h2 id="dockerfile" data-svelte-h="svelte-71n3v2"><a href="#dockerfile">Dockerfile</a></h2> <p data-svelte-h="svelte-1ekc7wx">Docker image를 생성하는데 필요한 파일</p> <!-- HTML_TAG_START --><pre class="shiki material-default" docker="true"><div class="language-id">docker</div><div class='code-container'><code><div class='line'>FROM node:18 AS development</div><div class='line'>WORKDIR /usr/src/app</div><div class='line'></div><div class='line'>COPY package*.json ./</div><div class='line'>RUN npm install</div><div class='line'>COPY ./ ./</div><div class='line'></div><div class='line'>EXPOSE 3000</div><div class='line'>CMD ["npm", "start"]</div></code></div></pre><!-- HTML_TAG_END --> <ul data-svelte-h="svelte-1ah9a4o"><li><p><code>FROM</code> : base 이미지 기반으로 실행</p></li> <li><p><code>WORKDIR</code> : copy한 file이  root로 들어오는 것을 방지하기 위해 work dir를 분리</p></li> <li><p><code>COPY</code> : local file을 도커로 복사</p></li> <li><p><code>RUN</code> : 코드 실행</p></li> <li><p><code>EXPOSE</code> : 노출 PORT 설정</p></li> <li><p><code>CMD</code> : 코드 실행</p></li> <li><p><code>RUN</code>과 <code>CMD</code>의 차이점</p> <ul><li><code>RUN</code> : 빌드 시 실행되는 코드 (일시적)</li> <li><code>CMD</code> : 컨테이너 실행 시 실행되는 코드 (상시적)</li></ul></li> <li><p>실행방법</p> <ul><li>docker build . -t 이미지_이름</li> <li>docker run -p 3500:3000 -v /usr/src/app/node<em>modules -v $(pwd):/usr/src/app 이미지</em>이름</li></ul></li></ul>]]>
     </content>
     <category term="docker" scheme="https://lyukidon.github.io/?tags=docker" />
   </entry>
