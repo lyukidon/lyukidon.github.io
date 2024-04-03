@@ -6,7 +6,7 @@
   <icon>https://lyukidon.github.io/favicon.png</icon>
   <link href="https://lyukidon.github.io" />
   <link href="https://lyukidon.github.io/atom.xml" rel="self" type="application/atom+xml" />
-  <updated>2024-04-03T03:27:43.131Z</updated>
+  <updated>2024-04-03T03:29:36.537Z</updated>
   <author>
     <name><![CDATA[Ryu Kidon]]></name>
   </author>
@@ -60,7 +60,7 @@
   <category term="Front-Matter" scheme="https://lyukidon.github.io/?tags=Front-Matter" />
   <category term="Hello World" scheme="https://lyukidon.github.io/?tags=Hello%20World" />
   <entry>
-    <title type="html"><![CDATA[Dockerfile]]></title>
+    <title type="html"><![CDATA[Docker 필요한 파일]]></title>
     <link href="https://lyukidon.github.io/Javascript/TIL/docker/files" />
     <id>https://lyukidon.github.io/Javascript/TIL/docker/files</id>
     <published>2024-04-03T00:00:00.000Z</published>
