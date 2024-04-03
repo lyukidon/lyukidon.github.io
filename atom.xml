@@ -6,7 +6,7 @@
   <icon>https://lyukidon.github.io/favicon.png</icon>
   <link href="https://lyukidon.github.io" />
   <link href="https://lyukidon.github.io/atom.xml" rel="self" type="application/atom+xml" />
-  <updated>2024-04-03T03:29:36.537Z</updated>
+  <updated>2024-04-03T07:57:49.601Z</updated>
   <author>
     <name><![CDATA[Ryu Kidon]]></name>
   </author>
@@ -77,7 +77,7 @@
     <published>2024-04-03T00:00:00.000Z</published>
     <updated>2024-04-03T00:00:00.000Z</updated>
     <content type="html">
-      <![CDATA[<h2 id="docker-composeyml" data-svelte-h="svelte-197dsln"><a href="#docker-composeyml">docker-compose.yml</a></h2> <!-- HTML_TAG_START --><pre class="shiki material-default" docker="true"><div class="language-id">docker</div><div class='code-container'><code><div class='line'>version: "3.8"</div><div class='line'>services:</div><div class='line'>  frontend:</div><div class='line'>    build:</div><div class='line'>      context: "."</div><div class='line'>      dockerfile: Dockerfile</div><div class='line'>    container_name: "you-pt-fe"</div><div class='line'>    working_dir: "/usr/src/app"</div><div class='line'>    ports:</div><div class='line'>      - "3500:3000"</div><div class='line'>    volumes:</div><div class='line'>      - /usr/src/app/node_modules</div><div class='line'>      # 컨테이너밖: 컨테이너안</div><div class='line'>      - .:/usr/src/app</div><div class='line'>    command: ["npm", "run", "start"]</div><div class='line'># services에 여러 개를 넣으면, 여러 컨테이너를 한번에 실행할 수 있다.</div></code></div></pre><!-- HTML_TAG_END --> <p data-svelte-h="svelte-1o2hnhg">version</p> <ul data-svelte-h="svelte-1aff5h4"><li>실행 방법<ul><li>기본 설정 파일인 docker-compose.yml 실행 시.</li> <li>-d: 백그라운드 실행.</li> <li>docker-compose up -d</li> <li>사용자 지정 설정파일 실행 시 -f 옵션</li> <li>docker-compose -f 파일명.yml up -d</li></ul></li></ul>]]>
+      <![CDATA[<h2 id="docker-composeyml" data-svelte-h="svelte-197dsln"><a href="#docker-composeyml">docker-compose.yml</a></h2> <!-- HTML_TAG_START --><pre class="shiki material-default" docker="true"><div class="language-id">docker</div><div class='code-container'><code><div class='line'>version: "3.8"</div><div class='line'>services:</div><div class='line'>  frontend:</div><div class='line'>    platform: linux/amd64</div><div class='line'>    build:</div><div class='line'>      context: "."</div><div class='line'>      dockerfile: Dockerfile</div><div class='line'>    container_name: "you-pt-fe"</div><div class='line'>    working_dir: "/usr/src/app"</div><div class='line'>    ports:</div><div class='line'>      - "3500:3000"</div><div class='line'>    volumes:</div><div class='line'>      - /usr/src/app/node_modules</div><div class='line'>      # 컨테이너밖: 컨테이너안</div><div class='line'>      - .:/usr/src/app</div><div class='line'>    command: ["npm", "run", "start"]</div><div class='line'># services에 여러 개를 넣으면, 여러 컨테이너를 한번에 실행할 수 있다.</div></code></div></pre><!-- HTML_TAG_END --> <p data-svelte-h="svelte-1o2hnhg">version</p> <ul data-svelte-h="svelte-1aff5h4"><li>실행 방법<ul><li>기본 설정 파일인 docker-compose.yml 실행 시.</li> <li>-d: 백그라운드 실행.</li> <li>docker-compose up -d</li> <li>사용자 지정 설정파일 실행 시 -f 옵션</li> <li>docker-compose -f 파일명.yml up -d</li></ul></li></ul>]]>
     </content>
     <category term="docker" scheme="https://lyukidon.github.io/?tags=docker" />
   </entry>
