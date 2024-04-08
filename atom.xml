@@ -6,12 +6,13 @@
   <icon>https://lyukidon.github.io/favicon.png</icon>
   <link href="https://lyukidon.github.io" />
   <link href="https://lyukidon.github.io/atom.xml" rel="self" type="application/atom+xml" />
-  <updated>2024-04-05T02:23:22.846Z</updated>
+  <updated>2024-04-08T02:36:21.917Z</updated>
   <author>
     <name><![CDATA[Ryu Kidon]]></name>
   </author>
-  <category term="docker" scheme="https://lyukidon.github.io/?tags=docker" />
   <category term="react" scheme="https://lyukidon.github.io/?tags=react" />
+  <category term="formData" scheme="https://lyukidon.github.io/?tags=formData" />
+  <category term="docker" scheme="https://lyukidon.github.io/?tags=docker" />
   <category term="typescript" scheme="https://lyukidon.github.io/?tags=typescript" />
   <category term="tailwind" scheme="https://lyukidon.github.io/?tags=tailwind" />
   <category term="error" scheme="https://lyukidon.github.io/?tags=error" />
@@ -59,6 +60,18 @@
   <category term="Elements" scheme="https://lyukidon.github.io/?tags=Elements" />
   <category term="Front-Matter" scheme="https://lyukidon.github.io/?tags=Front-Matter" />
   <category term="Hello World" scheme="https://lyukidon.github.io/?tags=Hello%20World" />
+  <entry>
+    <title type="html"><![CDATA[file Upload]]></title>
+    <link href="https://lyukidon.github.io/Javascript/TIL/React/fileUpload" />
+    <id>https://lyukidon.github.io/Javascript/TIL/React/fileUpload</id>
+    <published>2024-04-07T00:00:00.000Z</published>
+    <updated>2024-04-07T00:00:00.000Z</updated>
+    <content type="html">
+      <![CDATA[<h3 id="front-end" data-svelte-h="svelte-1mb2ly7"><a href="#front-end">front-end</a></h3> <!-- HTML_TAG_START --><pre class="shiki material-default" ts="true"><div class="language-id">ts</div><div class='code-container'><code><div class='line'>  // formData 객체를 생성해 전달 (submit 버튼이 없어도 됌)</div><div class='line'>  const handleUpload = async () =&gt; &#123;</div><div class='line'>    if (!img) return;</div><div class='line'>    const formData = new FormData();</div><div class='line'>    formData.append("file", img);</div><div class='line'>    try &#123;</div><div class='line'>      await axios(&#123;</div><div class='line'>        headers: &#123;</div><div class='line'>          "Content-Type": "multipart/form-data"</div><div class='line'>        &#125;,</div><div class='line'>        method: "POST",</div><div class='line'>        baseURL: "http://127.0.0.1:3001",</div><div class='line'>        url: "/image/upload",</div><div class='line'>        data: formData</div><div class='line'>      &#125;);</div><div class='line'>    &#125; catch (error) &#123;</div><div class='line'>      console.log(error);</div><div class='line'>    &#125;</div><div class='line'>  &#125;;</div></code></div></pre><!-- HTML_TAG_END --> <ul data-svelte-h="svelte-1r7a31w"><li>formData 객체 메서드<ul><li><code>.append(key, value)</code> : form field 추가(기존 값의 끝에 새로운 값을 추가)<ul><li><code>.append(key, blob, filename)</code> : Blob가 두번째 매개변수로 전달 시, blob의 파일 이름을 지정</li></ul></li> <li><code>.set(key, value)</code> : form field 추가(같은 key 필드 존재 시, 제거 후 생성)<ul><li><code>.set(key, blob, filename)</code> : Blob가 두번째 매개변수로 전달 시, blob의 파일 이름을 지정</li></ul></li> <li><code>.get(key)</code> : key 필드 읽기</li> <li><code>.has(key)</code> : key 필드 존재 여부</li> <li><code>.delete(key)</code> : key field 삭제</li></ul></li></ul> <h3 id="back-end" data-svelte-h="svelte-wpv8zl"><a href="#back-end">back-end</a></h3> <!-- HTML_TAG_START --><pre class="shiki material-default" ts="true"><div class="language-id">ts</div><div class='code-container'><code><div class='line'>  // image.controller.ts</div><div class='line'>  @Post('/upload')</div><div class='line'>  @UseInterceptors(FileInterceptor('file'))</div><div class='line'>  async uploadFile(@UploadedFile() file: Express.Multer.File) &#123;</div><div class='line'>    console.log(file);</div><div class='line'>  &#125;</div></code></div></pre><!-- HTML_TAG_END --> <h3 id="주의" data-svelte-h="svelte-ee990i"><a href="#주의">주의</a></h3> <p data-svelte-h="svelte-1h50pte"><code>FileInterceptor(key)</code>에서 <code>key</code> 값은 <code>formData.append(key, value)</code>의 <code>key</code> 값과 일치해야 한다.</p>]]>
+    </content>
+    <category term="react" scheme="https://lyukidon.github.io/?tags=react" />
+    <category term="formData" scheme="https://lyukidon.github.io/?tags=formData" />
+  </entry>
   <entry>
     <title type="html"><![CDATA[Docker Compose Cli]]></title>
     <link href="https://lyukidon.github.io/Javascript/TIL/docker/cli" />
