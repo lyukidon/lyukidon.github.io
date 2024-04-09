@@ -6,10 +6,11 @@
   <icon>https://lyukidon.github.io/favicon.png</icon>
   <link href="https://lyukidon.github.io" />
   <link href="https://lyukidon.github.io/atom.xml" rel="self" type="application/atom+xml" />
-  <updated>2024-04-08T02:36:21.917Z</updated>
+  <updated>2024-04-09T01:16:49.959Z</updated>
   <author>
     <name><![CDATA[Ryu Kidon]]></name>
   </author>
+  <category term="nestjs" scheme="https://lyukidon.github.io/?tags=nestjs" />
   <category term="react" scheme="https://lyukidon.github.io/?tags=react" />
   <category term="formData" scheme="https://lyukidon.github.io/?tags=formData" />
   <category term="docker" scheme="https://lyukidon.github.io/?tags=docker" />
@@ -25,7 +26,6 @@
   <category term="실행 컨텍스트" scheme="https://lyukidon.github.io/?tags=%EC%8B%A4%ED%96%89%20%EC%BB%A8%ED%85%8D%EC%8A%A4%ED%8A%B8" />
   <category term="closure" scheme="https://lyukidon.github.io/?tags=closure" />
   <category term="Relation" scheme="https://lyukidon.github.io/?tags=Relation" />
-  <category term="nestjs" scheme="https://lyukidon.github.io/?tags=nestjs" />
   <category term="GraphQL" scheme="https://lyukidon.github.io/?tags=GraphQL" />
   <category term="this" scheme="https://lyukidon.github.io/?tags=this" />
   <category term="Dependency Injection" scheme="https://lyukidon.github.io/?tags=Dependency%20Injection" />
@@ -60,6 +60,17 @@
   <category term="Elements" scheme="https://lyukidon.github.io/?tags=Elements" />
   <category term="Front-Matter" scheme="https://lyukidon.github.io/?tags=Front-Matter" />
   <category term="Hello World" scheme="https://lyukidon.github.io/?tags=Hello%20World" />
+  <entry>
+    <title type="html"><![CDATA[Providers]]></title>
+    <link href="https://lyukidon.github.io/Javascript/TIL/nestjs/providers" />
+    <id>https://lyukidon.github.io/Javascript/TIL/nestjs/providers</id>
+    <published>2024-04-08T00:00:00.000Z</published>
+    <updated>2024-04-08T00:00:00.000Z</updated>
+    <content type="html">
+      <![CDATA[<!-- HTML_TAG_START --><pre class="shiki material-default" ts="true"><div class="language-id">ts</div><div class='code-container'><code><div class='line'>import &#123; Module &#125; from "@nestjs/common";</div><div class='line'>import &#123; UserService &#125; from "./user.service";</div><div class='line'>import &#123; UserController &#125; from "./user.controller";</div><div class='line'></div><div class='line'>@Module(&#123;</div><div class='line'>  controllers: [UserController],</div><div class='line'>  providers: [UserService]</div><div class='line'>&#125;)</div><div class='line'>export class UserModule &#123;&#125;</div></code></div></pre><!-- HTML_TAG_END --> <p data-svelte-h="svelte-1jt90sz">위의 코드는 아래와 같다.</p> <!-- HTML_TAG_START --><pre class="shiki material-default" ts="true"><div class="language-id">ts</div><div class='code-container'><code><div class='line'>import &#123; Module &#125; from "@nestjs/common";</div><div class='line'>import &#123; UserService &#125; from "./user.service";</div><div class='line'>import &#123; UserController &#125; from "./user.controller";</div><div class='line'></div><div class='line'>@Module(&#123;</div><div class='line'>  controllers: [UserController],</div><div class='line'>  providers: [</div><div class='line'>    &#123;</div><div class='line'>      provide: UserService,</div><div class='line'>      useClass: UserService</div><div class='line'>    &#125;,</div><div class='line'>    &#123;</div><div class='line'>      provide: MockService,</div><div class='line'>      useValue: MockService</div><div class='line'>    &#125;</div><div class='line'>  ]</div><div class='line'>&#125;)</div><div class='line'>export class UserModule &#123;&#125;</div></code></div></pre><!-- HTML_TAG_END --> <ul data-svelte-h="svelte-u9txyz"><li>useClass : 실제 모듈</li> <li>useValue : 가짜 모듈</li></ul>]]>
+    </content>
+    <category term="nestjs" scheme="https://lyukidon.github.io/?tags=nestjs" />
+  </entry>
   <entry>
     <title type="html"><![CDATA[file Upload]]></title>
     <link href="https://lyukidon.github.io/Javascript/TIL/React/fileUpload" />
