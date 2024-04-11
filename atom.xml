@@ -6,7 +6,7 @@
   <icon>https://lyukidon.github.io/favicon.png</icon>
   <link href="https://lyukidon.github.io" />
   <link href="https://lyukidon.github.io/atom.xml" rel="self" type="application/atom+xml" />
-  <updated>2024-04-09T01:16:49.959Z</updated>
+  <updated>2024-04-11T02:41:31.095Z</updated>
   <author>
     <name><![CDATA[Ryu Kidon]]></name>
   </author>
@@ -14,6 +14,7 @@
   <category term="react" scheme="https://lyukidon.github.io/?tags=react" />
   <category term="formData" scheme="https://lyukidon.github.io/?tags=formData" />
   <category term="docker" scheme="https://lyukidon.github.io/?tags=docker" />
+  <category term="sorting" scheme="https://lyukidon.github.io/?tags=sorting" />
   <category term="typescript" scheme="https://lyukidon.github.io/?tags=typescript" />
   <category term="tailwind" scheme="https://lyukidon.github.io/?tags=tailwind" />
   <category term="error" scheme="https://lyukidon.github.io/?tags=error" />
@@ -93,6 +94,17 @@
       <![CDATA[<ul data-svelte-h="svelte-rzwx3x"><li><code>up</code> : Docker Compose에 정의되어 있는 모든 서비스 <strong>컨테이너를 한 번에 생성하고 실행</strong></li> <li><code>down</code> : Docker Compose에 정의되어 있는 모든 서비스 <strong>컨테이너를 한 번에 정지시키고 삭제</strong></li> <li><code>start</code> : 정지되어 있는 특정 서비스 컨테이너를 작동시키기 위해 사용</li> <li><code>stop</code> : 작동 중인 특정 서비스 컨테이너를 정지</li> <li><code>ps</code> : Docker Compose에 정의되어 있는 모든 서비스 컨테이너 목록을 조회</li> <li><code>logs</code> : 서비스 컨테이너의 로그를 확인하고 싶을 때 사용하며, 보통 <code>-f</code> 옵션을 붙여서 실시간 로그를 확인</li> <li><code>exec</code> : 실행 중인 서비스 컨테이너를 대상으로 어떤 명령어를 날릴 때 사용</li> <li><code>run</code> : 서비스 컨테이너의 특정 명령어를 일회성으로 실행할 때 사용</li> <li><code>config</code> : Docker Compose 설정을 확인할 때 사용</li></ul>]]>
     </content>
     <category term="docker" scheme="https://lyukidon.github.io/?tags=docker" />
+  </entry>
+  <entry>
+    <title type="html"><![CDATA[Sorting]]></title>
+    <link href="https://lyukidon.github.io/Javascript/TIL/sorting" />
+    <id>https://lyukidon.github.io/Javascript/TIL/sorting</id>
+    <published>2024-04-05T00:00:00.000Z</published>
+    <updated>2024-04-05T00:00:00.000Z</updated>
+    <content type="html">
+      <![CDATA[<ul data-svelte-h="svelte-ffhlmz"><li>오름차순 기준</li> <li>선택정렬 : 처음부터 끝까지 확인해서 제일 작은 수를 앞으로 (1-n번째 확인 ⇒ 1, 2-n번째 ⇒ 2)</li> <li>버블정렬 : 연속된 2개를 비교 ⇒ 그 다음 순서의 2개 비교 ⇒ 맨 뒤에 큰 수</li> <li>병합정렬 : 배열을 여러 개로 나누어 비교 ⇒ 연속된 배열을 합쳐서 비교 (작은 문제를 비교해, 큰 문제를 해결)</li> <li>삽입정렬 : 2번째 자료부터 시작해, 1번째 부터 비교하여 삽입을 한 후 뒤의 자료를 밀어내는 형식</li> <li>퀵정렬 : 임의의 기준값을 정하고, 한쪽은 기준보다 작은 값 &amp; 다른 한쪽은 기준보다 높은 값을 넣는다. 이 과정을 반복한다.</li> <li>힙정렬 : 이진 트리 구조를 이용하여, 정렬하는 자료구조</li></ul>]]>
+    </content>
+    <category term="sorting" scheme="https://lyukidon.github.io/?tags=sorting" />
   </entry>
   <entry>
     <title type="html"><![CDATA[Docker 필요한 파일]]></title>
