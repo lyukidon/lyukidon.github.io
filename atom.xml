@@ -6,13 +6,13 @@
   <icon>https://lyukidon.github.io/favicon.png</icon>
   <link href="https://lyukidon.github.io" />
   <link href="https://lyukidon.github.io/atom.xml" rel="self" type="application/atom+xml" />
-  <updated>2024-04-15T02:42:12.297Z</updated>
+  <updated>2024-04-15T02:48:15.131Z</updated>
   <author>
     <name><![CDATA[Ryu Kidon]]></name>
   </author>
+  <category term="react" scheme="https://lyukidon.github.io/?tags=react" />
   <category term="sorting" scheme="https://lyukidon.github.io/?tags=sorting" />
   <category term="nestjs" scheme="https://lyukidon.github.io/?tags=nestjs" />
-  <category term="react" scheme="https://lyukidon.github.io/?tags=react" />
   <category term="formData" scheme="https://lyukidon.github.io/?tags=formData" />
   <category term="docker" scheme="https://lyukidon.github.io/?tags=docker" />
   <category term="typescript" scheme="https://lyukidon.github.io/?tags=typescript" />
@@ -62,6 +62,17 @@
   <category term="Front-Matter" scheme="https://lyukidon.github.io/?tags=Front-Matter" />
   <category term="Hello World" scheme="https://lyukidon.github.io/?tags=Hello%20World" />
   <entry>
+    <title type="html"><![CDATA[useContext]]></title>
+    <link href="https://lyukidon.github.io/Javascript/TIL/react/useContext" />
+    <id>https://lyukidon.github.io/Javascript/TIL/react/useContext</id>
+    <published>2024-04-15T00:00:00.000Z</published>
+    <updated>2024-04-15T00:00:00.000Z</updated>
+    <content type="html">
+      <![CDATA[<ul data-svelte-h="svelte-2mdjw2"><li>참고 (코드) : <a href="https://velog.io/@hoonnn/React-Context-API%EC%99%80-useContext" rel="nofollow noopener noreferrer external" target="_blank">https://velog.io/@hoonnn/React-Context-API와-useContext</a></li> <li>Context API : 전역으로 데이터 관리해주는 API</li> <li>Provider &amp; Consumer<ul><li>Provider<ul><li>Context를 생성하고, 하위 컴포넌트에 제공하는 컴포넌트</li> <li>전역으로 관리할 상태를 value property로 설정하면, 하위 컴포넌트가 사용할 수 있음</li></ul></li> <li>Consumer<ul><li>Provider에서 제공하는 상태를 사용하는 컴포넌트</li> <li>Provider의 상태를 구독하고, 상태가 변경될 때마다 재랜더링</li></ul></li></ul></li> <li>Consumer ⇒ useContext Hook으로 대체하게 되면서 useState처럼 상태관리를 할 수 있게 됌</li> <li>useState VS useContext<ul><li>useState<ul><li>컴포넌트 내부의 상태관리</li> <li>예) form, loading, toggle 상태</li></ul></li> <li>useContext<ul><li>전역 상태 관리. 여러 컴포넌트 간에 같은 상태를 공유하는 경우 사용</li> <li>예) 로그인 상태, theme 상태, App 전체 알림</li></ul></li></ul></li></ul>]]>
+    </content>
+    <category term="react" scheme="https://lyukidon.github.io/?tags=react" />
+  </entry>
+  <entry>
     <title type="html"><![CDATA[Sorting]]></title>
     <link href="https://lyukidon.github.io/Javascript/TIL/sorting" />
     <id>https://lyukidon.github.io/Javascript/TIL/sorting</id>
@@ -105,17 +116,6 @@
       <![CDATA[<ul data-svelte-h="svelte-rzwx3x"><li><code>up</code> : Docker Compose에 정의되어 있는 모든 서비스 <strong>컨테이너를 한 번에 생성하고 실행</strong></li> <li><code>down</code> : Docker Compose에 정의되어 있는 모든 서비스 <strong>컨테이너를 한 번에 정지시키고 삭제</strong></li> <li><code>start</code> : 정지되어 있는 특정 서비스 컨테이너를 작동시키기 위해 사용</li> <li><code>stop</code> : 작동 중인 특정 서비스 컨테이너를 정지</li> <li><code>ps</code> : Docker Compose에 정의되어 있는 모든 서비스 컨테이너 목록을 조회</li> <li><code>logs</code> : 서비스 컨테이너의 로그를 확인하고 싶을 때 사용하며, 보통 <code>-f</code> 옵션을 붙여서 실시간 로그를 확인</li> <li><code>exec</code> : 실행 중인 서비스 컨테이너를 대상으로 어떤 명령어를 날릴 때 사용</li> <li><code>run</code> : 서비스 컨테이너의 특정 명령어를 일회성으로 실행할 때 사용</li> <li><code>config</code> : Docker Compose 설정을 확인할 때 사용</li></ul>]]>
     </content>
     <category term="docker" scheme="https://lyukidon.github.io/?tags=docker" />
-  </entry>
-  <entry>
-    <title type="html"><![CDATA[useContext]]></title>
-    <link href="https://lyukidon.github.io/Javascript/TIL/react/useContext" />
-    <id>https://lyukidon.github.io/Javascript/TIL/react/useContext</id>
-    <published>2024-04-05T00:00:00.000Z</published>
-    <updated>2024-04-05T00:00:00.000Z</updated>
-    <content type="html">
-      <![CDATA[<ul data-svelte-h="svelte-2mdjw2"><li>참고 (코드) : <a href="https://velog.io/@hoonnn/React-Context-API%EC%99%80-useContext" rel="nofollow noopener noreferrer external" target="_blank">https://velog.io/@hoonnn/React-Context-API와-useContext</a></li> <li>Context API : 전역으로 데이터 관리해주는 API</li> <li>Provider &amp; Consumer<ul><li>Provider<ul><li>Context를 생성하고, 하위 컴포넌트에 제공하는 컴포넌트</li> <li>전역으로 관리할 상태를 value property로 설정하면, 하위 컴포넌트가 사용할 수 있음</li></ul></li> <li>Consumer<ul><li>Provider에서 제공하는 상태를 사용하는 컴포넌트</li> <li>Provider의 상태를 구독하고, 상태가 변경될 때마다 재랜더링</li></ul></li></ul></li> <li>Consumer ⇒ useContext Hook으로 대체하게 되면서 useState처럼 상태관리를 할 수 있게 됌</li> <li>useState VS useContext<ul><li>useState<ul><li>컴포넌트 내부의 상태관리</li> <li>예) form, loading, toggle 상태</li></ul></li> <li>useContext<ul><li>전역 상태 관리. 여러 컴포넌트 간에 같은 상태를 공유하는 경우 사용</li> <li>예) 로그인 상태, theme 상태, App 전체 알림</li></ul></li></ul></li></ul>]]>
-    </content>
-    <category term="react" scheme="https://lyukidon.github.io/?tags=react" />
   </entry>
   <entry>
     <title type="html"><![CDATA[Docker 필요한 파일]]></title>
