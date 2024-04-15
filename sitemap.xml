@@ -21,12 +21,17 @@
             <priority>0.5</priority>
         </url>
         <url>
-            <loc>https://lyukidon.github.io/Javascript/TIL/React/fileUpload</loc>
+            <loc>https://lyukidon.github.io/Javascript/TIL/react/fileUpload</loc>
             <lastmod>2024-04-07T00:00:00.000Z</lastmod>
             <priority>0.5</priority>
         </url>
         <url>
             <loc>https://lyukidon.github.io/Javascript/TIL/docker/cli</loc>
+            <lastmod>2024-04-05T00:00:00.000Z</lastmod>
+            <priority>0.5</priority>
+        </url>
+        <url>
+            <loc>https://lyukidon.github.io/Javascript/TIL/react/useContext</loc>
             <lastmod>2024-04-05T00:00:00.000Z</lastmod>
             <priority>0.5</priority>
         </url>
@@ -46,7 +51,7 @@
             <priority>0.5</priority>
         </url>
         <url>
-            <loc>https://lyukidon.github.io/Javascript/TIL/React/tailwind/typescript_error</loc>
+            <loc>https://lyukidon.github.io/Javascript/TIL/react/tailwind/typescript_error</loc>
             <lastmod>2024-04-02T00:00:00.000Z</lastmod>
             <priority>0.5</priority>
         </url>
