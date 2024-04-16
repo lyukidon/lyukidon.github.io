@@ -6,10 +6,11 @@
   <icon>https://lyukidon.github.io/favicon.png</icon>
   <link href="https://lyukidon.github.io" />
   <link href="https://lyukidon.github.io/atom.xml" rel="self" type="application/atom+xml" />
-  <updated>2024-04-15T02:48:15.131Z</updated>
+  <updated>2024-04-16T00:35:44.889Z</updated>
   <author>
     <name><![CDATA[Ryu Kidon]]></name>
   </author>
+  <category term="backend" scheme="https://lyukidon.github.io/?tags=backend" />
   <category term="react" scheme="https://lyukidon.github.io/?tags=react" />
   <category term="sorting" scheme="https://lyukidon.github.io/?tags=sorting" />
   <category term="nestjs" scheme="https://lyukidon.github.io/?tags=nestjs" />
@@ -19,7 +20,6 @@
   <category term="tailwind" scheme="https://lyukidon.github.io/?tags=tailwind" />
   <category term="error" scheme="https://lyukidon.github.io/?tags=error" />
   <category term="webrtc" scheme="https://lyukidon.github.io/?tags=webrtc" />
-  <category term="backend" scheme="https://lyukidon.github.io/?tags=backend" />
   <category term="KPT" scheme="https://lyukidon.github.io/?tags=KPT" />
   <category term="TypeORM" scheme="https://lyukidon.github.io/?tags=TypeORM" />
   <category term="typeorm" scheme="https://lyukidon.github.io/?tags=typeorm" />
@@ -61,6 +61,17 @@
   <category term="Elements" scheme="https://lyukidon.github.io/?tags=Elements" />
   <category term="Front-Matter" scheme="https://lyukidon.github.io/?tags=Front-Matter" />
   <category term="Hello World" scheme="https://lyukidon.github.io/?tags=Hello%20World" />
+  <entry>
+    <title type="html"><![CDATA[Array와 LinkedList의 차이점]]></title>
+    <link href="https://lyukidon.github.io/Javascript/TIL/백엔드기초/Array_LinkedList" />
+    <id>https://lyukidon.github.io/Javascript/TIL/백엔드기초/Array_LinkedList</id>
+    <published>2024-04-16T00:00:00.000Z</published>
+    <updated>2024-04-16T00:00:00.000Z</updated>
+    <content type="html">
+      <![CDATA[<p data-svelte-h="svelte-8iu6j0">array 와 linked list를 비교 설명 해주세요. ( 코드 구현 해보기 )</p> <ul data-svelte-h="svelte-8frxab"><li>참고 : <a href="https://opentutorials.org/module/1335/8821" rel="nofollow noopener noreferrer external" target="_blank">https://opentutorials.org/module/1335/8821</a></li> <li>메모리 구조<ul><li>array : 연결된 공간에 할당<ul><li>장점 : 조회가 빠름 (배열의 인덱스만 알면 바로 조회 가능하기 때문)</li> <li>단점 : 추가 삭제 느림</li></ul></li> <li>linked list : 빈 공간에 데이터를 할당하고, 위치를 저장해 읽어오는 방법 <ul><li>요소<ul><li>Node : 데이터 필드와 링크 필드( 다음 노드를 가리키는 링크 )</li> <li>포인터 : 노드 내부에 다음 또는 이전 노드와의 연결정보를 가짐</li> <li>헤드 : 가장 처음 위치하는 노드</li> <li>테일 : 가장 끝에 위치하는 노드</li></ul></li> <li>종류<ul><li>단방향 링크드 리스트</li> <li>양방향 링크드 리스트</li> <li>원형 링크드 리스트</li> <li>청크 리스트</li></ul></li> <li>장점 : 조회가 느림 (배열의 헤드(가장 처음)가 가리키는 노드를 처음부터 순차적으로 조회하여 알맞은 값을 찾기 때문)</li> <li>단점 : 추가 삭제가 빠름</li></ul></li></ul></li></ul> <p data-svelte-h="svelte-12z97yt">array 는 일련, linked list 는 점 과 점 을 연결 =&gt; 시간 복잡도 =&gt; 언제 어디서 사용해야 할지를 좀 더 찾아보기</p> <p data-svelte-h="svelte-1r8ujtb">array는 연결된 공간에 할당하는 방식, linkedlist는 빈 공간에 데이터를 할당하고 위치를 저장하는 방식입니다. array 는 인</p> <p data-svelte-h="svelte-b8p174">queue : 선입 선출 (FIFO) 선착순</p> <ul data-svelte-h="svelte-d2kp58"><li>자바스크립트에서<ul><li>자료 삽입 : 위치 = rear, 메서드 = push()</li> <li>자료 인출 : 위치 = front, 메서드 = shift()</li></ul></li> <li>원형 큐 : 선형 큐의 단점을 보완. 기존 index에서 다음으로 넘어갈 때 (idx + 1) % length</li> <li>우선순위 큐 : 우선순위가 높은 것부터 내보냄</li> <li>데크 : 양방향 삽입/인출 =&gt; 이중 연결 리스트</li> <li>용례<ul><li>티켓 발매</li> <li>너비 우선 탐색 : 깊이가 낮은 노드부터 깊은 노드까지 탐색stack : 후입선출 (LIFO)</li></ul></li> <li>자바스크립트에서<ul><li>자료 삽입 : push()</li> <li>자료 인출 : pop()</li></ul></li> <li>용례<ul><li>웹 페이지 뒤로 가기</li> <li>실행 취소</li></ul></li></ul>]]>
+    </content>
+    <category term="backend" scheme="https://lyukidon.github.io/?tags=backend" />
+  </entry>
   <entry>
     <title type="html"><![CDATA[useContext]]></title>
     <link href="https://lyukidon.github.io/Javascript/TIL/react/useContext" />
