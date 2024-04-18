@@ -6,12 +6,12 @@
   <icon>https://lyukidon.github.io/favicon.png</icon>
   <link href="https://lyukidon.github.io" />
   <link href="https://lyukidon.github.io/atom.xml" rel="self" type="application/atom+xml" />
-  <updated>2024-04-16T00:35:44.889Z</updated>
+  <updated>2024-04-18T02:33:39.377Z</updated>
   <author>
     <name><![CDATA[Ryu Kidon]]></name>
   </author>
-  <category term="backend" scheme="https://lyukidon.github.io/?tags=backend" />
   <category term="react" scheme="https://lyukidon.github.io/?tags=react" />
+  <category term="backend" scheme="https://lyukidon.github.io/?tags=backend" />
   <category term="sorting" scheme="https://lyukidon.github.io/?tags=sorting" />
   <category term="nestjs" scheme="https://lyukidon.github.io/?tags=nestjs" />
   <category term="formData" scheme="https://lyukidon.github.io/?tags=formData" />
@@ -61,6 +61,17 @@
   <category term="Elements" scheme="https://lyukidon.github.io/?tags=Elements" />
   <category term="Front-Matter" scheme="https://lyukidon.github.io/?tags=Front-Matter" />
   <category term="Hello World" scheme="https://lyukidon.github.io/?tags=Hello%20World" />
+  <entry>
+    <title type="html"><![CDATA[Class 컴포넌트 사용 시, React-Router-Dom의 Hook이 호환되지 않는 문제점]]></title>
+    <link href="https://lyukidon.github.io/Javascript/TIL/react/class_component_compatibility_problem_with_react_router" />
+    <id>https://lyukidon.github.io/Javascript/TIL/react/class_component_compatibility_problem_with_react_router</id>
+    <published>2024-04-17T00:00:00.000Z</published>
+    <updated>2024-04-17T00:00:00.000Z</updated>
+    <content type="html">
+      <![CDATA[<p data-svelte-h="svelte-eqykgp">react-router-dom의 Hook을 class Component에서 사용하는 경우, 에러가 발생하게 된다.</p> <!-- HTML_TAG_START --><pre class="shiki material-default" sh="true"><div class="language-id">sh</div><div class='code-container'><code><div class='line'>React Hook "useNavigate" cannot be called in a class component.</div><div class='line'></div><div class='line'>React Hooks must be called in a React function component or a custom React Hook function  react-hooks/rules-of-hooks</div></code></div></pre><!-- HTML_TAG_END --> <p data-svelte-h="svelte-17i40gy">function 함수에서 밖에 쓸 수 없는 경우는 아래와 같이 해결하면 된다.</p> <!-- HTML_TAG_START --><pre class="shiki material-default" ts="true"><div class="language-id">ts</div><div class='code-container'><code><div class='line'>export const withRouter = (Component:React.FC): React.FC =&gt; &#123;</div><div class='line'>  const Wrapper = (props: any): React.ReactElement =&gt; &#123;</div><div class='line'>    const navigate = useNavigate();</div><div class='line'>    const params = useParams();</div><div class='line'></div><div class='line'>    return &lt;Component navigate=&#123;navigate&#125; params=&#123;params&#125; &#123;...props&#125; /&gt;;</div><div class='line'>  &#125;;</div><div class='line'></div><div class='line'>  return Wrapper;</div><div class='line'>&#125;;</div></code></div></pre><!-- HTML_TAG_END --> <p data-svelte-h="svelte-1oabkfd">매개변수 컴포넌트에 props를 주입하는 코드이다.</p> <p data-svelte-h="svelte-ie1iyi">Wrapper 함수 내부에 react-router-dom의 hook을 작성한다.</p> <p data-svelte-h="svelte-kzcv0n">위의 함수 사용방법</p> <!-- HTML_TAG_START --><pre class="shiki material-default" ts="true"><div class="language-id">ts</div><div class='code-container'><code><div class='line'>  class TempComp extends React.Component&lt;PropType, StateType&gt; &#123;</div><div class='line'>    navigate: (url: string) =&gt; void;</div><div class='line'>    params: &#123; param1: string; param2: number; &#125;;</div><div class='line'></div><div class='line'>    constructor(props: PropType)&#123;</div><div class='line'>      super(props)</div><div class='line'></div><div class='line'>      // 상단에 타입을 작성해준다.</div><div class='line'>      this.navigate = this.props.navigate</div><div class='line'>      this.params = this.props.params</div><div class='line'>    &#125;</div><div class='line'></div><div class='line'>    render(</div><div class='line'>      &lt;div&gt;&lt;/div&gt;</div><div class='line'>    )</div><div class='line'>  &#125;</div><div class='line'></div><div class='line'>  export default withRouter(TempComp)</div></code></div></pre><!-- HTML_TAG_END --> <p data-svelte-h="svelte-srrpvc">마지막 코드와 같이 Class Component를 withRouter에 넣게 되면 props를 주입할 수 있게 된다.</p>]]>
+    </content>
+    <category term="react" scheme="https://lyukidon.github.io/?tags=react" />
+  </entry>
   <entry>
     <title type="html"><![CDATA[Array와 LinkedList의 차이점]]></title>
     <link href="https://lyukidon.github.io/Javascript/TIL/백엔드기초/Array_LinkedList" />
