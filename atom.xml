@@ -6,10 +6,11 @@
   <icon>https://lyukidon.github.io/favicon.png</icon>
   <link href="https://lyukidon.github.io" />
   <link href="https://lyukidon.github.io/atom.xml" rel="self" type="application/atom+xml" />
-  <updated>2024-04-18T02:33:39.377Z</updated>
+  <updated>2024-04-22T02:02:51.375Z</updated>
   <author>
     <name><![CDATA[Ryu Kidon]]></name>
   </author>
+  <category term="redis" scheme="https://lyukidon.github.io/?tags=redis" />
   <category term="react" scheme="https://lyukidon.github.io/?tags=react" />
   <category term="backend" scheme="https://lyukidon.github.io/?tags=backend" />
   <category term="sorting" scheme="https://lyukidon.github.io/?tags=sorting" />
@@ -44,7 +45,6 @@
   <category term="Error" scheme="https://lyukidon.github.io/?tags=Error" />
   <category term="Google Console" scheme="https://lyukidon.github.io/?tags=Google%20Console" />
   <category term="Firewall" scheme="https://lyukidon.github.io/?tags=Firewall" />
-  <category term="redis" scheme="https://lyukidon.github.io/?tags=redis" />
   <category term="express" scheme="https://lyukidon.github.io/?tags=express" />
   <category term="jwt" scheme="https://lyukidon.github.io/?tags=jwt" />
   <category term="token" scheme="https://lyukidon.github.io/?tags=token" />
@@ -61,6 +61,17 @@
   <category term="Elements" scheme="https://lyukidon.github.io/?tags=Elements" />
   <category term="Front-Matter" scheme="https://lyukidon.github.io/?tags=Front-Matter" />
   <category term="Hello World" scheme="https://lyukidon.github.io/?tags=Hello%20World" />
+  <entry>
+    <title type="html"><![CDATA[NestJS에서 Redis 연결하기]]></title>
+    <link href="https://lyukidon.github.io/Javascript/TIL/redis/nestjs" />
+    <id>https://lyukidon.github.io/Javascript/TIL/redis/nestjs</id>
+    <published>2024-04-22T00:00:00.000Z</published>
+    <updated>2024-04-22T00:00:00.000Z</updated>
+    <content type="html">
+      <![CDATA[<ul><li><p data-svelte-h="svelte-ps6z27">redis.service.ts</p> <!-- HTML_TAG_START --><pre class="shiki material-default" ts="true"><div class="language-id">ts</div><div class='code-container'><code><div class='line'>import &#123; Injectable, OnModuleInit, OnModuleDestroy &#125; from "@nestjs/common";</div><div class='line'>import Redis from "ioredis";</div><div class='line'>import &#123; ConfigService &#125; from "@nestjs/config";</div><div class='line'></div><div class='line'>@Injectable()</div><div class='line'>export class RedisService implements OnModuleInit, OnModuleDestroy &#123;</div><div class='line'>  private redisClient: Redis;</div><div class='line'>  constructor(private readonly configService: ConfigService) &#123;</div><div class='line'>    this.redisClient = new Redis(&#123;</div><div class='line'>      host: this.configService.get&lt;string&gt;("REDIS_HOST"),</div><div class='line'>      port: this.configService.get&lt;number&gt;("REDIS_PORT"),</div><div class='line'>      password: this.configService.get&lt;string&gt;("REDIS_PASSWORD")</div><div class='line'>    &#125;);</div><div class='line'>  &#125;</div><div class='line'>  onModuleInit() &#123;</div><div class='line'>    this.redisClient.on("connect", () =&gt; &#123;</div><div class='line'>      console.log("Connected to Redis");</div><div class='line'>    &#125;);</div><div class='line'>  &#125;</div><div class='line'>  onModuleDestroy() &#123;</div><div class='line'>    this.redisClient.disconnect();</div><div class='line'>  &#125;</div><div class='line'>  get client(): Redis &#123;</div><div class='line'>    return this.redisClient;</div><div class='line'>  &#125;</div><div class='line'>&#125;</div></code></div></pre><!-- HTML_TAG_END --></li> <li data-svelte-h="svelte-1qkxwy5"><p>사용</p> <ol><li>사용하고자 하는 모듈의 imports에 추가</li> <li><code>this.redisService.client</code>로 사용하면 <code>this.redisClient</code>를 받을 수 있음</li></ol></li></ul>]]>
+    </content>
+    <category term="redis" scheme="https://lyukidon.github.io/?tags=redis" />
+  </entry>
   <entry>
     <title type="html"><![CDATA[Class 컴포넌트 사용 시, React-Router-Dom의 Hook이 호환되지 않는 문제점]]></title>
     <link href="https://lyukidon.github.io/Javascript/TIL/react/class_component_compatibility_problem_with_react_router" />

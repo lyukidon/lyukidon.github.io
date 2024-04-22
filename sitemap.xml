@@ -11,6 +11,11 @@
     </url>
     
         <url>
+            <loc>https://lyukidon.github.io/Javascript/TIL/redis/nestjs</loc>
+            <lastmod>2024-04-22T00:00:00.000Z</lastmod>
+            <priority>0.5</priority>
+        </url>
+        <url>
             <loc>https://lyukidon.github.io/Javascript/TIL/react/class_component_compatibility_problem_with_react_router</loc>
             <lastmod>2024-04-17T00:00:00.000Z</lastmod>
             <priority>0.5</priority>
