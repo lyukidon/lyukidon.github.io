@@ -6,15 +6,16 @@
   <icon>https://lyukidon.github.io/favicon.png</icon>
   <link href="https://lyukidon.github.io" />
   <link href="https://lyukidon.github.io/atom.xml" rel="self" type="application/atom+xml" />
-  <updated>2024-04-22T02:02:51.375Z</updated>
+  <updated>2024-04-22T15:28:06.830Z</updated>
   <author>
     <name><![CDATA[Ryu Kidon]]></name>
   </author>
+  <category term="nestjs" scheme="https://lyukidon.github.io/?tags=nestjs" />
+  <category term="test" scheme="https://lyukidon.github.io/?tags=test" />
   <category term="redis" scheme="https://lyukidon.github.io/?tags=redis" />
   <category term="react" scheme="https://lyukidon.github.io/?tags=react" />
   <category term="backend" scheme="https://lyukidon.github.io/?tags=backend" />
   <category term="sorting" scheme="https://lyukidon.github.io/?tags=sorting" />
-  <category term="nestjs" scheme="https://lyukidon.github.io/?tags=nestjs" />
   <category term="formData" scheme="https://lyukidon.github.io/?tags=formData" />
   <category term="docker" scheme="https://lyukidon.github.io/?tags=docker" />
   <category term="typescript" scheme="https://lyukidon.github.io/?tags=typescript" />
@@ -61,6 +62,18 @@
   <category term="Elements" scheme="https://lyukidon.github.io/?tags=Elements" />
   <category term="Front-Matter" scheme="https://lyukidon.github.io/?tags=Front-Matter" />
   <category term="Hello World" scheme="https://lyukidon.github.io/?tags=Hello%20World" />
+  <entry>
+    <title type="html"><![CDATA[Test Code 모듈 추가 시, ]]></title>
+    <link href="https://lyukidon.github.io/Javascript/TIL/nestjs/test/add_provider" />
+    <id>https://lyukidon.github.io/Javascript/TIL/nestjs/test/add_provider</id>
+    <published>2024-04-23T00:00:00.000Z</published>
+    <updated>2024-04-23T00:00:00.000Z</updated>
+    <content type="html">
+      <![CDATA[<p data-svelte-h="svelte-1y7r3dn">test code 작성 시, 모듈 추가</p> <p><img src="image.png" alt="alt text" class="rounded-lg my-2" loading="lazy" decoding="async"></p> <ul data-svelte-h="svelte-m43mwc"><li>사용: 상단에 선언한 변수로</li> <li>provide: Service Class로 작성</li></ul>]]>
+    </content>
+    <category term="nestjs" scheme="https://lyukidon.github.io/?tags=nestjs" />
+    <category term="test" scheme="https://lyukidon.github.io/?tags=test" />
+  </entry>
   <entry>
     <title type="html"><![CDATA[NestJS에서 Redis 연결하기]]></title>
     <link href="https://lyukidon.github.io/Javascript/TIL/redis/nestjs" />
