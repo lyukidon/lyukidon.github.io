@@ -6,14 +6,14 @@
   <icon>https://lyukidon.github.io/favicon.png</icon>
   <link href="https://lyukidon.github.io" />
   <link href="https://lyukidon.github.io/atom.xml" rel="self" type="application/atom+xml" />
-  <updated>2024-04-24T17:25:20.500Z</updated>
+  <updated>2024-04-24T17:27:12.268Z</updated>
   <author>
     <name><![CDATA[Ryu Kidon]]></name>
   </author>
   <category term="nestjs" scheme="https://lyukidon.github.io/?tags=nestjs" />
-  <category term="test" scheme="https://lyukidon.github.io/?tags=test" />
   <category term="react" scheme="https://lyukidon.github.io/?tags=react" />
   <category term="cors" scheme="https://lyukidon.github.io/?tags=cors" />
+  <category term="test" scheme="https://lyukidon.github.io/?tags=test" />
   <category term="redis" scheme="https://lyukidon.github.io/?tags=redis" />
   <category term="backend" scheme="https://lyukidon.github.io/?tags=backend" />
   <category term="sorting" scheme="https://lyukidon.github.io/?tags=sorting" />
@@ -64,6 +64,19 @@
   <category term="Front-Matter" scheme="https://lyukidon.github.io/?tags=Front-Matter" />
   <category term="Hello World" scheme="https://lyukidon.github.io/?tags=Hello%20World" />
   <entry>
+    <title type="html"><![CDATA[React CORS Error와 Proxy Server]]></title>
+    <link href="https://lyukidon.github.io/Javascript/TIL/react/proxy_server" />
+    <id>https://lyukidon.github.io/Javascript/TIL/react/proxy_server</id>
+    <published>2024-04-24T00:00:00.000Z</published>
+    <updated>2024-04-24T00:00:00.000Z</updated>
+    <content type="html">
+      <![CDATA[<p>React에서 로그인을 하려고 하니 자꾸 에러가 났다.<img src="image.png" alt="alt text" class="rounded-lg my-2" loading="lazy" decoding="async"></p> <p data-svelte-h="svelte-13axydx">NestJS의 cors option을 설정해도 같은 문제가 계속 발생한다.</p> <p data-svelte-h="svelte-1o0907r">이러한 경우, proxy server를 통해서 문제를 해결한다.</p> <p data-svelte-h="svelte-1urq1d3">통신 과정은 다음과 같다.</p> <!-- HTML_TAG_START --><pre class="shiki material-default"><div class='code-container'><code><div class='line'>┌─────────┐   →   ┌───────────┐</div><div class='line'>│ browser │   ←   │ BE-server │</div><div class='line'>└─────────┘       └───────────┘</div></code></div></pre><!-- HTML_TAG_END --> <p data-svelte-h="svelte-cqsylx">브라우저가 통신하는 과정에서 BE가 browser의 요청을 외부 API 요청으로 확인해, cookie 전송 요청을 거부하는 것이다.</p> <p data-svelte-h="svelte-1puf7g6">Proxy server를 생성하는 경우 다음과 같이 통신을 하게 된다.</p> <!-- HTML_TAG_START --><pre class="shiki material-default"><div class='code-container'><code><div class='line'>┌─────────┐      ┌───────────┐</div><div class='line'>│ browser │      │ BE-server │</div><div class='line'>└─────────┘      └───────────┘</div><div class='line'>    ↑↓                ↑↓</div><div class='line'>┌────────────────────────────┐</div><div class='line'>│       Proxy-server         │</div><div class='line'>└────────────────────────────┘</div></code></div></pre><!-- HTML_TAG_END --> <p data-svelte-h="svelte-192bzpl">설정하는 방법은 두 가지가 있다.</p> <ol data-svelte-h="svelte-4htmvu"><li>CRA를 사용하는 경우, package.json에 <code>&quot;proxy&quot;:&quot;https://www.server.com&quot;</code>를  추가한다.</li> <li>http-proxy-middleware 라이브러리를 사용한다.</li></ol>]]>
+    </content>
+    <category term="nestjs" scheme="https://lyukidon.github.io/?tags=nestjs" />
+    <category term="react" scheme="https://lyukidon.github.io/?tags=react" />
+    <category term="cors" scheme="https://lyukidon.github.io/?tags=cors" />
+  </entry>
+  <entry>
     <title type="html"><![CDATA[Test Code 모듈 추가 시, 확인할 것]]></title>
     <link href="https://lyukidon.github.io/Javascript/TIL/nestjs/test/add_provider" />
     <id>https://lyukidon.github.io/Javascript/TIL/nestjs/test/add_provider</id>
@@ -74,19 +87,6 @@
     </content>
     <category term="nestjs" scheme="https://lyukidon.github.io/?tags=nestjs" />
     <category term="test" scheme="https://lyukidon.github.io/?tags=test" />
-  </entry>
-  <entry>
-    <title type="html"><![CDATA[React CORS Error와 Proxy Server]]></title>
-    <link href="https://lyukidon.github.io/Javascript/TIL/react/proxy_server" />
-    <id>https://lyukidon.github.io/Javascript/TIL/react/proxy_server</id>
-    <published>2024-04-23T00:00:00.000Z</published>
-    <updated>2024-04-23T00:00:00.000Z</updated>
-    <content type="html">
-      <![CDATA[<p>React에서 로그인을 하려고 하니 자꾸 에러가 났다.<img src="image.png" alt="alt text" class="rounded-lg my-2" loading="lazy" decoding="async"></p> <p data-svelte-h="svelte-13axydx">NestJS의 cors option을 설정해도 같은 문제가 계속 발생한다.</p> <p data-svelte-h="svelte-1o0907r">이러한 경우, proxy server를 통해서 문제를 해결한다.</p> <p data-svelte-h="svelte-1urq1d3">통신 과정은 다음과 같다.</p> <!-- HTML_TAG_START --><pre class="shiki material-default"><div class='code-container'><code><div class='line'>┌─────────┐   →   ┌───────────┐</div><div class='line'>│ browser │   ←   │ BE-server │</div><div class='line'>└─────────┘       └───────────┘</div></code></div></pre><!-- HTML_TAG_END --> <p data-svelte-h="svelte-cqsylx">브라우저가 통신하는 과정에서 BE가 browser의 요청을 외부 API 요청으로 확인해, cookie 전송 요청을 거부하는 것이다.</p> <p data-svelte-h="svelte-1puf7g6">Proxy server를 생성하는 경우 다음과 같이 통신을 하게 된다.</p> <!-- HTML_TAG_START --><pre class="shiki material-default"><div class='code-container'><code><div class='line'>┌─────────┐      ┌───────────┐</div><div class='line'>│ browser │      │ BE-server │</div><div class='line'>└─────────┘      └───────────┘</div><div class='line'>    ↑↓                ↑↓</div><div class='line'>┌────────────────────────────┐</div><div class='line'>│       Proxy-server         │</div><div class='line'>└────────────────────────────┘</div></code></div></pre><!-- HTML_TAG_END --> <p data-svelte-h="svelte-192bzpl">설정하는 방법은 두 가지가 있다.</p> <ol data-svelte-h="svelte-4htmvu"><li>CRA를 사용하는 경우, package.json에 <code>&quot;proxy&quot;:&quot;https://www.server.com&quot;</code>를  추가한다.</li> <li>http-proxy-middleware 라이브러리를 사용한다.</li></ol>]]>
-    </content>
-    <category term="nestjs" scheme="https://lyukidon.github.io/?tags=nestjs" />
-    <category term="react" scheme="https://lyukidon.github.io/?tags=react" />
-    <category term="cors" scheme="https://lyukidon.github.io/?tags=cors" />
   </entry>
   <entry>
     <title type="html"><![CDATA[NestJS에서 Redis 연결하기]]></title>
