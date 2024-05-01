@@ -6,11 +6,12 @@
   <icon>https://lyukidon.github.io/favicon.png</icon>
   <link href="https://lyukidon.github.io" />
   <link href="https://lyukidon.github.io/atom.xml" rel="self" type="application/atom+xml" />
-  <updated>2024-05-01T01:45:00.599Z</updated>
+  <updated>2024-05-01T12:26:02.037Z</updated>
   <author>
     <name><![CDATA[Ryu Kidon]]></name>
   </author>
   <category term="netlify" scheme="https://lyukidon.github.io/?tags=netlify" />
+  <category term="date" scheme="https://lyukidon.github.io/?tags=date" />
   <category term="react" scheme="https://lyukidon.github.io/?tags=react" />
   <category term="typescript" scheme="https://lyukidon.github.io/?tags=typescript" />
   <category term="tailwind" scheme="https://lyukidon.github.io/?tags=tailwind" />
@@ -74,6 +75,17 @@
       <![CDATA[<p data-svelte-h="svelte-xaep35">React Router 를 사용 시 Netlify에서 <code>Page Not Found</code> 오류가 발생하는 경우</p> <p data-svelte-h="svelte-1xc8gp"><code>public</code> 디렉터리에 <code>_redirect</code> 파일을 생성 후, <code>/* /index.html 200</code>를 파일 내에 추가하면 문제가 해결된다.</p>]]>
     </content>
     <category term="netlify" scheme="https://lyukidon.github.io/?tags=netlify" />
+  </entry>
+  <entry>
+    <title type="html"><![CDATA[Typescript에서 시간 계산하는 방법]]></title>
+    <link href="https://lyukidon.github.io/Javascript/calculating_time" />
+    <id>https://lyukidon.github.io/Javascript/calculating_time</id>
+    <published>2024-05-01T00:00:00.000Z</published>
+    <updated>2024-05-01T00:00:00.000Z</updated>
+    <content type="html">
+      <![CDATA[<p data-svelte-h="svelte-zfc9i8">Date Object의 경우, +와 -연산을 할 수 있다.</p> <!-- HTML_TAG_START --><pre class="shiki material-default" js="true"><div class="language-id">js</div><div class='code-container'><code><div class='line'>new Date(time1) - newDate(time2)</div></code></div></pre><!-- HTML_TAG_END --> <p data-svelte-h="svelte-1qszhlf">계산을 하게 되면 millisecond로 나오게 된다.</p> <p data-svelte-h="svelte-y168xb">하지만 TypeScript의 경우는 아래와 같은 오류가 난다.</p> <p data-svelte-h="svelte-pz9s9j"><code>The left-hand side of an arithmetic operation must be of type &#39;any&#39;, &#39;number&#39;, &#39;bigint&#39; or an enum type.</code></p> <p data-svelte-h="svelte-ivbi0c">이유는 Object끼리 연산하기 때문인데, 위의 코드를 아래와 같이 바꾸면 작동한다.</p> <!-- HTML_TAG_START --><pre class="shiki material-default" js="true"><div class="language-id">js</div><div class='code-container'><code><div class='line'>new Date(time1).valueOf() - newDate(time2).valueOf()</div></code></div></pre><!-- HTML_TAG_END -->]]>
+    </content>
+    <category term="date" scheme="https://lyukidon.github.io/?tags=date" />
   </entry>
   <entry>
     <title type="html"><![CDATA[Redux Reducer 작성하기]]></title>
