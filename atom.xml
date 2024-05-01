@@ -6,12 +6,16 @@
   <icon>https://lyukidon.github.io/favicon.png</icon>
   <link href="https://lyukidon.github.io" />
   <link href="https://lyukidon.github.io/atom.xml" rel="self" type="application/atom+xml" />
-  <updated>2024-04-24T17:27:12.268Z</updated>
+  <updated>2024-05-01T01:45:00.599Z</updated>
   <author>
     <name><![CDATA[Ryu Kidon]]></name>
   </author>
-  <category term="nestjs" scheme="https://lyukidon.github.io/?tags=nestjs" />
+  <category term="netlify" scheme="https://lyukidon.github.io/?tags=netlify" />
   <category term="react" scheme="https://lyukidon.github.io/?tags=react" />
+  <category term="typescript" scheme="https://lyukidon.github.io/?tags=typescript" />
+  <category term="tailwind" scheme="https://lyukidon.github.io/?tags=tailwind" />
+  <category term="error" scheme="https://lyukidon.github.io/?tags=error" />
+  <category term="nestjs" scheme="https://lyukidon.github.io/?tags=nestjs" />
   <category term="cors" scheme="https://lyukidon.github.io/?tags=cors" />
   <category term="test" scheme="https://lyukidon.github.io/?tags=test" />
   <category term="redis" scheme="https://lyukidon.github.io/?tags=redis" />
@@ -19,9 +23,6 @@
   <category term="sorting" scheme="https://lyukidon.github.io/?tags=sorting" />
   <category term="formData" scheme="https://lyukidon.github.io/?tags=formData" />
   <category term="docker" scheme="https://lyukidon.github.io/?tags=docker" />
-  <category term="typescript" scheme="https://lyukidon.github.io/?tags=typescript" />
-  <category term="tailwind" scheme="https://lyukidon.github.io/?tags=tailwind" />
-  <category term="error" scheme="https://lyukidon.github.io/?tags=error" />
   <category term="webrtc" scheme="https://lyukidon.github.io/?tags=webrtc" />
   <category term="KPT" scheme="https://lyukidon.github.io/?tags=KPT" />
   <category term="TypeORM" scheme="https://lyukidon.github.io/?tags=TypeORM" />
@@ -63,6 +64,44 @@
   <category term="Elements" scheme="https://lyukidon.github.io/?tags=Elements" />
   <category term="Front-Matter" scheme="https://lyukidon.github.io/?tags=Front-Matter" />
   <category term="Hello World" scheme="https://lyukidon.github.io/?tags=Hello%20World" />
+  <entry>
+    <title type="html"><![CDATA[Netlify로 배포 시, React Router 에러]]></title>
+    <link href="https://lyukidon.github.io/Javascript/TIL/react/netlify_error" />
+    <id>https://lyukidon.github.io/Javascript/TIL/react/netlify_error</id>
+    <published>2024-05-01T00:00:00.000Z</published>
+    <updated>2024-05-01T00:00:00.000Z</updated>
+    <content type="html">
+      <![CDATA[<p data-svelte-h="svelte-xaep35">React Router 를 사용 시 Netlify에서 <code>Page Not Found</code> 오류가 발생하는 경우</p> <p data-svelte-h="svelte-1xc8gp"><code>public</code> 디렉터리에 <code>_redirect</code> 파일을 생성 후, <code>/* /index.html 200</code>를 파일 내에 추가하면 문제가 해결된다.</p>]]>
+    </content>
+    <category term="netlify" scheme="https://lyukidon.github.io/?tags=netlify" />
+  </entry>
+  <entry>
+    <title type="html"><![CDATA[Redux Reducer 작성하기]]></title>
+    <link href="https://lyukidon.github.io/Javascript/TIL/react/redux_reducers" />
+    <id>https://lyukidon.github.io/Javascript/TIL/react/redux_reducers</id>
+    <published>2024-04-30T00:00:00.000Z</published>
+    <updated>2024-04-30T00:00:00.000Z</updated>
+    <content type="html">
+      <![CDATA[]]>
+    </content>
+    <category term="react" scheme="https://lyukidon.github.io/?tags=react" />
+    <category term="typescript" scheme="https://lyukidon.github.io/?tags=typescript" />
+    <category term="tailwind" scheme="https://lyukidon.github.io/?tags=tailwind" />
+    <category term="error" scheme="https://lyukidon.github.io/?tags=error" />
+  </entry>
+  <entry>
+    <title type="html"><![CDATA[]]></title>
+    <link href="https://lyukidon.github.io/Javascript/TIL/react/how_to_store_jwt" />
+    <id>https://lyukidon.github.io/Javascript/TIL/react/how_to_store_jwt</id>
+    <published>2024-04-24T00:00:00.000Z</published>
+    <updated>2024-04-24T00:00:00.000Z</updated>
+    <content type="html">
+      <![CDATA[]]>
+    </content>
+    <category term="nestjs" scheme="https://lyukidon.github.io/?tags=nestjs" />
+    <category term="react" scheme="https://lyukidon.github.io/?tags=react" />
+    <category term="cors" scheme="https://lyukidon.github.io/?tags=cors" />
+  </entry>
   <entry>
     <title type="html"><![CDATA[React CORS Error와 Proxy Server]]></title>
     <link href="https://lyukidon.github.io/Javascript/TIL/react/proxy_server" />
