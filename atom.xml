@@ -6,10 +6,12 @@
   <icon>https://lyukidon.github.io/favicon.png</icon>
   <link href="https://lyukidon.github.io" />
   <link href="https://lyukidon.github.io/atom.xml" rel="self" type="application/atom+xml" />
-  <updated>2024-05-01T12:26:02.037Z</updated>
+  <updated>2024-05-15T09:42:09.561Z</updated>
   <author>
     <name><![CDATA[Ryu Kidon]]></name>
   </author>
+  <category term="prime" scheme="https://lyukidon.github.io/?tags=prime" />
+  <category term="algorithm" scheme="https://lyukidon.github.io/?tags=algorithm" />
   <category term="netlify" scheme="https://lyukidon.github.io/?tags=netlify" />
   <category term="date" scheme="https://lyukidon.github.io/?tags=date" />
   <category term="react" scheme="https://lyukidon.github.io/?tags=react" />
@@ -65,6 +67,18 @@
   <category term="Elements" scheme="https://lyukidon.github.io/?tags=Elements" />
   <category term="Front-Matter" scheme="https://lyukidon.github.io/?tags=Front-Matter" />
   <category term="Hello World" scheme="https://lyukidon.github.io/?tags=Hello%20World" />
+  <entry>
+    <title type="html"><![CDATA[소인수분해]]></title>
+    <link href="https://lyukidon.github.io/Javascript/Algorithm" />
+    <id>https://lyukidon.github.io/Javascript/Algorithm</id>
+    <published>2024-05-15T00:00:00.000Z</published>
+    <updated>2024-05-15T00:00:00.000Z</updated>
+    <content type="html">
+      <![CDATA[<!-- HTML_TAG_START --><pre class="shiki material-default" js="true"><div class="language-id">js</div><div class='code-container'><code><div class='line'>function primeFactors(n)&#123;</div><div class='line'>  const result = new Set()</div><div class='line'>  // 2로 나뉘지 않을 때까지 나눠주기</div><div class='line'>  while (n%2 === 0) &#123;</div><div class='line'>    if (result.at(-1) !== 2)&#123;</div><div class='line'>      result.add(2)</div><div class='line'>    &#125;</div><div class='line'>    n = n/2</div><div class='line'>  &#125;</div><div class='line'>  // n은 이제 홀수이다. 홀수만 확인하기 위해서 2씩 증가시킨다.</div><div class='line'>  // √n까지만 확인하면 된다.</div><div class='line'>  for (let i=3; i*i&lt;=n; i=i+2)&#123;</div><div class='line'>    while (n%i === 0)&#123;</div><div class='line'>      result.add(i)</div><div class='line'>      n = n/i</div><div class='line'>    &#125;</div><div class='line'>  &#125;</div><div class='line'></div><div class='line'>  // 마지막 n이 2보다 큰 소수인 경우, result에 추가해준다.</div><div class='line'>  if (n&gt;2)&#123;</div><div class='line'>    result.add(n)</div><div class='line'>  &#125;</div><div class='line'></div><div class='line'>  return result</div><div class='line'>&#125;</div></code></div></pre><!-- HTML_TAG_END -->]]>
+    </content>
+    <category term="prime" scheme="https://lyukidon.github.io/?tags=prime" />
+    <category term="algorithm" scheme="https://lyukidon.github.io/?tags=algorithm" />
+  </entry>
   <entry>
     <title type="html"><![CDATA[Netlify로 배포 시, React Router 에러]]></title>
     <link href="https://lyukidon.github.io/Javascript/TIL/react/netlify_error" />
