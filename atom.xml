@@ -6,7 +6,7 @@
   <icon>https://lyukidon.github.io/favicon.png</icon>
   <link href="https://lyukidon.github.io" />
   <link href="https://lyukidon.github.io/atom.xml" rel="self" type="application/atom+xml" />
-  <updated>2024-05-15T09:42:09.561Z</updated>
+  <updated>2024-05-15T11:38:18.783Z</updated>
   <author>
     <name><![CDATA[Ryu Kidon]]></name>
   </author>
@@ -68,15 +68,50 @@
   <category term="Front-Matter" scheme="https://lyukidon.github.io/?tags=Front-Matter" />
   <category term="Hello World" scheme="https://lyukidon.github.io/?tags=Hello%20World" />
   <entry>
+    <title type="html"><![CDATA[n보다 작은 모든 소수]]></title>
+    <link href="https://lyukidon.github.io/Javascript/Algorithm/n보다_작은_모든_소수" />
+    <id>https://lyukidon.github.io/Javascript/Algorithm/n보다_작은_모든_소수</id>
+    <published>2024-05-15T00:00:00.000Z</published>
+    <updated>2024-05-15T00:00:00.000Z</updated>
+    <content type="html">
+      <![CDATA[]]>
+    </content>
+    <category term="prime" scheme="https://lyukidon.github.io/?tags=prime" />
+    <category term="algorithm" scheme="https://lyukidon.github.io/?tags=algorithm" />
+  </entry>
+  <entry>
     <title type="html"><![CDATA[소인수분해]]></title>
-    <link href="https://lyukidon.github.io/Javascript/Algorithm" />
-    <id>https://lyukidon.github.io/Javascript/Algorithm</id>
+    <link href="https://lyukidon.github.io/Javascript/Algorithm/prime" />
+    <id>https://lyukidon.github.io/Javascript/Algorithm/prime</id>
     <published>2024-05-15T00:00:00.000Z</published>
     <updated>2024-05-15T00:00:00.000Z</updated>
     <content type="html">
       <![CDATA[<!-- HTML_TAG_START --><pre class="shiki material-default" js="true"><div class="language-id">js</div><div class='code-container'><code><div class='line'>function primeFactors(n)&#123;</div><div class='line'>  const result = new Set()</div><div class='line'>  // 2로 나뉘지 않을 때까지 나눠주기</div><div class='line'>  while (n%2 === 0) &#123;</div><div class='line'>    if (result.at(-1) !== 2)&#123;</div><div class='line'>      result.add(2)</div><div class='line'>    &#125;</div><div class='line'>    n = n/2</div><div class='line'>  &#125;</div><div class='line'>  // n은 이제 홀수이다. 홀수만 확인하기 위해서 2씩 증가시킨다.</div><div class='line'>  // √n까지만 확인하면 된다.</div><div class='line'>  for (let i=3; i*i&lt;=n; i=i+2)&#123;</div><div class='line'>    while (n%i === 0)&#123;</div><div class='line'>      result.add(i)</div><div class='line'>      n = n/i</div><div class='line'>    &#125;</div><div class='line'>  &#125;</div><div class='line'></div><div class='line'>  // 마지막 n이 2보다 큰 소수인 경우, result에 추가해준다.</div><div class='line'>  if (n&gt;2)&#123;</div><div class='line'>    result.add(n)</div><div class='line'>  &#125;</div><div class='line'></div><div class='line'>  return result</div><div class='line'>&#125;</div></code></div></pre><!-- HTML_TAG_END -->]]>
     </content>
     <category term="prime" scheme="https://lyukidon.github.io/?tags=prime" />
+    <category term="algorithm" scheme="https://lyukidon.github.io/?tags=algorithm" />
+  </entry>
+  <entry>
+    <title type="html"><![CDATA[소수 확인하기]]></title>
+    <link href="https://lyukidon.github.io/Javascript/Algorithm/소수" />
+    <id>https://lyukidon.github.io/Javascript/Algorithm/소수</id>
+    <published>2024-05-15T00:00:00.000Z</published>
+    <updated>2024-05-15T00:00:00.000Z</updated>
+    <content type="html">
+      <![CDATA[<p data-svelte-h="svelte-1ux6qds">소수임을 확인하기 위해서는 숫자 n을 2부터 n-1까지 나누어보면 된다.</p> <!-- HTML_TAG_START --><pre class="shiki material-default" js="true"><div class="language-id">js</div><div class='code-container'><code><div class='line'>function isPrime(n)&#123;</div><div class='line'>  if (n&lt;=1) return false</div><div class='line'></div><div class='line'>  for (let i=2; i&lt;n; i++)&#123;</div><div class='line'>    if (n%i === 0) return false</div><div class='line'>  &#125;</div><div class='line'></div><div class='line'>  return true</div><div class='line'>&#125;</div></code></div></pre><!-- HTML_TAG_END --> <p data-svelte-h="svelte-yb1owv">위의 식의 시간 복잡도는 O(n)이다.</p> <p data-svelte-h="svelte-15yskne">위의 식을 개선할 수 있는 조건은 다음과 같다.</p> <ul data-svelte-h="svelte-188vp1r"><li>√n까지만 확인하면 된다.</li> <li>소수는 6k±1의 형태를 띄고 있다.</li></ul> <p data-svelte-h="svelte-rvnv38">개선해보자</p> <!-- HTML_TAG_START --><pre class="shiki material-default" js="true"><div class="language-id">js</div><div class='code-container'><code><div class='line'>function isPrime(n)&#123;</div><div class='line'>  if (n&lt;=1) return false;</div><div class='line'>  if (n&lt;=3) return true;</div><div class='line'></div><div class='line'>  if (n%2===0 || n%3===0) return false</div><div class='line'></div><div class='line'>  for (let i=5; i*i&lt;n; i=i+6)&#123;</div><div class='line'>    if (n%i === 0 || n%(i+2) === 0) return false</div><div class='line'>  &#125;</div><div class='line'></div><div class='line'>  return true</div><div class='line'>&#125;</div></code></div></pre><!-- HTML_TAG_END -->]]>
+    </content>
+    <category term="prime" scheme="https://lyukidon.github.io/?tags=prime" />
+    <category term="algorithm" scheme="https://lyukidon.github.io/?tags=algorithm" />
+  </entry>
+  <entry>
+    <title type="html"><![CDATA[큰 수의 나머지 찾기(Modular Arithmetic, 모듈러 산술, 합동식)]]></title>
+    <link href="https://lyukidon.github.io/Javascript/Algorithm/큰_수의_나머지" />
+    <id>https://lyukidon.github.io/Javascript/Algorithm/큰_수의_나머지</id>
+    <published>2024-05-15T00:00:00.000Z</published>
+    <updated>2024-05-15T00:00:00.000Z</updated>
+    <content type="html">
+      <![CDATA[<ul><li>합동식 (모듈러 산술, Modular Arthmetic)<!-- HTML_TAG_START --><pre class="shiki material-default" js="true"><div class="language-id">js</div><div class='code-container'><code><div class='line'>c % m = (a * b) % m</div><div class='line'>c % m = [(a % m)(b % m)] % m</div></code></div></pre><!-- HTML_TAG_END --></li></ul> <p data-svelte-h="svelte-t2xrk6">위의 합동식을 이용해서, 큰 수의 나머지를 구하는 알고리즘</p> <!-- HTML_TAG_START --><pre class="shiki material-default" js="true"><div class="language-id">js</div><div class='code-container'><code><div class='line'>/**</div><div class='line'> * base: 밑</div><div class='line'> * exponent: 지수</div><div class='line'> * modulus: 나누는 수</div><div class='line'> */</div><div class='line'>function modular(base, exponent, modulus)&#123;</div><div class='line'>  if (modulus === 1) return 0;</div><div class='line'>  let value = 1;</div><div class='line'>  for (let i=0; i&lt;exponent; i++)&#123;</div><div class='line'>    value = (value * base) % modulus;</div><div class='line'>  &#125;</div><div class='line'>  return value;</div><div class='line'>&#125;</div></code></div></pre><!-- HTML_TAG_END -->]]>
+    </content>
     <category term="algorithm" scheme="https://lyukidon.github.io/?tags=algorithm" />
   </entry>
   <entry>
