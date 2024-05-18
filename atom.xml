@@ -6,7 +6,7 @@
   <icon>https://lyukidon.github.io/favicon.png</icon>
   <link href="https://lyukidon.github.io" />
   <link href="https://lyukidon.github.io/atom.xml" rel="self" type="application/atom+xml" />
-  <updated>2024-05-18T04:23:06.796Z</updated>
+  <updated>2024-05-18T04:24:39.875Z</updated>
   <author>
     <name><![CDATA[Ryu Kidon]]></name>
   </author>
@@ -72,8 +72,8 @@
     <title type="html"><![CDATA[어떤 수가 주어졌을 때, 배열 내의 어떤 항목 두 개를 합쳐야 해당 수가 되는지 찾으시오]]></title>
     <link href="https://lyukidon.github.io/Javascript/Algorithm/array/두_개를_더해서_수_만들기" />
     <id>https://lyukidon.github.io/Javascript/Algorithm/array/두_개를_더해서_수_만들기</id>
-    <published>2024-05-15T00:00:00.000Z</published>
-    <updated>2024-05-15T00:00:00.000Z</updated>
+    <published>2024-05-18T00:00:00.000Z</published>
+    <updated>2024-05-18T00:00:00.000Z</updated>
     <content type="html">
       <![CDATA[<!-- HTML_TAG_START --><pre class="shiki material-default" js="true"><div class="language-id">js</div><div class='code-container'><code><div class='line'>const a = [1,2,3,4,5]</div><div class='line'>const b = 9</div><div class='line'></div><div class='line'>function sum(arr, weight)&#123;</div><div class='line'>  for(let i=0; i&lt;arr.length; i++)&#123;</div><div class='line'>    for (let j=i+1; j&lt;arr.length; j++)&#123;</div><div class='line'>      if (arr[i] + arr[j] === weight)&#123;</div><div class='line'>        return [arr[i], arr[j]]</div><div class='line'>      &#125;</div><div class='line'>    &#125;</div><div class='line'>  &#125;</div><div class='line'>  return -1</div><div class='line'>&#125;</div><div class='line'></div><div class='line'>sum(a, b)</div></code></div></pre><!-- HTML_TAG_END --> <p data-svelte-h="svelte-eoys7i">시간복잡도: O(n^2)공간복잡도: O(1)</p> <p data-svelte-h="svelte-1xmobyh">공간복잡도를 늘리는 대신, 시간 복잡도를 줄일 수 있다.</p> <!-- HTML_TAG_START --><pre class="shiki material-default" js="true"><div class="language-id">js</div><div class='code-container'><code><div class='line'>const a = [1,2,3,4,5]</div><div class='line'>const b = 9</div><div class='line'></div><div class='line'>function sum(arr, weight)&#123;</div><div class='line'>  const hash = &#123;&#125;</div><div class='line'></div><div class='line'>  for (let i=0; i&lt;arr.length; i++)&#123;</div><div class='line'>    const currentElement = arr[i];</div><div class='line'>    const difference = weight - currentElement</div><div class='line'></div><div class='line'>    if(hash[currentElement])&#123;</div><div class='line'>      return [hash[currentElement], arr[i]];</div><div class='line'>    &#125;else&#123;</div><div class='line'>      hash[difference] = i+1</div><div class='line'>    &#125;</div><div class='line'>  &#125;</div><div class='line'>  return -1</div><div class='line'>&#125;</div><div class='line'></div><div class='line'>sum(a, b)</div></code></div></pre><!-- HTML_TAG_END -->]]>
     </content>
