@@ -11,6 +11,16 @@
     </url>
     
         <url>
+            <loc>https://lyukidon.github.io/Javascript/TIL/CV/findWall</loc>
+            <lastmod>2024-06-05T00:00:00.000Z</lastmod>
+            <priority>0.5</priority>
+        </url>
+        <url>
+            <loc>https://lyukidon.github.io/Javascript/TIL/CV/morphology</loc>
+            <lastmod>2024-06-02T00:00:00.000Z</lastmod>
+            <priority>0.5</priority>
+        </url>
+        <url>
             <loc>https://lyukidon.github.io/Javascript/Algorithm/array/두_개를_더해서_수_만들기</loc>
             <lastmod>2024-05-18T00:00:00.000Z</lastmod>
             <priority>0.5</priority>
@@ -27,6 +37,11 @@
         </url>
         <url>
             <loc>https://lyukidon.github.io/Javascript/Algorithm/number/큰_수의_나머지</loc>
+            <lastmod>2024-05-15T00:00:00.000Z</lastmod>
+            <priority>0.5</priority>
+        </url>
+        <url>
+            <loc>https://lyukidon.github.io/Javascript/TIL/이미지_처리/canvas에서_이미지_수정</loc>
             <lastmod>2024-05-15T00:00:00.000Z</lastmod>
             <priority>0.5</priority>
         </url>

@@ -6,10 +6,12 @@
   <icon>https://lyukidon.github.io/favicon.png</icon>
   <link href="https://lyukidon.github.io" />
   <link href="https://lyukidon.github.io/atom.xml" rel="self" type="application/atom+xml" />
-  <updated>2024-05-18T04:24:39.875Z</updated>
+  <updated>2024-06-04T15:14:48.082Z</updated>
   <author>
     <name><![CDATA[Ryu Kidon]]></name>
   </author>
+  <category term="cv" scheme="https://lyukidon.github.io/?tags=cv" />
+  <category term="morphology" scheme="https://lyukidon.github.io/?tags=morphology" />
   <category term="array" scheme="https://lyukidon.github.io/?tags=array" />
   <category term="algorithm" scheme="https://lyukidon.github.io/?tags=algorithm" />
   <category term="prime" scheme="https://lyukidon.github.io/?tags=prime" />
@@ -69,6 +71,29 @@
   <category term="Front-Matter" scheme="https://lyukidon.github.io/?tags=Front-Matter" />
   <category term="Hello World" scheme="https://lyukidon.github.io/?tags=Hello%20World" />
   <entry>
+    <title type="html"><![CDATA[평면도의 벽을 확인하는 방법]]></title>
+    <link href="https://lyukidon.github.io/Javascript/TIL/CV/findWall" />
+    <id>https://lyukidon.github.io/Javascript/TIL/CV/findWall</id>
+    <published>2024-06-02T00:00:00.000Z</published>
+    <updated>2024-06-05T00:00:00.000Z</updated>
+    <content type="html">
+      <![CDATA[<p data-svelte-h="svelte-1g1p6s9">기존의 벽을 확인하는 방법은 다음과 같았다.</p> <ol data-svelte-h="svelte-1hv4q2x"><li>이진화</li></ol> <ul data-svelte-h="svelte-xpqzb"><li>특정 값 이상의 색을 모두 255로 만들어, 흑과 백만 남긴다.</li></ul> <p data-svelte-h="svelte-fur4bd">그러나 위와 같은 방법은 어떤 그림에서는 사용할 수 없는 방법이라, 다음과 같은 방법을 찾았다.</p> <p data-svelte-h="svelte-1hu1ytn">참고: 사진 속 글자 검출하기</p> <ul data-svelte-h="svelte-19qw3q4"><li><a href="https://d2.naver.com/helloworld/8344782" rel="nofollow noopener noreferrer external" target="_blank">https://d2.naver.com/helloworld/8344782</a></li></ul> <p data-svelte-h="svelte-1cgs8ub">위의 사이트를 참고하여, 다음과 같은 순서로 벽을 찾는 것을 진행해볼 예정이다.</p> <ol data-svelte-h="svelte-p96k75"><li>그레이 스케일</li></ol> <ul data-svelte-h="svelte-11teuxo"><li>이미지를 회색으로 만들기 위해서는 (r+g+b)/3 을 해주면 된다.</li></ul> <ol start="2" data-svelte-h="svelte-i7us6y"><li>모폴로지 그레디언트</li></ol> <ul data-svelte-h="svelte-1ncdi60"><li>경계 이미지를 추출하는 방법이다.</li></ul> <ol start="3" data-svelte-h="svelte-uya5la"><li>adaptive threshold</li></ol> <ul data-svelte-h="svelte-yxkmk8"><li>잡영(noise) 제거</li></ul> <ol start="4" data-svelte-h="svelte-bk9mlw"><li>모폴로지 클로즈</li></ol> <ul data-svelte-h="svelte-19ek8c8"><li>끊어진 개체를 연결하거나 구멍을 채우는 연산 작업이다.</li></ul>]]>
+    </content>
+    <category term="cv" scheme="https://lyukidon.github.io/?tags=cv" />
+  </entry>
+  <entry>
+    <title type="html"><![CDATA[평면도의 벽을 확인하는 방법]]></title>
+    <link href="https://lyukidon.github.io/Javascript/TIL/CV/morphology" />
+    <id>https://lyukidon.github.io/Javascript/TIL/CV/morphology</id>
+    <published>2024-06-02T00:00:00.000Z</published>
+    <updated>2024-06-02T00:00:00.000Z</updated>
+    <content type="html">
+      <![CDATA[<h1 id="모폴로지morphology" data-svelte-h="svelte-1uxoqzf"><a href="#모폴로지morphology">모폴로지(Morphology)</a></h1> <ul data-svelte-h="svelte-1kqmjvl"><li><p>한글: 형태론</p></li> <li><p>한자: 形態論</p></li> <li><p>생물의 구조에 대해서 파악하는 분야이다. 수학적 모폴로지는 이미지를 단순한 형태로 변형시키는 것을 말한다.</p></li> <li><p>종류는 <code>침식</code>, <code>팽창</code>, <code>열림</code>, <code>닫힘</code>, <code>그레디언트</code>, <code>탑햇</code>, <code>블랙햇</code>이 있다.</p></li></ul> <h2 id="연산-종류" data-svelte-h="svelte-mxdpav"><a href="#연산-종류">연산 종류</a></h2> <ol data-svelte-h="svelte-y2v52e"><li>침식</li></ol> <ul data-svelte-h="svelte-3azjmr"><li>구조화 요소가 겹치지 않으면 0, 겹치면 1로 변경</li></ul> <ol start="2" data-svelte-h="svelte-13eslig"><li>팽창</li></ol> <ul data-svelte-h="svelte-12hwjzi"><li>기준점과 이미지가 모두 1인 상태로 겹치는 경우 기준점 위치의 그림은 1, 그렇지 않은 경우 0</li></ul> <ol start="3" data-svelte-h="svelte-14b8fjh"><li>열림</li></ol> <ul data-svelte-h="svelte-1bxvk85"><li>침식 연산 -&gt; 팽창 연산</li> <li>주변보다 밝은 노이즈를 제거해 줌</li> <li>맞닿아있는 것처럼 보이는 독립개체를 분리하거나 돌출된 모양 제거</li></ul> <ol start="4" data-svelte-h="svelte-1cqwf11"><li>닫힘</li></ol> <ul data-svelte-h="svelte-z2kww5"><li>팽창 연산 -&gt; 침식 연산</li> <li>주변보다 어두운 노이즈 제거</li> <li>끊어진 개체를 연결하거나 구멍을 메우는데 효과적</li></ul> <ol start="5" data-svelte-h="svelte-z7n7gp"><li>그레디언트</li></ol> <ul data-svelte-h="svelte-apwqyn"><li>팽창 - 침식</li> <li>테두리를 얻어내는 방법</li></ul> <ol start="6" data-svelte-h="svelte-pmxg22"><li>탑햇</li></ol> <ul data-svelte-h="svelte-er0rfx"><li>원본 사진 - 열림 연산</li> <li>밝은 영역 강조</li></ul> <ol start="7" data-svelte-h="svelte-4ztcj7"><li>블랙햇</li></ol> <ul data-svelte-h="svelte-1wpt8sf"><li>닫힘 - 원본</li> <li>어두운 영역 강조</li></ul>]]>
+    </content>
+    <category term="cv" scheme="https://lyukidon.github.io/?tags=cv" />
+    <category term="morphology" scheme="https://lyukidon.github.io/?tags=morphology" />
+  </entry>
+  <entry>
     <title type="html"><![CDATA[어떤 수가 주어졌을 때, 배열 내의 어떤 항목 두 개를 합쳐야 해당 수가 되는지 찾으시오]]></title>
     <link href="https://lyukidon.github.io/Javascript/Algorithm/array/두_개를_더해서_수_만들기" />
     <id>https://lyukidon.github.io/Javascript/Algorithm/array/두_개를_더해서_수_만들기</id>
@@ -114,6 +139,17 @@
       <![CDATA[<ul><li>합동식 (모듈러 산술, Modular Arthmetic)<!-- HTML_TAG_START --><pre class="shiki material-default" js="true"><div class="language-id">js</div><div class='code-container'><code><div class='line'>c % m = (a * b) % m</div><div class='line'>c % m = [(a % m)(b % m)] % m</div></code></div></pre><!-- HTML_TAG_END --></li></ul> <p data-svelte-h="svelte-t2xrk6">위의 합동식을 이용해서, 큰 수의 나머지를 구하는 알고리즘</p> <!-- HTML_TAG_START --><pre class="shiki material-default" js="true"><div class="language-id">js</div><div class='code-container'><code><div class='line'>/**</div><div class='line'> * base: 밑</div><div class='line'> * exponent: 지수</div><div class='line'> * modulus: 나누는 수</div><div class='line'> */</div><div class='line'>function modular(base, exponent, modulus)&#123;</div><div class='line'>  if (modulus === 1) return 0;</div><div class='line'>  let value = 1;</div><div class='line'>  for (let i=0; i&lt;exponent; i++)&#123;</div><div class='line'>    value = (value * base) % modulus;</div><div class='line'>  &#125;</div><div class='line'>  return value;</div><div class='line'>&#125;</div></code></div></pre><!-- HTML_TAG_END -->]]>
     </content>
     <category term="algorithm" scheme="https://lyukidon.github.io/?tags=algorithm" />
+  </entry>
+  <entry>
+    <title type="html"><![CDATA[Canvas 데이터 처리하기]]></title>
+    <link href="https://lyukidon.github.io/Javascript/TIL/이미지_처리/canvas에서_이미지_수정" />
+    <id>https://lyukidon.github.io/Javascript/TIL/이미지_처리/canvas에서_이미지_수정</id>
+    <published>2024-05-15T00:00:00.000Z</published>
+    <updated>2024-05-15T00:00:00.000Z</updated>
+    <content type="html">
+      <![CDATA[<ul data-svelte-h="svelte-13lunf8"><li>html</li></ul> <!-- HTML_TAG_START --><pre class="shiki material-default" html="true"><div class="language-id">html</div><div class='code-container'><code><div class='line'>&lt;input type="file" id="fileInput" name="file" /&gt;</div><div class='line'>&lt;img id="imageSrc" alt="No Image" /&gt;</div><div class='line'>&lt;canvas id="canvasOutput"&gt;&lt;/canvas&gt;</div><div class='line'>&lt;canvas id="canvasEdit"&gt;&lt;/canvas&gt;</div></code></div></pre><!-- HTML_TAG_END --> <ul data-svelte-h="svelte-gew7im"><li>script</li></ul> <!-- HTML_TAG_START --><pre class="shiki material-default" js="true"><div class="language-id">js</div><div class='code-container'><code><div class='line'>const imgElement = document.querySelector("img#imageSrc");</div><div class='line'>const inputElement = document.getElementById("fileInput");</div><div class='line'></div><div class='line'>// 이미지 넣기</div><div class='line'>inputElement.addEventListener(</div><div class='line'>  "change",</div><div class='line'>  e =&gt; &#123;</div><div class='line'>    imgElement.src = URL.createObjectURL(e.target.files[0]);</div><div class='line'>  &#125;,</div><div class='line'>  false</div><div class='line'>);</div></code></div></pre><!-- HTML_TAG_END -->]]>
+    </content>
+    <category term="cv" scheme="https://lyukidon.github.io/?tags=cv" />
   </entry>
   <entry>
     <title type="html"><![CDATA[Netlify로 배포 시, React Router 에러]]></title>
