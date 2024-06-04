@@ -6,7 +6,7 @@
   <icon>https://lyukidon.github.io/favicon.png</icon>
   <link href="https://lyukidon.github.io" />
   <link href="https://lyukidon.github.io/atom.xml" rel="self" type="application/atom+xml" />
-  <updated>2024-06-04T15:31:46.644Z</updated>
+  <updated>2024-06-04T15:33:10.571Z</updated>
   <author>
     <name><![CDATA[Ryu Kidon]]></name>
   </author>
@@ -82,7 +82,7 @@
     <category term="cv" scheme="https://lyukidon.github.io/?tags=cv" />
   </entry>
   <entry>
-    <title type="html"><![CDATA[평면도의 벽을 확인하는 방법]]></title>
+    <title type="html"><![CDATA[모폴로지(Morphology) 연산]]></title>
     <link href="https://lyukidon.github.io/Javascript/TIL/CV/morphology" />
     <id>https://lyukidon.github.io/Javascript/TIL/CV/morphology</id>
     <published>2024-06-02T00:00:00.000Z</published>
