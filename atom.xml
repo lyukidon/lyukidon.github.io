@@ -6,7 +6,7 @@
   <icon>https://lyukidon.github.io/favicon.png</icon>
   <link href="https://lyukidon.github.io" />
   <link href="https://lyukidon.github.io/atom.xml" rel="self" type="application/atom+xml" />
-  <updated>2024-06-04T15:33:10.571Z</updated>
+  <updated>2024-06-04T15:43:10.513Z</updated>
   <author>
     <name><![CDATA[Ryu Kidon]]></name>
   </author>
@@ -71,6 +71,18 @@
   <category term="Front-Matter" scheme="https://lyukidon.github.io/?tags=Front-Matter" />
   <category term="Hello World" scheme="https://lyukidon.github.io/?tags=Hello%20World" />
   <entry>
+    <title type="html"><![CDATA[모폴로지(Morphology) 연산]]></title>
+    <link href="https://lyukidon.github.io/Javascript/TIL/CV/morphology" />
+    <id>https://lyukidon.github.io/Javascript/TIL/CV/morphology</id>
+    <published>2024-06-05T00:00:00.000Z</published>
+    <updated>2024-06-05T00:00:00.000Z</updated>
+    <content type="html">
+      <![CDATA[<p data-svelte-h="svelte-8awkk1">참고: <a href="https://velog.io/@kansun12/%EC%BB%B4%ED%93%A8%ED%84%B0%EB%B9%84%EC%A0%84-%EC%B9%A8%EC%8B%9D%EA%B3%BC-%ED%8C%BD%EC%B0%BD%EC%9D%98-%EB%AA%A8%ED%8F%B4%EB%A1%9C%EC%A7%80-%EC%98%81%EC%83%81%EC%B2%98%EB%A6%AC" rel="nofollow noopener noreferrer external" target="_blank">https://velog.io/@kansun12/컴퓨터비전-침식과-팽창의-모폴로지-영상처리</a></p> <p data-svelte-h="svelte-q0rxyi">그림으로 설명이 잘되어있으니, 필요할 때 확인</p> <h1 id="모폴로지morphology" data-svelte-h="svelte-1uxoqzf"><a href="#모폴로지morphology">모폴로지(Morphology)</a></h1> <ul data-svelte-h="svelte-1kqmjvl"><li><p>한글: 형태론</p></li> <li><p>한자: 形態論</p></li> <li><p>생물의 구조에 대해서 파악하는 분야이다. 수학적 모폴로지는 이미지를 단순한 형태로 변형시키는 것을 말한다.</p></li> <li><p>종류는 <code>침식</code>, <code>팽창</code>, <code>열림</code>, <code>닫힘</code>, <code>그레디언트</code>, <code>탑햇</code>, <code>블랙햇</code>이 있다.</p></li></ul> <h2 id="연산-종류" data-svelte-h="svelte-mxdpav"><a href="#연산-종류">연산 종류</a></h2> <ol data-svelte-h="svelte-81orrw"><li>침식(Erosion)</li></ol> <ul data-svelte-h="svelte-3azjmr"><li>구조화 요소가 겹치지 않으면 0, 겹치면 1로 변경</li></ul> <ol start="2" data-svelte-h="svelte-1bxm533"><li>팽창(Dilation)</li></ol> <ul data-svelte-h="svelte-12hwjzi"><li>기준점과 이미지가 모두 1인 상태로 겹치는 경우 기준점 위치의 그림은 1, 그렇지 않은 경우 0</li></ul> <ol start="3" data-svelte-h="svelte-1udz4u0"><li>열림(Opening)</li></ol> <ul data-svelte-h="svelte-1bxvk85"><li>침식 연산 -&gt; 팽창 연산</li> <li>주변보다 밝은 노이즈를 제거해 줌</li> <li>맞닿아있는 것처럼 보이는 독립개체를 분리하거나 돌출된 모양 제거</li></ul> <ol start="4" data-svelte-h="svelte-oqdx75"><li>닫힘(Closing)</li></ol> <ul data-svelte-h="svelte-z2kww5"><li>팽창 연산 -&gt; 침식 연산</li> <li>주변보다 어두운 노이즈 제거</li> <li>끊어진 개체를 연결하거나 구멍을 메우는데 효과적</li></ul> <ol start="5" data-svelte-h="svelte-rcd8di"><li>그레디언트(Gradient)</li></ol> <ul data-svelte-h="svelte-apwqyn"><li>팽창 - 침식</li> <li>테두리를 얻어내는 방법</li></ul> <ol start="6" data-svelte-h="svelte-nmgmgl"><li>탑햇(Top Hat)</li></ol> <ul data-svelte-h="svelte-er0rfx"><li>원본 사진 - 열림 연산</li> <li>밝은 영역 강조</li></ul> <ol start="7" data-svelte-h="svelte-15hudu"><li>블랙햇(Black Hat)</li></ol> <ul data-svelte-h="svelte-1wpt8sf"><li>닫힘 - 원본</li> <li>어두운 영역 강조</li></ul>]]>
+    </content>
+    <category term="cv" scheme="https://lyukidon.github.io/?tags=cv" />
+    <category term="morphology" scheme="https://lyukidon.github.io/?tags=morphology" />
+  </entry>
+  <entry>
     <title type="html"><![CDATA[평면도의 벽을 확인하는 방법]]></title>
     <link href="https://lyukidon.github.io/Javascript/TIL/CV/findWall" />
     <id>https://lyukidon.github.io/Javascript/TIL/CV/findWall</id>
@@ -80,18 +92,6 @@
       <![CDATA[<p data-svelte-h="svelte-1g1p6s9">기존의 벽을 확인하는 방법은 다음과 같았다.</p> <ol data-svelte-h="svelte-o31lfj"><li>평균값을 이용</li></ol> <ul data-svelte-h="svelte-19qyvec"><li>색상의 평균값을 이용해서, 데이터를 계산하고, 평균값보다 높은 경우 데이터를 255로 변경한다.</li></ul> <ol start="2" data-svelte-h="svelte-aiystc"><li>이진화</li></ol> <ul data-svelte-h="svelte-xpqzb"><li>특정 값 이상의 색을 모두 255로 만들어, 흑과 백만 남긴다.</li></ul> <ol start="3" data-svelte-h="svelte-ua97gy"><li>DFS (깊이 우선 탐색)</li></ol> <ul data-svelte-h="svelte-azm6k3"><li>검은 점이 이어진 부분들을 모두 찾아 벽을 찾으려고 했으나, 1개의 선으로 이어지지 않은 그림의 경우는 사용할 수 없는 문제점이 존재</li></ul> <p data-svelte-h="svelte-fur4bd">그러나 위와 같은 방법은 어떤 그림에서는 사용할 수 없는 방법이라, 다음과 같은 방법을 찾았다.</p> <p data-svelte-h="svelte-1gvrrre">참고: <a href="https://d2.naver.com/helloworld/8344782" rel="nofollow noopener noreferrer external" target="_blank">딥러닝과 OpenCV를 활용해 사진 속 글자 검출하기</a></p> <p data-svelte-h="svelte-1cgs8ub">위의 사이트를 참고하여, 다음과 같은 순서로 벽을 찾는 것을 진행해볼 예정이다.</p> <ol data-svelte-h="svelte-p96k75"><li>그레이 스케일</li></ol> <ul data-svelte-h="svelte-11teuxo"><li>이미지를 회색으로 만들기 위해서는 (r+g+b)/3 을 해주면 된다.</li></ul> <ol start="2" data-svelte-h="svelte-i7us6y"><li>모폴로지 그레디언트</li></ol> <ul data-svelte-h="svelte-1ncdi60"><li>경계 이미지를 추출하는 방법이다.</li></ul> <ol start="3" data-svelte-h="svelte-uya5la"><li>adaptive threshold</li></ol> <ul data-svelte-h="svelte-yxkmk8"><li>잡영(noise) 제거</li></ul> <ol start="4" data-svelte-h="svelte-bk9mlw"><li>모폴로지 클로즈</li></ol> <ul data-svelte-h="svelte-19ek8c8"><li>끊어진 개체를 연결하거나 구멍을 채우는 연산 작업이다.</li></ul>]]>
     </content>
     <category term="cv" scheme="https://lyukidon.github.io/?tags=cv" />
-  </entry>
-  <entry>
-    <title type="html"><![CDATA[모폴로지(Morphology) 연산]]></title>
-    <link href="https://lyukidon.github.io/Javascript/TIL/CV/morphology" />
-    <id>https://lyukidon.github.io/Javascript/TIL/CV/morphology</id>
-    <published>2024-06-02T00:00:00.000Z</published>
-    <updated>2024-06-02T00:00:00.000Z</updated>
-    <content type="html">
-      <![CDATA[<h1 id="모폴로지morphology" data-svelte-h="svelte-1uxoqzf"><a href="#모폴로지morphology">모폴로지(Morphology)</a></h1> <ul data-svelte-h="svelte-1kqmjvl"><li><p>한글: 형태론</p></li> <li><p>한자: 形態論</p></li> <li><p>생물의 구조에 대해서 파악하는 분야이다. 수학적 모폴로지는 이미지를 단순한 형태로 변형시키는 것을 말한다.</p></li> <li><p>종류는 <code>침식</code>, <code>팽창</code>, <code>열림</code>, <code>닫힘</code>, <code>그레디언트</code>, <code>탑햇</code>, <code>블랙햇</code>이 있다.</p></li></ul> <h2 id="연산-종류" data-svelte-h="svelte-mxdpav"><a href="#연산-종류">연산 종류</a></h2> <ol data-svelte-h="svelte-y2v52e"><li>침식</li></ol> <ul data-svelte-h="svelte-3azjmr"><li>구조화 요소가 겹치지 않으면 0, 겹치면 1로 변경</li></ul> <ol start="2" data-svelte-h="svelte-13eslig"><li>팽창</li></ol> <ul data-svelte-h="svelte-12hwjzi"><li>기준점과 이미지가 모두 1인 상태로 겹치는 경우 기준점 위치의 그림은 1, 그렇지 않은 경우 0</li></ul> <ol start="3" data-svelte-h="svelte-14b8fjh"><li>열림</li></ol> <ul data-svelte-h="svelte-1bxvk85"><li>침식 연산 -&gt; 팽창 연산</li> <li>주변보다 밝은 노이즈를 제거해 줌</li> <li>맞닿아있는 것처럼 보이는 독립개체를 분리하거나 돌출된 모양 제거</li></ul> <ol start="4" data-svelte-h="svelte-1cqwf11"><li>닫힘</li></ol> <ul data-svelte-h="svelte-z2kww5"><li>팽창 연산 -&gt; 침식 연산</li> <li>주변보다 어두운 노이즈 제거</li> <li>끊어진 개체를 연결하거나 구멍을 메우는데 효과적</li></ul> <ol start="5" data-svelte-h="svelte-z7n7gp"><li>그레디언트</li></ol> <ul data-svelte-h="svelte-apwqyn"><li>팽창 - 침식</li> <li>테두리를 얻어내는 방법</li></ul> <ol start="6" data-svelte-h="svelte-pmxg22"><li>탑햇</li></ol> <ul data-svelte-h="svelte-er0rfx"><li>원본 사진 - 열림 연산</li> <li>밝은 영역 강조</li></ul> <ol start="7" data-svelte-h="svelte-4ztcj7"><li>블랙햇</li></ol> <ul data-svelte-h="svelte-1wpt8sf"><li>닫힘 - 원본</li> <li>어두운 영역 강조</li></ul>]]>
-    </content>
-    <category term="cv" scheme="https://lyukidon.github.io/?tags=cv" />
-    <category term="morphology" scheme="https://lyukidon.github.io/?tags=morphology" />
   </entry>
   <entry>
     <title type="html"><![CDATA[어떤 수가 주어졌을 때, 배열 내의 어떤 항목 두 개를 합쳐야 해당 수가 되는지 찾으시오]]></title>
