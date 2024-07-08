@@ -6,12 +6,14 @@
   <icon>https://lyukidon.github.io/favicon.png</icon>
   <link href="https://lyukidon.github.io" />
   <link href="https://lyukidon.github.io/atom.xml" rel="self" type="application/atom+xml" />
-  <updated>2024-06-04T15:43:10.513Z</updated>
+  <updated>2024-07-08T13:03:25.085Z</updated>
   <author>
     <name><![CDATA[Ryu Kidon]]></name>
   </author>
   <category term="cv" scheme="https://lyukidon.github.io/?tags=cv" />
   <category term="morphology" scheme="https://lyukidon.github.io/?tags=morphology" />
+  <category term="python" scheme="https://lyukidon.github.io/?tags=python" />
+  <category term="정렬" scheme="https://lyukidon.github.io/?tags=%EC%A0%95%EB%A0%AC" />
   <category term="array" scheme="https://lyukidon.github.io/?tags=array" />
   <category term="algorithm" scheme="https://lyukidon.github.io/?tags=algorithm" />
   <category term="prime" scheme="https://lyukidon.github.io/?tags=prime" />
@@ -83,15 +85,39 @@
     <category term="morphology" scheme="https://lyukidon.github.io/?tags=morphology" />
   </entry>
   <entry>
+    <title type="html"><![CDATA[]]></title>
+    <link href="https://lyukidon.github.io/Javascript/Algorithm/sorting/selection" />
+    <id>https://lyukidon.github.io/Javascript/Algorithm/sorting/selection</id>
+    <published>2024-06-02T00:00:00.000Z</published>
+    <updated>2024-06-05T00:00:00.000Z</updated>
+    <content type="html">
+      <![CDATA[<p data-svelte-h="svelte-1wlifqk">파이선으로 작성한 선택정렬</p> <!-- HTML_TAG_START --><pre class="shiki material-default" py="true"><div class="language-id">py</div><div class='code-container'><code><div class='line'>def selectionSort(arr):</div><div class='line'>    tmp = list(arr);</div><div class='line'></div><div class='line'>    for i in range(0,len(tmp)):</div><div class='line'>        minIdx = i;</div><div class='line'>        for j in range(i+1, len(tmp)):</div><div class='line'>            if (tmp[i] &lt; tmp[j]):</div><div class='line'>                minIdx = i;</div><div class='line'>            else:</div><div class='line'>                minIdx = j;</div><div class='line'>        if (minIdx != i):</div><div class='line'>            minNum = tmp[minIdx];</div><div class='line'>            tmp.pop(minIdx);</div><div class='line'>            tmp.insert(i, minNum);</div><div class='line'>    return tmp;</div></code></div></pre><!-- HTML_TAG_END -->]]>
+    </content>
+    <category term="python" scheme="https://lyukidon.github.io/?tags=python" />
+    <category term="정렬" scheme="https://lyukidon.github.io/?tags=%EC%A0%95%EB%A0%AC" />
+  </entry>
+  <entry>
     <title type="html"><![CDATA[평면도의 벽을 확인하는 방법]]></title>
     <link href="https://lyukidon.github.io/Javascript/TIL/CV/findWall" />
     <id>https://lyukidon.github.io/Javascript/TIL/CV/findWall</id>
     <published>2024-06-02T00:00:00.000Z</published>
     <updated>2024-06-05T00:00:00.000Z</updated>
     <content type="html">
-      <![CDATA[<p data-svelte-h="svelte-1g1p6s9">기존의 벽을 확인하는 방법은 다음과 같았다.</p> <ol data-svelte-h="svelte-o31lfj"><li>평균값을 이용</li></ol> <ul data-svelte-h="svelte-19qyvec"><li>색상의 평균값을 이용해서, 데이터를 계산하고, 평균값보다 높은 경우 데이터를 255로 변경한다.</li></ul> <ol start="2" data-svelte-h="svelte-aiystc"><li>이진화</li></ol> <ul data-svelte-h="svelte-xpqzb"><li>특정 값 이상의 색을 모두 255로 만들어, 흑과 백만 남긴다.</li></ul> <ol start="3" data-svelte-h="svelte-ua97gy"><li>DFS (깊이 우선 탐색)</li></ol> <ul data-svelte-h="svelte-azm6k3"><li>검은 점이 이어진 부분들을 모두 찾아 벽을 찾으려고 했으나, 1개의 선으로 이어지지 않은 그림의 경우는 사용할 수 없는 문제점이 존재</li></ul> <p data-svelte-h="svelte-fur4bd">그러나 위와 같은 방법은 어떤 그림에서는 사용할 수 없는 방법이라, 다음과 같은 방법을 찾았다.</p> <p data-svelte-h="svelte-1gvrrre">참고: <a href="https://d2.naver.com/helloworld/8344782" rel="nofollow noopener noreferrer external" target="_blank">딥러닝과 OpenCV를 활용해 사진 속 글자 검출하기</a></p> <p data-svelte-h="svelte-1cgs8ub">위의 사이트를 참고하여, 다음과 같은 순서로 벽을 찾는 것을 진행해볼 예정이다.</p> <ol data-svelte-h="svelte-p96k75"><li>그레이 스케일</li></ol> <ul data-svelte-h="svelte-11teuxo"><li>이미지를 회색으로 만들기 위해서는 (r+g+b)/3 을 해주면 된다.</li></ul> <ol start="2" data-svelte-h="svelte-i7us6y"><li>모폴로지 그레디언트</li></ol> <ul data-svelte-h="svelte-1ncdi60"><li>경계 이미지를 추출하는 방법이다.</li></ul> <ol start="3" data-svelte-h="svelte-uya5la"><li>adaptive threshold</li></ol> <ul data-svelte-h="svelte-yxkmk8"><li>잡영(noise) 제거</li></ul> <ol start="4" data-svelte-h="svelte-bk9mlw"><li>모폴로지 클로즈</li></ol> <ul data-svelte-h="svelte-19ek8c8"><li>끊어진 개체를 연결하거나 구멍을 채우는 연산 작업이다.</li></ul>]]>
+      <![CDATA[<p data-svelte-h="svelte-1g1p6s9">기존의 벽을 확인하는 방법은 다음과 같았다.</p> <ol data-svelte-h="svelte-1c0rdjk"><li><p>평균값을 이용</p> <ul><li>색상의 평균값을 이용해서, 데이터를 계산하고, 평균값보다 높은 경우 데이터를 255로 변경한다.</li></ul></li> <li><p>이진화</p> <ul><li>특정 값 이상의 색을 모두 255로 만들어, 흑과 백만 남긴다.</li></ul></li> <li><p>DFS (깊이 우선 탐색)</p> <ul><li>검은 점이 이어진 부분들을 모두 찾아 벽을 찾으려고 했으나, 1개의 선으로 이어지지 않은 그림의 경우는 사용할 수 없는 문제점이 존재</li></ul></li></ol> <p data-svelte-h="svelte-1tevhlc">그러나 위와 같은 방법은 어떤 그림에서는 사용할 수 없는 방법이라, 다음과 같은 방법으로 변경</p> <ol data-svelte-h="svelte-t8ojb8"><li><p>색상 제거</p> <ul><li>평균값 =&gt; 중앙값을 사용해보기</li></ul></li> <li><p>이진화</p></li> <li><p>그레이 스케일</p> <ul><li>이미지를 회색으로 만들기 위해서는 (r+g+b)/3 을 해주면 된다.</li></ul></li> <li><p>모폴로지 그레디언트</p> <ul><li>경계 이미지를 추출하는 방법이다.</li></ul></li> <li><p>adaptive threshold</p> <ul><li>잡영(noise) 제거</li></ul></li> <li><p>모폴로지 클로즈</p> <ul><li>끊어진 개체를 연결하거나 구멍을 채우는 연산 작업이다.</li></ul></li></ol> <p data-svelte-h="svelte-1gvrrre">참고: <a href="https://d2.naver.com/helloworld/8344782" rel="nofollow noopener noreferrer external" target="_blank">딥러닝과 OpenCV를 활용해 사진 속 글자 검출하기</a></p>]]>
     </content>
     <category term="cv" scheme="https://lyukidon.github.io/?tags=cv" />
+  </entry>
+  <entry>
+    <title type="html"><![CDATA[침식(Erosion) 구현하기]]></title>
+    <link href="https://lyukidon.github.io/Javascript/TIL/CV/morphology/erosion_building" />
+    <id>https://lyukidon.github.io/Javascript/TIL/CV/morphology/erosion_building</id>
+    <published>2024-06-02T00:00:00.000Z</published>
+    <updated>2024-06-05T00:00:00.000Z</updated>
+    <content type="html">
+      <![CDATA[<p data-svelte-h="svelte-1toadej">침식을 구현하기 위해서는 사진과 구조화 요소가 필요하다.</p> <p data-svelte-h="svelte-gwf2nh">구조화 요소의 예시는 다음과 같다.</p> <!-- HTML_TAG_START --><pre class="shiki material-default" js="true"><div class="language-id">js</div><div class='code-container'><code><div class='line'>[ </div><div class='line'>  1,1,1,</div><div class='line'>  1,1,1,</div><div class='line'>  1,1,1</div><div class='line'>]</div></code></div></pre><!-- HTML_TAG_END --> <p data-svelte-h="svelte-1k4cvm1">이렇게 했을 때, 기준점을 0으로 만들어줄 필요가 있다.</p> <p data-svelte-h="svelte-d85cq">중앙이 기준점이면</p> <!-- HTML_TAG_START --><pre class="shiki material-default"><div class='code-container'><code><div class='line'>[</div><div class='line'>  (-1, -1), (0, -1), (1, -1),</div><div class='line'>  (-1, 0), (0, 0), (1, 0),</div><div class='line'>  (-1, 1), (0, 1), (1, 1),</div><div class='line'>]</div></code></div></pre><!-- HTML_TAG_END -->]]>
+    </content>
+    <category term="cv" scheme="https://lyukidon.github.io/?tags=cv" />
+    <category term="morphology" scheme="https://lyukidon.github.io/?tags=morphology" />
   </entry>
   <entry>
     <title type="html"><![CDATA[어떤 수가 주어졌을 때, 배열 내의 어떤 항목 두 개를 합쳐야 해당 수가 되는지 찾으시오]]></title>
