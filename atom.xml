@@ -6,7 +6,7 @@
   <icon>https://lyukidon.github.io/favicon.png</icon>
   <link href="https://lyukidon.github.io" />
   <link href="https://lyukidon.github.io/atom.xml" rel="self" type="application/atom+xml" />
-  <updated>2024-07-08T13:03:25.085Z</updated>
+  <updated>2024-07-08T13:06:30.830Z</updated>
   <author>
     <name><![CDATA[Ryu Kidon]]></name>
   </author>
@@ -85,13 +85,13 @@
     <category term="morphology" scheme="https://lyukidon.github.io/?tags=morphology" />
   </entry>
   <entry>
-    <title type="html"><![CDATA[]]></title>
+    <title type="html"><![CDATA[선택 정렬]]></title>
     <link href="https://lyukidon.github.io/Javascript/Algorithm/sorting/selection" />
     <id>https://lyukidon.github.io/Javascript/Algorithm/sorting/selection</id>
     <published>2024-06-02T00:00:00.000Z</published>
     <updated>2024-06-05T00:00:00.000Z</updated>
     <content type="html">
-      <![CDATA[<p data-svelte-h="svelte-1wlifqk">파이선으로 작성한 선택정렬</p> <!-- HTML_TAG_START --><pre class="shiki material-default" py="true"><div class="language-id">py</div><div class='code-container'><code><div class='line'>def selectionSort(arr):</div><div class='line'>    tmp = list(arr);</div><div class='line'></div><div class='line'>    for i in range(0,len(tmp)):</div><div class='line'>        minIdx = i;</div><div class='line'>        for j in range(i+1, len(tmp)):</div><div class='line'>            if (tmp[i] &lt; tmp[j]):</div><div class='line'>                minIdx = i;</div><div class='line'>            else:</div><div class='line'>                minIdx = j;</div><div class='line'>        if (minIdx != i):</div><div class='line'>            minNum = tmp[minIdx];</div><div class='line'>            tmp.pop(minIdx);</div><div class='line'>            tmp.insert(i, minNum);</div><div class='line'>    return tmp;</div></code></div></pre><!-- HTML_TAG_END -->]]>
+      <![CDATA[<p data-svelte-h="svelte-1wlifqk">파이선으로 작성한 선택정렬</p> <!-- HTML_TAG_START --><pre class="shiki material-default" py="true"><div class="language-id">py</div><div class='code-container'><code><div class='line'>  def selectionSort(arr):</div><div class='line'>      tmp = list(arr);</div><div class='line'></div><div class='line'>      for i in range(0,len(tmp)):</div><div class='line'>          minIdx = i;</div><div class='line'>          for j in range(i+1, len(tmp)):</div><div class='line'>              if (tmp[i] &lt; tmp[j]):</div><div class='line'>                  minIdx = i;</div><div class='line'>              else:</div><div class='line'>                  minIdx = j;</div><div class='line'>          if (minIdx != i):</div><div class='line'>              minNum = tmp[minIdx];</div><div class='line'>              tmp.pop(minIdx);</div><div class='line'>              tmp.insert(i, minNum);</div><div class='line'>      return tmp;</div></code></div></pre><!-- HTML_TAG_END -->]]>
     </content>
     <category term="python" scheme="https://lyukidon.github.io/?tags=python" />
     <category term="정렬" scheme="https://lyukidon.github.io/?tags=%EC%A0%95%EB%A0%AC" />
