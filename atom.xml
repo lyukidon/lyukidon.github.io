@@ -6,15 +6,15 @@
   <icon>https://lyukidon.github.io/favicon.png</icon>
   <link href="https://lyukidon.github.io" />
   <link href="https://lyukidon.github.io/atom.xml" rel="self" type="application/atom+xml" />
-  <updated>2024-07-15T13:33:26.725Z</updated>
+  <updated>2024-07-15T13:44:46.434Z</updated>
   <author>
     <name><![CDATA[Ryu Kidon]]></name>
   </author>
+  <category term="berry" scheme="https://lyukidon.github.io/?tags=berry" />
   <category term="python" scheme="https://lyukidon.github.io/?tags=python" />
   <category term="정렬" scheme="https://lyukidon.github.io/?tags=%EC%A0%95%EB%A0%AC" />
   <category term="cv" scheme="https://lyukidon.github.io/?tags=cv" />
   <category term="morphology" scheme="https://lyukidon.github.io/?tags=morphology" />
-  <category term="berry" scheme="https://lyukidon.github.io/?tags=berry" />
   <category term="array" scheme="https://lyukidon.github.io/?tags=array" />
   <category term="algorithm" scheme="https://lyukidon.github.io/?tags=algorithm" />
   <category term="prime" scheme="https://lyukidon.github.io/?tags=prime" />
@@ -74,6 +74,17 @@
   <category term="Front-Matter" scheme="https://lyukidon.github.io/?tags=Front-Matter" />
   <category term="Hello World" scheme="https://lyukidon.github.io/?tags=Hello%20World" />
   <entry>
+    <title type="html"><![CDATA[yarn berry 도입하기]]></title>
+    <link href="https://lyukidon.github.io/Javascript/TIL/yarn_berry/add" />
+    <id>https://lyukidon.github.io/Javascript/TIL/yarn_berry/add</id>
+    <published>2024-07-15T00:00:00.000Z</published>
+    <updated>2024-07-15T00:00:00.000Z</updated>
+    <content type="html">
+      <![CDATA[<p data-svelte-h="svelte-1c3osh4">3d 평면도 프로젝트에 react를 사용하기 전, yarn berry 패키지 매니저를 사용해보려고 한다.</p> <h2 id="도입-전-조사" data-svelte-h="svelte-z15429"><a href="#도입-전-조사">도입 전 조사</a></h2> <ul data-svelte-h="svelte-11jp61q"><li>장점<ul><li>PnP 기능<ul><li>비(非)설치형 (Zero Install)</li> <li>용량 감소</li></ul></li> <li>빌드 속도 증가</li> <li>유령 의존성 현상 해결(모듈을 사용하지 않는 환경에서도, 다른 브랜치 등에 설치했었던 경우 사용 가능한 문제점)</li> <li>branch를 변경하는 환경에서도 install을 하지 않아도 됨</li></ul></li> <li>단점<ul><li>node_modules를 사용하지 않음</li></ul></li></ul> <p data-svelte-h="svelte-1pl4rvz">일단 이렇게 조사를 마치고, 적용해보기로 함</p> <h2 id="도입-중" data-svelte-h="svelte-1ikptb0"><a href="#도입-중">도입 중</a></h2> <ul><li><p data-svelte-h="svelte-1wpxzn8">순서</p> <ol><li data-svelte-h="svelte-b1b5ik"><p><code>npm install -g yarn</code></p></li> <li data-svelte-h="svelte-lsb9u6"><p><code>yarn set version berry</code></p></li> <li><p data-svelte-h="svelte-abvjub"><code>.gitignore</code> 파일 생성</p> <p data-svelte-h="svelte-1kzz7ck">zero install 사용 시</p> <!-- HTML_TAG_START --><pre class="shiki material-default" bash="true"><div class="language-id">bash</div><div class='code-container'><code><div class='line'>.yarn/*</div><div class='line'>!.yarn/cache</div><div class='line'>!.yarn/patches</div><div class='line'>!.yarn/plugins</div><div class='line'>!.yarn/releases</div><div class='line'>!.yarn/sdks</div><div class='line'>!.yarn/versions</div></code></div></pre><!-- HTML_TAG_END --> <p data-svelte-h="svelte-qkesi0">zero install 사용 안할 시</p> <!-- HTML_TAG_START --><pre class="shiki material-default" bash="true"><div class="language-id">bash</div><div class='code-container'><code><div class='line'>.pnp.*</div><div class='line'>.yarn/*</div><div class='line'>!.yarn/patches</div><div class='line'>!.yarn/plugins</div><div class='line'>!.yarn/releases</div><div class='line'>!.yarn/sdks</div><div class='line'>!.yarn/versions</div></code></div></pre><!-- HTML_TAG_END --></li> <li data-svelte-h="svelte-ciefy7"><p>ZipFS(VS Code Extension) 설치</p></li></ol> <ul data-svelte-h="svelte-chr94z"><li>역할: yarn berry는 zip으로 모듈을 저장하기 때문에, 모듈 코드 확인이 불가능한데, ZipFS를 통해서 코드 확인이 즉각 가능해짐.</li></ul></li></ul> <ul data-svelte-h="svelte-1bm0ufs"><li><p>오류 발생</p> <ul><li><p><code>Cannot find module &#39;&#39; or its corresponding type declarations.</code></p> <p>모듈을 찾을 수 없는 문제가 발생했다. 위에 대한 해결책으로는</p> <ol><li><code>yarn dlx @yarnpkg/sdks vscode</code> 를 실행하게 되면 <code>.vscode</code>라는 폴더가 생성된다.</li> <li><code>cmd</code>+<code>shift</code>+<code>P</code>를 누르고, <strong>Select Typescript Version</strong>을 선택한다.</li> <li><strong>Use Workspace Version</strong>을 선택한다.</li></ol> <p>을 해보았는데, workspace가 되지 않는 문제점 발생</p> <ol start="4"><li>다시 <code>yarn plugin import typescript</code></li> <li><code>yarn dlx @yarnpkg/sdks vscode</code> 실행하니, workspace가 생성되었고, vs code 하단에 자동으로 allow 팝업이 떠서 해결완료</li></ol></li></ul></li></ul>]]>
+    </content>
+    <category term="berry" scheme="https://lyukidon.github.io/?tags=berry" />
+  </entry>
+  <entry>
     <title type="html"><![CDATA[선택 정렬]]></title>
     <link href="https://lyukidon.github.io/Javascript/Algorithm/sorting/selection" />
     <id>https://lyukidon.github.io/Javascript/Algorithm/sorting/selection</id>
@@ -119,17 +130,6 @@
     </content>
     <category term="cv" scheme="https://lyukidon.github.io/?tags=cv" />
     <category term="morphology" scheme="https://lyukidon.github.io/?tags=morphology" />
-  </entry>
-  <entry>
-    <title type="html"><![CDATA[yarn berry 도입하기]]></title>
-    <link href="https://lyukidon.github.io/Javascript/TIL/yarn_berry/add" />
-    <id>https://lyukidon.github.io/Javascript/TIL/yarn_berry/add</id>
-    <published>2024-06-02T00:00:00.000Z</published>
-    <updated>2024-06-05T00:00:00.000Z</updated>
-    <content type="html">
-      <![CDATA[<p data-svelte-h="svelte-1c3osh4">3d 평면도 프로젝트에 react를 사용하기 전, yarn berry 패키지 매니저를 사용해보려고 한다.</p> <h2 id="도입-전-조사" data-svelte-h="svelte-z15429"><a href="#도입-전-조사">도입 전 조사</a></h2> <ul data-svelte-h="svelte-11jp61q"><li>장점<ul><li>PnP 기능<ul><li>비(非)설치형 (Zero Install)</li> <li>용량 감소</li></ul></li> <li>빌드 속도 증가</li> <li>유령 의존성 현상 해결(모듈을 사용하지 않는 환경에서도, 다른 브랜치 등에 설치했었던 경우 사용 가능한 문제점)</li> <li>branch를 변경하는 환경에서도 install을 하지 않아도 됨</li></ul></li> <li>단점<ul><li>node_modules를 사용하지 않음</li></ul></li></ul> <p data-svelte-h="svelte-1pl4rvz">일단 이렇게 조사를 마치고, 적용해보기로 함</p> <h2 id="도입-중" data-svelte-h="svelte-1ikptb0"><a href="#도입-중">도입 중</a></h2> <ul><li><p data-svelte-h="svelte-1wpxzn8">순서</p> <ol><li data-svelte-h="svelte-b1b5ik"><p><code>npm install -g yarn</code></p></li> <li data-svelte-h="svelte-lsb9u6"><p><code>yarn set version berry</code></p></li> <li><p data-svelte-h="svelte-abvjub"><code>.gitignore</code> 파일 생성</p> <p data-svelte-h="svelte-1kzz7ck">zero install 사용 시</p> <!-- HTML_TAG_START --><pre class="shiki material-default" bash="true"><div class="language-id">bash</div><div class='code-container'><code><div class='line'>.yarn/*</div><div class='line'>!.yarn/cache</div><div class='line'>!.yarn/patches</div><div class='line'>!.yarn/plugins</div><div class='line'>!.yarn/releases</div><div class='line'>!.yarn/sdks</div><div class='line'>!.yarn/versions</div></code></div></pre><!-- HTML_TAG_END --> <p data-svelte-h="svelte-qkesi0">zero install 사용 안할 시</p> <!-- HTML_TAG_START --><pre class="shiki material-default" bash="true"><div class="language-id">bash</div><div class='code-container'><code><div class='line'>.pnp.*</div><div class='line'>.yarn/*</div><div class='line'>!.yarn/patches</div><div class='line'>!.yarn/plugins</div><div class='line'>!.yarn/releases</div><div class='line'>!.yarn/sdks</div><div class='line'>!.yarn/versions</div></code></div></pre><!-- HTML_TAG_END --></li> <li data-svelte-h="svelte-ciefy7"><p>ZipFS(VS Code Extension) 설치</p></li></ol> <ul data-svelte-h="svelte-chr94z"><li>역할: yarn berry는 zip으로 모듈을 저장하기 때문에, 모듈 코드 확인이 불가능한데, ZipFS를 통해서 코드 확인이 즉각 가능해짐.</li></ul></li></ul> <ul data-svelte-h="svelte-1bm0ufs"><li><p>오류 발생</p> <ul><li><p><code>Cannot find module &#39;&#39; or its corresponding type declarations.</code></p> <p>모듈을 찾을 수 없는 문제가 발생했다. 위에 대한 해결책으로는</p> <ol><li><code>yarn dlx @yarnpkg/sdks vscode</code> 를 실행하게 되면 <code>.vscode</code>라는 폴더가 생성된다.</li> <li><code>cmd</code>+<code>shift</code>+<code>P</code>를 누르고, <strong>Select Typescript Version</strong>을 선택한다.</li> <li><strong>Use Workspace Version</strong>을 선택한다.</li></ol> <p>을 해보았는데, workspace가 되지 않는 문제점 발생</p> <ol start="4"><li>다시 <code>yarn plugin import typescript</code></li> <li><code>yarn dlx @yarnpkg/sdks vscode</code> 실행하니, workspace가 생성되었고, vs code 하단에 자동으로 allow 팝업이 떠서 해결완료</li></ol></li></ul></li></ul>]]>
-    </content>
-    <category term="berry" scheme="https://lyukidon.github.io/?tags=berry" />
   </entry>
   <entry>
     <title type="html"><![CDATA[어떤 수가 주어졌을 때, 배열 내의 어떤 항목 두 개를 합쳐야 해당 수가 되는지 찾으시오]]></title>
