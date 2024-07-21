@@ -6,10 +6,12 @@
   <icon>https://lyukidon.github.io/favicon.png</icon>
   <link href="https://lyukidon.github.io" />
   <link href="https://lyukidon.github.io/atom.xml" rel="self" type="application/atom+xml" />
-  <updated>2024-07-15T15:54:42.318Z</updated>
+  <updated>2024-07-21T08:38:10.101Z</updated>
   <author>
     <name><![CDATA[Ryu Kidon]]></name>
   </author>
+  <category term="redux" scheme="https://lyukidon.github.io/?tags=redux" />
+  <category term="error" scheme="https://lyukidon.github.io/?tags=error" />
   <category term="berry" scheme="https://lyukidon.github.io/?tags=berry" />
   <category term="python" scheme="https://lyukidon.github.io/?tags=python" />
   <category term="정렬" scheme="https://lyukidon.github.io/?tags=%EC%A0%95%EB%A0%AC" />
@@ -20,11 +22,8 @@
   <category term="prime" scheme="https://lyukidon.github.io/?tags=prime" />
   <category term="netlify" scheme="https://lyukidon.github.io/?tags=netlify" />
   <category term="date" scheme="https://lyukidon.github.io/?tags=date" />
-  <category term="react" scheme="https://lyukidon.github.io/?tags=react" />
-  <category term="typescript" scheme="https://lyukidon.github.io/?tags=typescript" />
-  <category term="tailwind" scheme="https://lyukidon.github.io/?tags=tailwind" />
-  <category term="error" scheme="https://lyukidon.github.io/?tags=error" />
   <category term="nestjs" scheme="https://lyukidon.github.io/?tags=nestjs" />
+  <category term="react" scheme="https://lyukidon.github.io/?tags=react" />
   <category term="cors" scheme="https://lyukidon.github.io/?tags=cors" />
   <category term="test" scheme="https://lyukidon.github.io/?tags=test" />
   <category term="redis" scheme="https://lyukidon.github.io/?tags=redis" />
@@ -32,6 +31,8 @@
   <category term="sorting" scheme="https://lyukidon.github.io/?tags=sorting" />
   <category term="formData" scheme="https://lyukidon.github.io/?tags=formData" />
   <category term="docker" scheme="https://lyukidon.github.io/?tags=docker" />
+  <category term="typescript" scheme="https://lyukidon.github.io/?tags=typescript" />
+  <category term="tailwind" scheme="https://lyukidon.github.io/?tags=tailwind" />
   <category term="webrtc" scheme="https://lyukidon.github.io/?tags=webrtc" />
   <category term="KPT" scheme="https://lyukidon.github.io/?tags=KPT" />
   <category term="TypeORM" scheme="https://lyukidon.github.io/?tags=TypeORM" />
@@ -73,6 +74,28 @@
   <category term="Elements" scheme="https://lyukidon.github.io/?tags=Elements" />
   <category term="Front-Matter" scheme="https://lyukidon.github.io/?tags=Front-Matter" />
   <category term="Hello World" scheme="https://lyukidon.github.io/?tags=Hello%20World" />
+  <entry>
+    <title type="html"><![CDATA[Redux Toolkit 사용하기]]></title>
+    <link href="https://lyukidon.github.io/Javascript/TIL/react/redux_reducers" />
+    <id>https://lyukidon.github.io/Javascript/TIL/react/redux_reducers</id>
+    <published>2024-07-21T00:00:00.000Z</published>
+    <updated>2024-07-21T00:00:00.000Z</updated>
+    <content type="html">
+      <![CDATA[<ul data-svelte-h="svelte-172mf77"><li>설치</li></ul> <!-- HTML_TAG_START --><pre class="shiki material-default" sh="true"><div class="language-id">sh</div><div class='code-container'><code><div class='line'>    yarn add redux react-redux @reduxjs/toolkit</div></code></div></pre><!-- HTML_TAG_END --> <ul data-svelte-h="svelte-t1f1w3"><li>필요한 파일</li></ul> <!-- HTML_TAG_START --><pre class="shiki material-default" bash="true"><div class="language-id">bash</div><div class='code-container'><code><div class='line'>  src</div><div class='line'>    ├─ index.js</div><div class='line'>    └─ store</div><div class='line'>        ├─  store.js</div><div class='line'>        └─  dataSlice.js</div></code></div></pre><!-- HTML_TAG_END --> <ol data-svelte-h="svelte-ldcfkv"><li><code>dataSlice.ts</code></li></ol> <!-- HTML_TAG_START --><pre class="shiki material-default" ts="true"><div class="language-id">ts</div><div class='code-container'><code><div class='line'>    import &#123; createSlice &#125; from '@reduxjs/toolkit';</div><div class='line'></div><div class='line'>    export const dataSlice = createSlice(&#123;</div><div class='line'>        name: "data",</div><div class='line'>        initialState: &#123; name: 'Jack' &#125;,</div><div class='line'>        reducers: &#123;</div><div class='line'>            getData: (state) =&gt; &#123;</div><div class='line'>                return state</div><div class='line'>            &#125;,</div><div class='line'>            setData: (state, action: PayloadAction&lt;T&gt;) =&gt; &#123;</div><div class='line'>                state.name = action.payload;</div><div class='line'>            &#125;</div><div class='line'>        &#125;,</div><div class='line'>    &#125;);</div><div class='line'></div><div class='line'>    export default dataSlice.reducer;</div></code></div></pre><!-- HTML_TAG_END --> <ol start="2" data-svelte-h="svelte-1ruoai5"><li><code>store.ts</code></li></ol> <!-- HTML_TAG_START --><pre class="shiki material-default" ts="true"><div class="language-id">ts</div><div class='code-container'><code><div class='line'>    import React from 'react';</div><div class='line'>    import &#123; configureStore &#125; from '@reduxjs/toolkit';</div><div class='line'>    import dataReducer from './dataSlice'</div><div class='line'></div><div class='line'>    export default configureStore(&#123;</div><div class='line'>        reducer: &#123;</div><div class='line'>            data: dataReducer</div><div class='line'>        &#125;,</div><div class='line'>    &#125;)</div></code></div></pre><!-- HTML_TAG_END --> <ol start="3" data-svelte-h="svelte-4mixh2"><li><code>src/index.ts</code></li></ol> <!-- HTML_TAG_START --><pre class="shiki material-default" ts="true"><div class="language-id">ts</div><div class='code-container'><code><div class='line'>    import React from 'react';</div><div class='line'>    import ReactDOM from 'react-dom/client';</div><div class='line'>    import './global.css';</div><div class='line'>    import App from './App';</div><div class='line'>    </div><div class='line'>    /** 추가해야 할 코드 **/</div><div class='line'>    import &#123; Provider &#125; from 'react-redux';</div><div class='line'>    import store from './store/store'</div><div class='line'>    </div><div class='line'>    const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);</div><div class='line'>    root.render(</div><div class='line'>        &lt;React.StrictMode&gt;</div><div class='line'>            &lt;Provider store=&#123;store&#125;&gt;</div><div class='line'>            &lt;App /&gt;</div><div class='line'>            &lt;/Provider&gt;</div><div class='line'>        &lt;/React.StrictMode&gt;</div><div class='line'>    );</div></code></div></pre><!-- HTML_TAG_END -->]]>
+    </content>
+    <category term="redux" scheme="https://lyukidon.github.io/?tags=redux" />
+  </entry>
+  <entry>
+    <title type="html"><![CDATA[Cannot use JSX unless the '--jsx' flag is provided]]></title>
+    <link href="https://lyukidon.github.io/Javascript/TIL/error/tsconfig" />
+    <id>https://lyukidon.github.io/Javascript/TIL/error/tsconfig</id>
+    <published>2024-07-16T00:00:00.000Z</published>
+    <updated>2024-07-16T00:00:00.000Z</updated>
+    <content type="html">
+      <![CDATA[<p data-svelte-h="svelte-1r1ikt0">tsx 확장자를 사용할 때, <code>tsconfig.json</code>에서 <code>jsx</code>옵션을 설정해주어야 한다. 👍</p>]]>
+    </content>
+    <category term="error" scheme="https://lyukidon.github.io/?tags=error" />
+  </entry>
   <entry>
     <title type="html"><![CDATA[yarn berry 도입하기]]></title>
     <link href="https://lyukidon.github.io/Javascript/TIL/yarn_berry/add" />
@@ -210,20 +233,6 @@
       <![CDATA[<p data-svelte-h="svelte-zfc9i8">Date Object의 경우, +와 -연산을 할 수 있다.</p> <!-- HTML_TAG_START --><pre class="shiki material-default" js="true"><div class="language-id">js</div><div class='code-container'><code><div class='line'>new Date(time1) - newDate(time2)</div></code></div></pre><!-- HTML_TAG_END --> <p data-svelte-h="svelte-1qszhlf">계산을 하게 되면 millisecond로 나오게 된다.</p> <p data-svelte-h="svelte-y168xb">하지만 TypeScript의 경우는 아래와 같은 오류가 난다.</p> <p data-svelte-h="svelte-pz9s9j"><code>The left-hand side of an arithmetic operation must be of type &#39;any&#39;, &#39;number&#39;, &#39;bigint&#39; or an enum type.</code></p> <p data-svelte-h="svelte-ivbi0c">이유는 Object끼리 연산하기 때문인데, 위의 코드를 아래와 같이 바꾸면 작동한다.</p> <!-- HTML_TAG_START --><pre class="shiki material-default" js="true"><div class="language-id">js</div><div class='code-container'><code><div class='line'>new Date(time1).valueOf() - newDate(time2).valueOf()</div></code></div></pre><!-- HTML_TAG_END -->]]>
     </content>
     <category term="date" scheme="https://lyukidon.github.io/?tags=date" />
-  </entry>
-  <entry>
-    <title type="html"><![CDATA[Redux Reducer 작성하기]]></title>
-    <link href="https://lyukidon.github.io/Javascript/TIL/react/redux_reducers" />
-    <id>https://lyukidon.github.io/Javascript/TIL/react/redux_reducers</id>
-    <published>2024-04-30T00:00:00.000Z</published>
-    <updated>2024-04-30T00:00:00.000Z</updated>
-    <content type="html">
-      <![CDATA[]]>
-    </content>
-    <category term="react" scheme="https://lyukidon.github.io/?tags=react" />
-    <category term="typescript" scheme="https://lyukidon.github.io/?tags=typescript" />
-    <category term="tailwind" scheme="https://lyukidon.github.io/?tags=tailwind" />
-    <category term="error" scheme="https://lyukidon.github.io/?tags=error" />
   </entry>
   <entry>
     <title type="html"><![CDATA[]]></title>
