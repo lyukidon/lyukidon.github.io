@@ -11,6 +11,11 @@
     </url>
     
         <url>
+            <loc>https://lyukidon.github.io/Javascript/TIL/vite_env</loc>
+            <lastmod>2024-09-11T00:00:00.000Z</lastmod>
+            <priority>0.5</priority>
+        </url>
+        <url>
             <loc>https://lyukidon.github.io/Javascript/TIL/react/redux_reducers</loc>
             <lastmod>2024-07-21T00:00:00.000Z</lastmod>
             <priority>0.5</priority>

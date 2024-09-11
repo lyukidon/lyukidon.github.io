@@ -6,13 +6,13 @@
   <icon>https://lyukidon.github.io/favicon.png</icon>
   <link href="https://lyukidon.github.io" />
   <link href="https://lyukidon.github.io/atom.xml" rel="self" type="application/atom+xml" />
-  <updated>2024-07-21T08:38:10.101Z</updated>
+  <updated>2024-09-11T13:55:15.502Z</updated>
   <author>
     <name><![CDATA[Ryu Kidon]]></name>
   </author>
+  <category term="berry" scheme="https://lyukidon.github.io/?tags=berry" />
   <category term="redux" scheme="https://lyukidon.github.io/?tags=redux" />
   <category term="error" scheme="https://lyukidon.github.io/?tags=error" />
-  <category term="berry" scheme="https://lyukidon.github.io/?tags=berry" />
   <category term="python" scheme="https://lyukidon.github.io/?tags=python" />
   <category term="정렬" scheme="https://lyukidon.github.io/?tags=%EC%A0%95%EB%A0%AC" />
   <category term="cv" scheme="https://lyukidon.github.io/?tags=cv" />
@@ -74,6 +74,17 @@
   <category term="Elements" scheme="https://lyukidon.github.io/?tags=Elements" />
   <category term="Front-Matter" scheme="https://lyukidon.github.io/?tags=Front-Matter" />
   <category term="Hello World" scheme="https://lyukidon.github.io/?tags=Hello%20World" />
+  <entry>
+    <title type="html"><![CDATA[VITE에서 process.env 사용하기]]></title>
+    <link href="https://lyukidon.github.io/Javascript/TIL/vite_env" />
+    <id>https://lyukidon.github.io/Javascript/TIL/vite_env</id>
+    <published>2024-09-11T00:00:00.000Z</published>
+    <updated>2024-09-11T00:00:00.000Z</updated>
+    <content type="html">
+      <![CDATA[<p data-svelte-h="svelte-1oon0zn">vite에서 환경 변수를 사용하기 위해서는 import.meta.env를 사용해야 하는데, jest에서는 import 구문이 호환이 되지 않아 찾아보게 되었다.</p> <ol><li><p data-svelte-h="svelte-1m28wp4">vite-plugin-environment 라는 라이브러리를 설치한다.</p> <!-- HTML_TAG_START --><pre class="shiki material-default" bash="true"><div class="language-id">bash</div><div class='code-container'><code><div class='line'>npm i --save-dev vite-plugin-environment       </div></code></div></pre><!-- HTML_TAG_END --></li> <li><p data-svelte-h="svelte-ookt2o"><code>vite.config.ts</code>라는 파일을 위와 같이 설정한다.</p> <!-- HTML_TAG_START --><pre class="shiki material-default" ts="true"><div class="language-id">ts</div><div class='code-container'><code><div class='line'>import &#123; defineConfig &#125; from "vite";</div><div class='line'>import react from "@vitejs/plugin-react";</div><div class='line'>import EnvironmentPlugin from "vite-plugin-environment";</div><div class='line'></div><div class='line'>// https://vitejs.dev/config/</div><div class='line'>export default defineConfig(&#123;</div><div class='line'>  plugins: [</div><div class='line'>    react(),</div><div class='line'>    EnvironmentPlugin('all'),</div><div class='line'>  ],</div><div class='line'>  define: &#123;</div><div class='line'>    'process.env': process.env,</div><div class='line'>  &#125;,</div><div class='line'>&#125;);</div><div class='line'></div></code></div></pre><!-- HTML_TAG_END --> <p data-svelte-h="svelte-1iic6lf">위와 같이 설정하면, <code>{"BASE_URL":"/","MODE":"production","DEV":false,"PROD":true,"SSR":true}</code> =&gt; <code>process.env</code>로 바꾸어도 잘 적용이 된다.<del>그런데 jest에는 undefined라고 나온다…</del></p></li></ol>]]>
+    </content>
+    <category term="berry" scheme="https://lyukidon.github.io/?tags=berry" />
+  </entry>
   <entry>
     <title type="html"><![CDATA[Redux Toolkit 사용하기]]></title>
     <link href="https://lyukidon.github.io/Javascript/TIL/react/redux_reducers" />
