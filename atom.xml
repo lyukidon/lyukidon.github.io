@@ -6,10 +6,14 @@
   <icon>https://lyukidon.github.io/favicon.png</icon>
   <link href="https://lyukidon.github.io" />
   <link href="https://lyukidon.github.io/atom.xml" rel="self" type="application/atom+xml" />
-  <updated>2024-09-20T05:38:16.429Z</updated>
+  <updated>2024-10-12T08:37:22.612Z</updated>
   <author>
     <name><![CDATA[Ryu Kidon]]></name>
   </author>
+  <category term="react-native" scheme="https://lyukidon.github.io/?tags=react-native" />
+  <category term="expo" scheme="https://lyukidon.github.io/?tags=expo" />
+  <category term="nativewind" scheme="https://lyukidon.github.io/?tags=nativewind" />
+  <category term="tailwind" scheme="https://lyukidon.github.io/?tags=tailwind" />
   <category term="berry" scheme="https://lyukidon.github.io/?tags=berry" />
   <category term="redux" scheme="https://lyukidon.github.io/?tags=redux" />
   <category term="error" scheme="https://lyukidon.github.io/?tags=error" />
@@ -32,7 +36,6 @@
   <category term="formData" scheme="https://lyukidon.github.io/?tags=formData" />
   <category term="docker" scheme="https://lyukidon.github.io/?tags=docker" />
   <category term="typescript" scheme="https://lyukidon.github.io/?tags=typescript" />
-  <category term="tailwind" scheme="https://lyukidon.github.io/?tags=tailwind" />
   <category term="webrtc" scheme="https://lyukidon.github.io/?tags=webrtc" />
   <category term="KPT" scheme="https://lyukidon.github.io/?tags=KPT" />
   <category term="TypeORM" scheme="https://lyukidon.github.io/?tags=TypeORM" />
@@ -74,6 +77,20 @@
   <category term="Elements" scheme="https://lyukidon.github.io/?tags=Elements" />
   <category term="Front-Matter" scheme="https://lyukidon.github.io/?tags=Front-Matter" />
   <category term="Hello World" scheme="https://lyukidon.github.io/?tags=Hello%20World" />
+  <entry>
+    <title type="html"><![CDATA[Native Wind가 적용되지 않는 경우]]></title>
+    <link href="https://lyukidon.github.io/Javascript/TIL/react_native/nativewind_error" />
+    <id>https://lyukidon.github.io/Javascript/TIL/react_native/nativewind_error</id>
+    <published>2024-10-12T00:00:00.000Z</published>
+    <updated>2024-10-12T00:00:00.000Z</updated>
+    <content type="html">
+      <![CDATA[<h2 id="오류-위치" data-svelte-h="svelte-1rgwefu"><a href="#오류-위치">오류 위치</a></h2> <p data-svelte-h="svelte-2eo1wm">Expo에서 nativewind를 사용하다가, 갑자기 적용되지 않는 문제점이 생겼다.</p> <p data-svelte-h="svelte-14abgz2">firebase를 적용하는 과정에서</p> <p data-svelte-h="svelte-a0qin9"><code>firebase.js</code>와 <code>metro.config.js</code>파일을 작성했는데, 이 중 <code>metro.config.js</code>파일을 작성한 것이 문제였다.</p> <h2 id="metro란" data-svelte-h="svelte-19q3dej"><a href="#metro란">Metro란</a></h2> <p data-svelte-h="svelte-1050cmp">React Native의 JS Bundler</p> <ul data-svelte-h="svelte-1ertl01"><li>Bundling: 코드를 모두 하나의 파일로 묶어줌</li> <li>Hot Reloading: 변경된 부분만 Reload</li> <li>Asset 관리</li> <li>Source Mapping: 개발자가 작성한 <strong>원본 코드</strong>와 <strong>번들링된 코드</strong>를 연결해주어, 디버깅을 쉽게 해줌</li></ul> <p data-svelte-h="svelte-x2zfzw">참고: 다른 번들러로는<a href="https://yozm.wishket.com/magazine/detail/2528/" rel="nofollow noopener noreferrer external" target="_blank">ES Build</a>라는 것도 있다고 한다.</p> <h2 id="오류-수정-방법" data-svelte-h="svelte-1xzaa1b"><a href="#오류-수정-방법">오류 수정 방법</a></h2> <ol data-svelte-h="svelte-3vw5lc"><li>expo에서 <code>metro.config.js</code>를 고치기 위해서 cli에 명령</li></ol> <!-- HTML_TAG_START --><pre class="shiki material-default" sh="true"><div class="language-id">sh</div><div class='code-container'><code><div class='line'>npx expo customize metro.config.js</div></code></div></pre><!-- HTML_TAG_END --> <p data-svelte-h="svelte-comhbh">2.<code>metro.config.js</code>가 프로젝트 최상단에 나타나면 다음과 같이 수정</p> <!-- HTML_TAG_START --><pre class="shiki material-default" js="true"><div class="language-id">js</div><div class='code-container'><code><div class='line'>const &#123; getDefaultConfig &#125; = require('expo/metro-config');</div><div class='line'>const &#123; withNativeWind &#125; = require('nativewind/metro');</div><div class='line'></div><div class='line'>/** @type &#123;import('expo/metro-config').MetroConfig&#125; */</div><div class='line'>const config = getDefaultConfig(__dirname);</div><div class='line'></div><div class='line'>module.exports = withNativeWind(config, &#123; input: './global.css' &#125;);</div></code></div></pre><!-- HTML_TAG_END --> <ol start="3" data-svelte-h="svelte-1n7kyjb"><li>Expo를 cache를 제거하고, 다시 동작해본다.</li></ol> <!-- HTML_TAG_START --><pre class="shiki material-default" sh="true"><div class="language-id">sh</div><div class='code-container'><code><div class='line'>npx expo start -c</div></code></div></pre><!-- HTML_TAG_END -->]]>
+    </content>
+    <category term="react-native" scheme="https://lyukidon.github.io/?tags=react-native" />
+    <category term="expo" scheme="https://lyukidon.github.io/?tags=expo" />
+    <category term="nativewind" scheme="https://lyukidon.github.io/?tags=nativewind" />
+    <category term="tailwind" scheme="https://lyukidon.github.io/?tags=tailwind" />
+  </entry>
   <entry>
     <title type="html"><![CDATA[VITE에서 process.env 사용하기]]></title>
     <link href="https://lyukidon.github.io/Javascript/TIL/vite_env" />
