@@ -6,10 +6,12 @@
   <icon>https://lyukidon.github.io/favicon.png</icon>
   <link href="https://lyukidon.github.io" />
   <link href="https://lyukidon.github.io/atom.xml" rel="self" type="application/atom+xml" />
-  <updated>2024-10-12T08:37:22.612Z</updated>
+  <updated>2025-03-01T16:57:03.869Z</updated>
   <author>
     <name><![CDATA[Ryu Kidon]]></name>
   </author>
+  <category term="정렬" scheme="https://lyukidon.github.io/?tags=%EC%A0%95%EB%A0%AC" />
+  <category term="힙정렬" scheme="https://lyukidon.github.io/?tags=%ED%9E%99%EC%A0%95%EB%A0%AC" />
   <category term="react-native" scheme="https://lyukidon.github.io/?tags=react-native" />
   <category term="expo" scheme="https://lyukidon.github.io/?tags=expo" />
   <category term="nativewind" scheme="https://lyukidon.github.io/?tags=nativewind" />
@@ -18,7 +20,6 @@
   <category term="redux" scheme="https://lyukidon.github.io/?tags=redux" />
   <category term="error" scheme="https://lyukidon.github.io/?tags=error" />
   <category term="python" scheme="https://lyukidon.github.io/?tags=python" />
-  <category term="정렬" scheme="https://lyukidon.github.io/?tags=%EC%A0%95%EB%A0%AC" />
   <category term="cv" scheme="https://lyukidon.github.io/?tags=cv" />
   <category term="morphology" scheme="https://lyukidon.github.io/?tags=morphology" />
   <category term="array" scheme="https://lyukidon.github.io/?tags=array" />
@@ -77,6 +78,18 @@
   <category term="Elements" scheme="https://lyukidon.github.io/?tags=Elements" />
   <category term="Front-Matter" scheme="https://lyukidon.github.io/?tags=Front-Matter" />
   <category term="Hello World" scheme="https://lyukidon.github.io/?tags=Hello%20World" />
+  <entry>
+    <title type="html"><![CDATA[힙 정렬]]></title>
+    <link href="https://lyukidon.github.io/Javascript/Algorithm/sorting/heap" />
+    <id>https://lyukidon.github.io/Javascript/Algorithm/sorting/heap</id>
+    <published>2025-03-02T00:00:00.000Z</published>
+    <updated>2025-03-02T00:00:00.000Z</updated>
+    <content type="html">
+      <![CDATA[<p data-svelte-h="svelte-2oocqy">힙 정렬은 생각보다 어려운 것 같다…</p> <ul><li><p data-svelte-h="svelte-1oh6o7z">기본 지식</p> <ul><li>완전 이진 트리<!-- HTML_TAG_START --><pre class="shiki material-default"><div class='code-container'><code><div class='line'>  1</div><div class='line'> / </div><div class='line'>2   3</div><div class='line'>---------</div><div class='line'>  1</div><div class='line'> / </div><div class='line'>2</div></code></div></pre><!-- HTML_TAG_END -->형태로 부모 노드 1개, 자식 노드는 최대 2개의 형태로 뻗어나가는 구조</li> <li>힙 구조<ul><li>최대 힙<!-- HTML_TAG_START --><pre class="shiki material-default"><div class='code-container'><code><div class='line'>  1</div><div class='line'> / </div><div class='line'>2   3</div></code></div></pre><!-- HTML_TAG_END -->부모 노드가 자식 노드보다 큰 경우</li> <li>최소 힙<!-- HTML_TAG_START --><pre class="shiki material-default"><div class='code-container'><code><div class='line'>  3</div><div class='line'> / </div><div class='line'>2   1</div></code></div></pre><!-- HTML_TAG_END -->부모 노드가 자식 노드보다 작은 경우</li></ul></li></ul></li> <li><p data-svelte-h="svelte-1aeg7xs">힙 정렬 알고리즘</p> <!-- HTML_TAG_START --><pre class="shiki material-default" js="true"><div class="language-id">js</div><div class='code-container'><code><div class='line'>const heapify = (arr, n, i) =&gt; &#123;</div><div class='line'>    // 1)</div><div class='line'>    let largest = i;</div><div class='line'>    let left = 2 * i + 1</div><div class='line'>    let right = 2 * i + 2</div><div class='line'></div><div class='line'>    // 2)</div><div class='line'>    if (left &lt; n && arr[left] &gt; arr[largest]) &#123;</div><div class='line'>        largest = left;</div><div class='line'>    &#125;</div><div class='line'>    if (right &lt; n && arr[right] &gt; arr[largest]) &#123;</div><div class='line'>        largest = right</div><div class='line'>    &#125;</div><div class='line'>    // 3)</div><div class='line'>    if (largest !== i) &#123;</div><div class='line'>        [arr[i], arr[largest]] = [arr[largest], arr[i]];</div><div class='line'>        heapify(arr, n, largest);</div><div class='line'>    &#125;</div><div class='line'>&#125;</div><div class='line'></div><div class='line'>const heapSort = (arr) =&gt; &#123;</div><div class='line'>    let n = arr.length</div><div class='line'>    // 4) 최대 힙 구조로 만들기</div><div class='line'>    for (let i = Math.floor(n / 2); i &gt;= 0; i--) &#123;</div><div class='line'>        heapify(arr, n, i);</div><div class='line'>    &#125;</div><div class='line'>    // 5) 힙 구조를 오름차순 배열로 변경하기</div><div class='line'>    for (let i = n - 1; i &gt; 0; i--) &#123;</div><div class='line'>        [arr[0], arr[i]] = [arr[i], arr[0]];</div><div class='line'>        // 6)</div><div class='line'>        heapify(arr, i, 0)</div><div class='line'>    &#125;</div><div class='line'>    return arr</div><div class='line'>&#125;</div></code></div></pre><!-- HTML_TAG_END --></li> <li><p data-svelte-h="svelte-mhe6l">알고리즘 세부적으로 살펴보기</p> <ul><li><p data-svelte-h="svelte-1c0rrg4">heapify 함수 살펴보기</p> <ol><li><p data-svelte-h="svelte-7ns5uf"><code>2 * i + 1</code>의 의미는?</p> <!-- HTML_TAG_START --><pre class="shiki material-default" js="true"><div class="language-id">js</div><div class='code-container'><code><div class='line'>let largest = i;</div><div class='line'>let left = 2 * i + 1</div><div class='line'>let right = 2 * i + 2</div></code></div></pre><!-- HTML_TAG_END --> <p data-svelte-h="svelte-16uc6yj">heap은 배열로 표현되는데, parent의 index가 <code>i</code> 인 경우, 자식 노드의 index는 각각 <code>2 * i + 1</code>과 <code>2 * i + 2</code>로 표현될 수 있다.</p></li> <li><p data-svelte-h="svelte-1nwvchj">왜 else if 를 사용하지 않고, if 문으로 작성되어 있을까?</p> <!-- HTML_TAG_START --><pre class="shiki material-default" js="true"><div class="language-id">js</div><div class='code-container'><code><div class='line'>if (left &lt; n && arr[left] &gt; arr[largest]) &#123;</div><div class='line'>    largest = left;</div><div class='line'>&#125;</div><div class='line'>if (right &lt; n && arr[right] &gt; arr[largest]) &#123;</div><div class='line'>    largest = right</div><div class='line'>&#125;</div></code></div></pre><!-- HTML_TAG_END --> <p data-svelte-h="svelte-psaq7n">else if 로 작성되게 되면, 좌측 자식 노드만 확인하고 우측은 확인하지 않을 수 있다.</p> <p data-svelte-h="svelte-1mrgqbd">if 로 처리하기 되면 3개의 노드 중 가장 큰(또는 작은) 값을 확인할 수 있다.</p></li> <li><p data-svelte-h="svelte-1gbqs6w">위 코드의 arr은 어떻게 변경되는가?</p> <!-- HTML_TAG_START --><pre class="shiki material-default" js="true"><div class="language-id">js</div><div class='code-container'><code><div class='line'>[arr[i], arr[largest]] = [arr[largest], arr[i]];</div></code></div></pre><!-- HTML_TAG_END --> <ul data-svelte-h="svelte-1ytsuvd"><li>배열은 참조형 데이터 타입이다. 따라서 함수에 전달된 값을 변경하면 원본이 변경이 된다.</li> <li>배열의 구조 분해 할당을 통해 위와 같이 할당을 해주면, 임시로 값을 저장해둘 필요 없이 값을 변환할 수 있다. 👍</li></ul></li> <li data-svelte-h="svelte-1p41ql2"><p><code>Math.floor(n / 2) - 1</code>부터 <code>0</code>까지 반복하는 이유는?</p> <ul><li><code>Math.floor(n / 2) - 1</code>보다 큰 index는 부모 노드가 아니기 때문!!</li></ul></li> <li><p data-svelte-h="svelte-rvqh4p">최대 힙을 오름차순 정렬로 변경하는 방법</p> <!-- HTML_TAG_START --><pre class="shiki material-default" js="true"><div class="language-id">js</div><div class='code-container'><code><div class='line'>for (let i = n - 1; i &gt; 0; i--) &#123;</div><div class='line'>    [arr[0], arr[i]] = [arr[i], arr[0]];</div><div class='line'>    heapify(arr, i, 0)</div><div class='line'>&#125;</div></code></div></pre><!-- HTML_TAG_END --> <ol data-svelte-h="svelte-1q8ifok"><li>index 0번 값(첫번째, 최댓값)과 index i번 값(마지막, 최솟값)의 위치를 변경</li> <li>마지막 번째 값(최댓값)을 제외한 나머지 값의 최대 힙 구조 재배치</li></ol></li> <li data-svelte-h="svelte-4hpt5n"><p><code>heapify(arr, i, 0)</code>의 3번째 인자에 <code>0</code>이 들어가는 이유</p> <ul><li>최대 힙 구조의 0번째 값이 최댓값이기 때문!!</li></ul></li></ol></li></ul></li></ul>]]>
+    </content>
+    <category term="정렬" scheme="https://lyukidon.github.io/?tags=%EC%A0%95%EB%A0%AC" />
+    <category term="힙정렬" scheme="https://lyukidon.github.io/?tags=%ED%9E%99%EC%A0%95%EB%A0%AC" />
+  </entry>
   <entry>
     <title type="html"><![CDATA[Native Wind가 적용되지 않는 경우]]></title>
     <link href="https://lyukidon.github.io/Javascript/TIL/react_native/nativewind_error" />
